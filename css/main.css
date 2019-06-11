@@ -1,0 +1,243 @@
+body,
+html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  display: none;
+}
+
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 2em);
+  background: white;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  padding: 1em;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.wrapper section {
+  padding: 3em;
+}
+
+.wrapper section h2 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.wrapper section .gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.wrapper section .gallery figure {
+  margin: 6px;
+  overflow: hidden;
+  position: relative;
+  background: none;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.wrapper section .gallery figure img {
+  width: calc(100% + 6px);
+  opacity: 1;
+  -webkit-transform: translate3d(0, -20px, 0) scale(1.12);
+          transform: translate3d(0, -20px, 0) scale(1.12);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.wrapper section .gallery figure figcaption {
+  position: absolute;
+  padding: 1em 1em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-align: center;
+}
+
+.wrapper section .gallery figure figcaption h3 {
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: black;
+  display: inline-block;
+  padding: 0.5em 0.7em;
+}
+
+.wrapper section .gallery .additional {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.wrapper section figure:hover {
+  background: white;
+}
+
+.wrapper section figure:hover img {
+  opacity: 0.4;
+}
+
+.wrapper section figure:hover .additional {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.wrapper section.hero {
+  padding-top: 8em;
+  background: url("../img/hero-background.jpg");
+  background-size: cover;
+}
+
+.wrapper section.hero h1,
+.wrapper section.hero a {
+  color: white;
+  font-weight: 300;
+}
+
+.wrapper section.hero h1 {
+  width: 70%;
+  font-size: 1.5rem;
+}
+
+.wrapper footer {
+  padding-bottom: 3em;
+  text-align: center;
+}
+
+.wrapper footer ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  list-style-type: none;
+  -webkit-padding-start: 0%;
+          padding-inline-start: 0%;
+}
+
+.wrapper footer p {
+  line-height: .25rem;
+}
+
+.wrapper footer a {
+  color: black;
+}
+
+.wrapper footer .icon {
+  padding: 1rem;
+  width: 1.5rem;
+}
+
+img.hide-image {
+  position: absolute;
+  height: auto;
+  width: 400px;
+  display: none;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline:hover img {
+  display: inline;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+  .wrapper section .gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
+  .wrapper section .gallery .additional {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  header {
+    background: none;
+  }
+  .wrapper {
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+    height: 100vh;
+  }
+  section {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-rows: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 21px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
