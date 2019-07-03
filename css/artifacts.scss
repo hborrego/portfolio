@@ -1,0 +1,96 @@
+.wrapper {
+  max-width: 1080px;
+  margin: auto;
+
+  section.hero {
+    padding-top: 8em;
+    background: url("../img/hero-artifacts.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 24rem;
+    
+
+
+    h1 {
+      color: black;
+      font-weight: 300;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+  }
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+.animation {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  padding-top: 3rem;
+}
+
+.market {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.market-title {
+  order: -2;
+  text-align: center;
+}
+
+$frame-count: 15;
+$offset-val: 160;
+
+.viewer {
+  height: 100%;
+  max-width: 320px;
+  width: 100%;
+  background-image: url(../img/market.png);
+  background-size: 5120px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  flex-basis: 320px;
+  border: solid 2px white;
+}
+
+.detail-01 {
+  flex: 1;
+  background-image: url(../img/marketClose01.png);
+}
+.detail-02 {
+  order: -1;
+  flex: 1;
+  background-image: url(../img/marketClose02.png);
+}
+
+@for $i from 1 through $frame-count {
+  .viewer.frame#{$i} {
+    background-position: -(($i * $offset-val) * 2) + px 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .market {
+    flex-flow: row;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .wrapper {
+    grid-template-rows: none;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+}

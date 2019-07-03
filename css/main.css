@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   padding: 1em;
   z-index: 20;
   display: -webkit-box;
@@ -170,7 +170,7 @@ header nav ul li a {
 }
 
 .wrapper footer p {
-  line-height: .25rem;
+  line-height: 0.25rem;
 }
 
 .wrapper footer a {
@@ -217,9 +217,6 @@ img.hide-image {
 }
 
 @media only screen and (min-width: 1020px) {
-  header {
-    background: none;
-  }
   .wrapper {
     -ms-grid-rows: 100%;
         grid-template-rows: 100%;

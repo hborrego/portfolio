@@ -21,3 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     false
   );
 });
+
+var images = [
+  "img/passport01.png"
+]
