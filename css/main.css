@@ -9,8 +9,22 @@ body {
   display: none;
 }
 
-header {
+a.back-to-top {
+  display: none;
   position: fixed;
+  z-index: 999;
+  right: 1em;
+  bottom: 1em;
+}
+
+a.back-to-top img {
+  width: 4.5em;
+  height: auto;
+  opacity: 50%;
+}
+
+header {
+  position: absolute;
   padding: 1em;
   z-index: 20;
   display: -webkit-box;
@@ -46,7 +60,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .wrapper {
@@ -56,13 +70,10 @@ header nav ul li a {
       grid-template-columns: auto;
 }
 
-.wrapper section {
-  padding: 3em;
-}
-
 .wrapper section h2 {
-  font-size: 2em;
-  margin-bottom: 0;
+  font-size: 1.5em;
+  margin-top: 0;
+  text-align: center;
 }
 
 .wrapper section .gallery {
@@ -146,16 +157,20 @@ header nav ul li a {
 }
 
 .wrapper section.hero h1 {
-  width: 70%;
+  width: 90%;
   font-size: 1.5rem;
 }
 
-.wrapper footer {
+section {
+  padding: 2em 2em;
+}
+
+footer {
   padding-bottom: 3em;
   text-align: center;
 }
 
-.wrapper footer ul {
+footer ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -169,15 +184,15 @@ header nav ul li a {
           padding-inline-start: 0%;
 }
 
-.wrapper footer p {
+footer p {
   line-height: 0.25rem;
 }
 
-.wrapper footer a {
+footer a {
   color: black;
 }
 
-.wrapper footer .icon {
+footer .icon {
   padding: 1rem;
   width: 1.5rem;
 }
@@ -214,13 +229,17 @@ img.hide-image {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
-}
-
-@media only screen and (min-width: 1020px) {
+  .site-content {
+    max-width: 48em;
+    margin: 0 auto;
+    display: block;
+  }
   .wrapper {
     -ms-grid-rows: 100%;
         grid-template-rows: 100%;
-    height: 100vh;
+  }
+  section {
+    padding: 1.5em 3em;
   }
   section {
     display: -ms-grid;
@@ -230,11 +249,41 @@ img.hide-image {
         -ms-flex-align: center;
             align-items: center;
   }
+  header nav ul li a {
+    padding: 1em;
+  }
+  header section.hero h1 {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .wrapper section.hero h1 {
+    width: 70%;
+  }
+  section {
+    padding: 2em 4em;
+  }
+  .site-content {
+    max-width: 60em;
+  }
 }
 
 @media only screen and (min-width: 1800px) {
   html {
     font-size: 21px;
+  }
+  section {
+    padding: 3em 8em;
+  }
+  .site-content {
+    max-width: 72em;
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  html {
+    font-size: 36px;
   }
 }
 /*# sourceMappingURL=main.css.map */

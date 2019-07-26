@@ -1,25 +1,65 @@
+section.hero {
+  background: url("../img/hero-artifacts.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 50vh;
+}
+
 .wrapper {
-  max-width: 1080px;
   margin: auto;
+  display: inline;
 
-  section.hero {
-    padding-top: 8em;
-    background: url("../img/hero-artifacts.jpg");
-    background-size: cover;
-    background-position: 50% 50%;
-    min-height: 24rem;
-    
-
-
-    h1 {
-      color: black;
-      font-weight: 300;
-      width: 100%;
-      text-align: center;
-      font-size: 1.5rem;
-    }
-
+  section {
+    padding: em;
   }
+  
+  h1 {
+    color: black;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .project-description {
+    text-align: center;
+    list-style: none;
+    padding-bottom: 1em;
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+section#holder {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.map{
+  display: flex;
+  flex-flow: column;
+}
+
+.text-passport {
+  display: none;
+}
+
+.hold-text {
+  display: block;
+}
+
+.active {
+  display: block;
 }
 
 svg {
@@ -31,8 +71,22 @@ svg {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
-  padding-top: 3rem;
+  text-align: center;
+  height: 50vh;
+}
+
+div.text-title {
+  height: 20vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.text-section {
+  height: 30vh;
+  display: flex;
+  flex-flow: column;
 }
 
 .market {
@@ -51,6 +105,7 @@ svg {
 
 $frame-count: 15;
 $offset-val: 160;
+$offset-val2: 320;
 
 .viewer {
   height: 100%;
@@ -61,7 +116,7 @@ $offset-val: 160;
   background-repeat: no-repeat;
   background-position: 0 50%;
   flex-basis: 320px;
-  border: solid 2px white;
+  border: solid 0.15em white;
 }
 
 .detail-01 {
@@ -81,8 +136,30 @@ $offset-val: 160;
 }
 
 @media only screen and (min-width: 768px) {
+  
   .market {
     flex-flow: row;
+  }
+
+  .animation {
+    height: auto;
+  }
+
+  .map {
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+  div.text-title {
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 1em;
+  }
+  div.text-section{
+    padding-left: 3em;
+    height: auto;
+    max-width: 30em;
   }
 }
 
@@ -90,7 +167,29 @@ $offset-val: 160;
   .wrapper {
     grid-template-rows: none;
   }
-}
 
+  svg {
+    max-width: 30em;
+  }
+}
 @media only screen and (min-width: 1800px) {
+
+  .viewer {
+    max-width: 640px;
+    background-size: 10240px;
+    flex-basis: 640px;
+    border: solid 0.25em white;
+  }
+
+  svg {
+    width: auto;
+    height: 100%;
+    max-width: 60em;
+  }
+
+  @for $i from 1 through $frame-count {
+    .viewer.frame#{$i} {
+      background-position: -(($i * $offset-val2) * 2) + px 50%;
+    }
+  }
 }

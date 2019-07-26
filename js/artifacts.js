@@ -12,11 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
       let selectAll = function(s) {
         return document.querySelectorAll(s);
       };
+
       // Set up our animation
       var passportAnimWindow = document.getElementById("passportLottie"),
         passportAnimData = {
           wrapper: passportAnimWindow,
-          renderer: "html",
+          renderer: "svg",
           loop: false,
           prerender: true,
           autoplay: false,
@@ -44,10 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
         );
       }
 
-      var viewer = document.querySelector(".viewer"),
-        frame_count = 15,
-        offset_value = 100;
-
       // ---------------------------------------------------------
       // ------------------ Scrolling Control--------------------
       // --------------------------------------------------------
@@ -61,14 +58,43 @@ document.addEventListener("DOMContentLoaded", function() {
       //-------------------------------------------------
       //----------- passport ANIMATIONS ---------------
       //-------------------------------------------------
+      var numPassport = $(".text-passport").length;
+
       let notpassportScene = new ScrollMagic.Scene({
-        triggerElement: "#passportLottie",
-        duration: "50%" //controls how long the scroll should be to display the animation
+        triggerElement: "#holder",
+        duration: numPassport * 100 //controls how long the scroll should be to display the animation
       })
         .setTween(tl)
-        .setPin(".animation") // set the div where the animation gets pined
+        .setPin("#holder") // set the div where the animation gets pined
+        .on("start", function() {
+          $(".passport0").toggleClass("hold-text");
+        }) // keeps first text visible when scrolling back
+        .on("end", function() {
+          $(".passport" + (numPassport - 1)).toggleClass("hold-text");
+        }) // keeps last text visible when scrolling pass animation
         .addIndicators() //triger, start and end indicators
         .addTo(controller);
+
+      //-------------------------------------------------
+      //----------- passport text ANIMATION ------------
+      //-------------------------------------------------
+
+      for (var i = 0, l = numPassport - 1; i <= l; i++) {
+        new ScrollMagic.Scene({
+          triggerElement: "#holder",
+          duration: 100,
+          offset: i * 100
+        })
+          .setClassToggle(".passport" + i, "active")
+          .addIndicators()
+          .addTo(controller);
+      }
+
+      //-------------------------------------------------
+      //----------- market drawing ANIMATION ------------
+      //-------------------------------------------------
+
+      (frame_count = 15), (offset_value = 100);
 
       // build pinned scene
       new ScrollMagic.Scene({

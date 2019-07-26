@@ -22,6 +22,4 @@ document.addEventListener("DOMContentLoaded", function() {
   );
 });
 
-var images = [
-  "img/passport01.png"
-]
+var images = ["img/passport01.png"];
