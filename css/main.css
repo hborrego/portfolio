@@ -63,6 +63,29 @@ header nav ul li a {
   padding: 0.5em;
 }
 
+p {
+  font-weight: 300;
+}
+
+h1 {
+  color: black;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .wrapper {
   display: -ms-grid;
   display: grid;
@@ -70,17 +93,19 @@ header nav ul li a {
       grid-template-columns: auto;
 }
 
-.wrapper section h2 {
-  font-size: 1.5em;
-  margin-top: 0;
-  text-align: center;
-}
-
 .wrapper section .gallery {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
+}
+
+.wrapper section .gallery h3 {
+  font-weight: 300;
+  font-size: 1.15rem;
+  background: rgba(255, 255, 255, 0.85);
+  display: inline-block;
+  padding: 0.5em 0.7em;
 }
 
 .wrapper section .gallery figure {
@@ -109,17 +134,7 @@ header nav ul li a {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  color: white;
   text-align: center;
-}
-
-.wrapper section .gallery figure figcaption h3 {
-  font-weight: 300;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background: black;
-  display: inline-block;
-  padding: 0.5em 0.7em;
 }
 
 .wrapper section .gallery .additional {
@@ -157,6 +172,7 @@ header nav ul li a {
 }
 
 .wrapper section.hero h1 {
+  text-align: left;
   width: 90%;
   font-size: 1.5rem;
 }

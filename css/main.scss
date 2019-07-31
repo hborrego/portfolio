@@ -55,18 +55,43 @@ header {
   }
 }
 
+p{
+  font-weight: 300;
+}
+
+h1 {
+  color: black;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: auto;
 
   section {
-    h2 {
-      font-size: 1.5em;
-      margin-top: 0;
-      text-align: center;
-    }
-
     .gallery {
+      h3 {
+        font-weight: 300;
+        font-size: 1.15rem;
+        background: rgba(255, 255, 255, .85);
+        display: inline-block;
+        padding: 0.5em 0.7em;
+      }
+
       display: grid;
       grid-template-columns: auto;
 
@@ -92,17 +117,7 @@ header {
           right: 0;
           margin-left: auto;
           margin-right: auto;
-          color: white;
           text-align: center;
-
-          h3 {
-            font-weight: 300;
-            font-size: 1rem;
-            text-transform: uppercase;
-            background: black;
-            display: inline-block;
-            padding: 0.5em 0.7em;
-          }
         }
       }
 
@@ -138,6 +153,7 @@ header {
     }
 
     h1 {
+      text-align: left;
       width: 90%;
       font-size: 1.5rem;
     }

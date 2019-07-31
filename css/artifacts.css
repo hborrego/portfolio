@@ -2,30 +2,12 @@ section.hero {
   background: url("../img/hero-artifacts.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  height: 50vh;
+  height: 35vh;
 }
 
 .wrapper {
   margin: auto;
   display: inline;
-}
-
-.wrapper section {
-  padding: em;
-}
-
-.wrapper h1 {
-  color: black;
-  font-weight: 300;
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.wrapper h2 {
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: center;
 }
 
 .wrapper .project-description {
@@ -38,7 +20,8 @@ section.hero {
   font-size: 1rem;
 }
 
-section#holder {
+#mapHolder {
+  background-color: #e6e7e8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +38,45 @@ section#holder {
           justify-content: center;
 }
 
+#marketHolder {
+  background-color: #e6e7e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#passportHolder {
+  display: -ms-grid;
+  display: grid;
+  height: 75vh;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animation-passport {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  min-height: 50vh;
+}
+
 .map {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,6 +85,10 @@ section#holder {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+}
+
+.text-map {
+  display: none;
 }
 
 .text-passport {
@@ -77,17 +103,13 @@ section#holder {
   display: block;
 }
 
-svg {
-  width: 100%;
-  height: auto;
-}
-
 .animation {
   position: relative;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  height: 50vh;
+  height: auto;
+  width: 100%;
 }
 
 div.text-title {
@@ -119,7 +141,8 @@ div.text-section {
 }
 
 .market {
-  height: 100vh;
+  height: 80vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,10 +162,14 @@ div.text-section {
 }
 
 .market-title {
-  -webkit-box-ordinal-group: -1;
-      -ms-flex-order: -2;
-          order: -2;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding-bottom: 1em;
 }
 
 .viewer {
@@ -152,13 +179,14 @@ div.text-section {
   background-image: url(../img/market.png);
   background-size: 5120px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 0 center;
   -ms-flex-preferred-size: 320px;
       flex-basis: 320px;
-  border: solid 0.15em white;
+  margin: 0.5em 0;
 }
 
 .detail-01 {
+  margin: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -166,6 +194,7 @@ div.text-section {
 }
 
 .detail-02 {
+  margin: 0;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
@@ -175,72 +204,126 @@ div.text-section {
   background-image: url(../img/marketClose02.png);
 }
 
+.carousel {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 75vh;
+}
+
+.carousel-cell {
+  height: 100%;
+  width: 100%;
+  margin: 0 1em;
+  /* center images in cells with flexbox */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  max-height: 100%;
+  width: 100%;
+}
+
+.carousel-cell img {
+  cursor: pointer;
+  display: block;
+  max-height: 100%;
+}
+
 .viewer.frame1 {
-  background-position: -320px 50%;
+  background-position: -320px center;
 }
 
 .viewer.frame2 {
-  background-position: -640px 50%;
+  background-position: -640px center;
 }
 
 .viewer.frame3 {
-  background-position: -960px 50%;
+  background-position: -960px center;
 }
 
 .viewer.frame4 {
-  background-position: -1280px 50%;
+  background-position: -1280px center;
 }
 
 .viewer.frame5 {
-  background-position: -1600px 50%;
+  background-position: -1600px center;
 }
 
 .viewer.frame6 {
-  background-position: -1920px 50%;
+  background-position: -1920px center;
 }
 
 .viewer.frame7 {
-  background-position: -2240px 50%;
+  background-position: -2240px center;
 }
 
 .viewer.frame8 {
-  background-position: -2560px 50%;
+  background-position: -2560px center;
 }
 
 .viewer.frame9 {
-  background-position: -2880px 50%;
+  background-position: -2880px center;
 }
 
 .viewer.frame10 {
-  background-position: -3200px 50%;
+  background-position: -3200px center;
 }
 
 .viewer.frame11 {
-  background-position: -3520px 50%;
+  background-position: -3520px center;
 }
 
 .viewer.frame12 {
-  background-position: -3840px 50%;
+  background-position: -3840px center;
 }
 
 .viewer.frame13 {
-  background-position: -4160px 50%;
+  background-position: -4160px center;
 }
 
 .viewer.frame14 {
-  background-position: -4480px 50%;
+  background-position: -4480px center;
 }
 
 .viewer.frame15 {
-  background-position: -4800px 50%;
+  background-position: -4800px center;
 }
 
 @media only screen and (min-width: 768px) {
+  section.hero {
+    height: 50vh;
+  }
+  .animation-passport {
+    min-height: 75vh;
+    min-width: 75vh;
+  }
+  #passportHolder {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
   .market {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+    height: 70vh;
+  }
+  .viewer {
+    margin: 0 0.5em;
+  }
+  .detail-01 {
+    margin: 0;
+  }
+  .detail-02 {
+    margin: 0;
   }
   .animation {
     height: auto;
@@ -267,10 +350,17 @@ div.text-section {
             justify-content: flex-start;
     padding-bottom: 1em;
   }
+  .market-title {
+    height: auto;
+    padding-bottom: 1em;
+  }
   div.text-section {
     padding-left: 3em;
     height: auto;
     max-width: 30em;
+  }
+  .carousel-cell {
+    width: 50%;
   }
 }
 
@@ -282,9 +372,15 @@ div.text-section {
   svg {
     max-width: 30em;
   }
+  .carousel-cell {
+    width: 33.33%;
+  }
 }
 
 @media only screen and (min-width: 1800px) {
+  .carousel-cell {
+    width: 25%;
+  }
   .viewer {
     max-width: 640px;
     background-size: 10240px;

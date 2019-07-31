@@ -5,36 +5,150 @@ document.addEventListener("DOMContentLoaded", function() {
     function() {
       document.body.style.display = "block";
 
-      let select = function(s) {
-        return document.querySelector(s);
+      var options = {
+        wrapAround: true,
+        autoPlay: true,
+        prevNextButtons: false,
+        lazyLoad: 3
       };
 
-      let selectAll = function(s) {
-        return document.querySelectorAll(s);
-      };
+      if (matchMedia("screen and (min-width: 768px)").matches) {
+        options.prevNextButtons = true;
+      }
 
-      // Set up our animation
-      var passportAnimWindow = document.getElementById("passportLottie"),
-        passportAnimData = {
-          wrapper: passportAnimWindow,
+      if (matchMedia("screen and (min-width: 1200px)").matches) {
+        options.draggable = false;
+      }
+
+      $(".carousel").flickity(options);
+
+      $(".carousel").on("staticClick.flickity", function(
+        event,
+        pointer,
+        cellElement,
+        cellIndex
+      ) {
+        if (typeof cellIndex == "number") {
+          $(".carousel").flickity("select", cellIndex);
+        }
+        $(".carousel").flickity("toggleFullscreen");
+      });
+
+      // --------------------------------------------------------
+      // ------------------ Scrolling Control--------------------
+      // --------------------------------------------------------
+      var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+          triggerHook: 0,
+          reverse: true
+        }
+      });
+
+      // --------------------------------------------------------
+      // ------------------ Lottie Animations -------------------
+      // --------------------------------------------------------
+
+      // 1. Set up for Map animation
+
+      var mapAnimWindow = document.getElementById("mapLottie"),
+        mapAnimData = {
+          wrapper: mapAnimWindow,
           renderer: "svg",
           loop: false,
           prerender: true,
           autoplay: false,
-          path: "../json/passport.json"
+          path: "../json/map/map.json"
         };
-      var passportAnim = bodymovin.loadAnimation(passportAnimData);
-      passportAnim.addEventListener("DOMLoaded", onPassportDOMLoaded);
+      var mapAnim = bodymovin.loadAnimation(mapAnimData);
+      mapAnim.addEventListener("DOMLoaded", onmapDOMLoaded);
 
-      // --------passport TLs-------------
-      var tl = new TimelineMax();
+      // 2. TimelineMax Map animation
 
-      function onPassportDOMLoaded(e) {
-        tl.to(
+      var mapTL = new TimelineMax(); // new TimelineMax
+
+      function onmapDOMLoaded(e) {
+        mapTL.to(
           {
             frame: 0
           },
           3,
+          {
+            frame: mapAnim.totalFrames - 1,
+            onUpdate: function() {
+              mapAnim.goToAndStop(Math.round(this.target.frame), true);
+            },
+            ease: Linear.easeNone
+          }
+        );
+      }
+
+      // 3. ScrollMagic Map Animation
+
+      var numMap = $(".text-map").length;
+
+      new ScrollMagic.Scene({
+        triggerElement: "#mapHolder",
+        duration: numMap * 100 //controls how long the scroll should be to display the animation
+      })
+        .setTween(mapTL)
+        .setPin("#mapHolder") // set the div where the animation gets pined
+        .on("start", function() {
+          $(".map0").toggleClass("hold-text");
+        }) // keeps first text visible when scrolling back
+        .on("end", function() {
+          $(".map" + (numMap - 1)).toggleClass("hold-text");
+        }) // keeps last text visible when scrolling pass animation
+        // .addIndicators() //triger, start and end indicators
+        .addTo(controller);
+
+      // 4. ScrollMagic Map Text
+
+      for (var i = 0, l = numMap - 1; i <= l; i++) {
+        new ScrollMagic.Scene({
+          triggerElement: "#mapHolder",
+          duration: 100,
+          offset: i * 100
+        })
+          .setClassToggle(".map" + i, "active")
+          // .addIndicators()
+          .addTo(controller);
+      }
+
+      // --------------------------------------------------------
+      // ------------------ Passport Animation ------------------
+      // --------------------------------------------------------
+
+      var controller2 = new ScrollMagic.Controller({
+        globalSceneOptions: {
+          triggerHook: 0.125,
+          reverse: true
+        }
+      });
+
+      // 1. Set up for Passport animation
+
+      var passportAnimWindow = document.getElementById("passportLottie"),
+        passportAnimData = {
+          wrapper: passportAnimWindow,
+          renderer: "html",
+          loop: false,
+          prerender: true,
+          autoplay: false,
+          path: "../json/passport/passport.json"
+        };
+      var passportAnim = bodymovin.loadAnimation(passportAnimData);
+      passportAnim.addEventListener("DOMLoaded", onPassportDOMLoaded);
+
+      // 2. TimelineMax Passport animation
+
+      var passportTL = new TimelineMax(); // new TimelineMax
+
+      function onPassportDOMLoaded() {
+        passportTL.to(
+          {
+            frame: 0
+          },
+          1.5,
           {
             frame: passportAnim.totalFrames - 1,
             onUpdate: function() {
@@ -45,75 +159,40 @@ document.addEventListener("DOMContentLoaded", function() {
         );
       }
 
-      // ---------------------------------------------------------
-      // ------------------ Scrolling Control--------------------
-      // --------------------------------------------------------
-      var controller = new ScrollMagic.Controller({
-        globalSceneOptions: {
-          triggerHook: 0,
-          reverse: true
-        }
-      });
+      // 3. ScrollMagic Passport Animation
 
-      //-------------------------------------------------
-      //----------- passport ANIMATIONS ---------------
-      //-------------------------------------------------
-      var numPassport = $(".text-passport").length;
-
-      let notpassportScene = new ScrollMagic.Scene({
-        triggerElement: "#holder",
-        duration: numPassport * 100 //controls how long the scroll should be to display the animation
+      new ScrollMagic.Scene({
+        triggerElement: "#passportLottie"
       })
-        .setTween(tl)
-        .setPin("#holder") // set the div where the animation gets pined
-        .on("start", function() {
-          $(".passport0").toggleClass("hold-text");
-        }) // keeps first text visible when scrolling back
-        .on("end", function() {
-          $(".passport" + (numPassport - 1)).toggleClass("hold-text");
-        }) // keeps last text visible when scrolling pass animation
-        .addIndicators() //triger, start and end indicators
-        .addTo(controller);
+        .setTween(passportTL)
+        // .setPin("#passportLottie") // set the id where the animation gets pined
+        // .addIndicators() //triger, start and end indicators
+        .addTo(controller2);
 
-      //-------------------------------------------------
-      //----------- passport text ANIMATION ------------
-      //-------------------------------------------------
+      // --------------------------------------------------------
+      // --------------- Market Drawing ANIMATION ---------------
+      // --------------------------------------------------------
 
-      for (var i = 0, l = numPassport - 1; i <= l; i++) {
-        new ScrollMagic.Scene({
-          triggerElement: "#holder",
-          duration: 100,
-          offset: i * 100
-        })
-          .setClassToggle(".passport" + i, "active")
-          .addIndicators()
-          .addTo(controller);
-      }
-
-      //-------------------------------------------------
-      //----------- market drawing ANIMATION ------------
-      //-------------------------------------------------
-
-      (frame_count = 15), (offset_value = 100);
+      (frame_count = 15), (offset_value = 50);
 
       // build pinned scene
       new ScrollMagic.Scene({
-        triggerElement: "#sticky",
+        triggerElement: "#marketHolder",
         duration: frame_count * offset_value + "px",
         reverse: true
       })
-        .setPin("#sticky")
-        .addIndicators()
+        .setPin("#marketHolder")
+        // .addIndicators()
         .addTo(controller);
 
       // build step frame scene
       for (var i = 1, l = frame_count; i <= l; i++) {
         new ScrollMagic.Scene({
-          triggerElement: "#sticky",
+          triggerElement: "#marketHolder",
           offset: i * offset_value
         })
           .setClassToggle(".viewer", "frame" + i)
-          .addIndicators()
+          // .addIndicators()
           .addTo(controller);
       }
     },

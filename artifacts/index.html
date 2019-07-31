@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Space+Mono&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/flickity.css" />
+    <link rel="stylesheet" href="../css/fullscreen.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/artifacts.css" />
   </head>
@@ -44,39 +46,39 @@
           </p>
         </div>
       </section>
-      <section id="holder">
+      <section id="mapHolder">
         <div class="text-title site-content">
-          <h2>A Brief Background Facts</h2>
+          <h2>A Brief Background</h2>
         </div>
         <div class="map site-content">
-          <div id="passportLottie" class="animation"></div>
+          <div id="mapLottie" class="animation"></div>
           <div class="text-section site-content">
-            <p class="text-passport passport0 hold-text">
+            <p class="text-map map0 hold-text">
               The Archipelago of San Andres, Providencia and Santa Catalina is
               situated in the Caribbean Sea, at the maritime border between
               Nicaragua and Colombia. The archipelago is home of the Raizals — a
               Creole-speaking people of Afro-Caribbean and British descent — who
               have occupied the archipelago for centuries.
             </p>
-            <p class="text-passport passport1">
+            <p class="text-map map1">
               Historically, the archipelago has been a highly contested
               territory between nations — most notably between Colombia and
               Nicaragua — for its territorial waters, which have caused
               generations of negligence and displacement for the Raizals.
             </p>
-            <p class="text-passport passport2">
+            <p class="text-map map2">
               Since the Raizals are citizens of Colombia, the fight between
               Managua and Bogotá in the last decade over their territory has
               created a series of inconvenient divisions in the place that they
               have always known, related to, and understood.
             </p>
-            <p class="text-passport passport3">
+            <p class="text-map map3">
               The Raizals have lost their freedom to fish and visit the places
               that they have gone to for centuries. Although these territorial
               divisions are merely a series of dotted lines illustrated on maps,
               they are enforced and affect their freedom.
             </p>
-            <p class="text-passport passport4">
+            <p class="text-map map4">
               These debates between nations have ignored the fact that the
               archipelago is a network of islands, banks, cays, and other atolls
               that act as one connected system and as such, the Raizals should
@@ -100,7 +102,68 @@
           Nicaragua claimed sovereignty over some islands and the maritime
           border with Colombia, right across the archipelago.
         </p>
-        <div></div>
+      </section>
+
+      <section class="site-content">
+        <div id="passport">
+          <div>
+            <h2>This is a title</h2>
+          </div>
+          <div id="passportHolder">
+            <div id="passportLottie" class="animation-passport"></div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                deserunt sequi maxime vitae eum sed esse voluptatum assumenda
+                nobis culpa sit blanditiis odit, obcaecati saepe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+          reprehenderit officia magnam est. Maiores deleniti minus, nesciunt
+          expedita et eos ab sed iure blanditiis aperiam earum magni culpa, quam
+          vero delectus, labore error assumenda nostrum dolor dolorem cumque
+          aspernatur? Asperiores quae nobis excepturi explicabo fugit esse hic
+          distinctio sit temporibus.
+        </p>
+      </section>
+
+      <div class="site-content">
+        <h2>The Drawings</h2>
+        <div class="carousel ">
+          <div class="carousel-cell">
+            <img src="../img/Elevation.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../img/Axo.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../img/Market.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../img/FishermanHut.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../img/Football.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../img/Aerial.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../img/Boardwalk.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../img/Posts.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <section class="site-content">
         <p>
           As Eric takes a glimpse to the map in the newspaper, which illustrated
           the new limits, he noticed that Quita Sueño and Serrana are now
@@ -119,11 +182,16 @@
         </p>
       </section>
     </div>
-    
-    <section class="market" id="sticky">
-      <div class="viewer"></div>
-      <div class="viewer detail-01"></div>
-      <div class="viewer detail-02"></div>
+
+    <section id="marketHolder">
+      <div class="market-title site-content">
+        <h2>Drawing Process</h2>
+      </div>
+      <div class="market">
+        <div class="viewer"></div>
+        <div class="viewer detail-01"></div>
+        <div class="viewer detail-02"></div>
+      </div>
     </section>
 
     <footer class="footer">
@@ -155,6 +223,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../js/flickity.pkgd.min.js"></script>
+    <script src="../js/fullscreen.js"></script>
     <script src="../js/artifacts.js"></script>
     <script src="../js/scroll.js"></script>
   </body>

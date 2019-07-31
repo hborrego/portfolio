@@ -2,30 +2,12 @@ section.hero {
   background: url("../img/hero-artifacts.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  height: 50vh;
+  height: 35vh;
 }
 
 .wrapper {
   margin: auto;
   display: inline;
-
-  section {
-    padding: em;
-  }
-  
-  h1 {
-    color: black;
-    font-weight: 300;
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1rem;
-    font-weight: 300;
-    text-align: center;
-  }
 
   .project-description {
     text-align: center;
@@ -37,7 +19,8 @@ section.hero {
   }
 }
 
-section#holder {
+#mapHolder {
+  background-color: #e6e7e8;
   display: flex;
   flex-flow: column;
   height: 100vh;
@@ -45,9 +28,37 @@ section#holder {
   justify-content: center;
 }
 
-.map{
+#marketHolder {
+  background-color: #e6e7e8;
   display: flex;
   flex-flow: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#passportHolder {
+  display: grid;
+  height: 75vh;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-passport {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  min-height: 50vh;
+}
+
+.map {
+  display: flex;
+  flex-flow: column;
+}
+
+.text-map {
+  display: none;
 }
 
 .text-passport {
@@ -62,17 +73,13 @@ section#holder {
   display: block;
 }
 
-svg {
-  width: 100%;
-  height: auto;
-}
-
 .animation {
   position: relative;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  height: 50vh;
+  height: auto;
+  width: 100%;
 }
 
 div.text-title {
@@ -90,7 +97,8 @@ div.text-section {
 }
 
 .market {
-  height: 100vh;
+  height: 80vh;
+  width: 100%;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -99,8 +107,9 @@ div.text-section {
 }
 
 .market-title {
-  order: -2;
-  text-align: center;
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 1em;
 }
 
 $frame-count: 15;
@@ -114,31 +123,84 @@ $offset-val2: 320;
   background-image: url(../img/market.png);
   background-size: 5120px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 0 center;
   flex-basis: 320px;
-  border: solid 0.15em white;
+  margin: 0.5em 0;
 }
 
 .detail-01 {
+  margin: 0;
   flex: 1;
   background-image: url(../img/marketClose01.png);
 }
 .detail-02 {
+  margin: 0;
   order: -1;
   flex: 1;
   background-image: url(../img/marketClose02.png);
 }
 
+.carousel {
+  box-sizing: border-box;
+  height: 75vh;
+}
+
+.carousel-cell {
+  height: 100%;
+  width: 100%;
+  margin: 0 1em;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  max-height: 100%;
+  width: 100%;
+}
+
+.carousel-cell img {
+  cursor: pointer;
+  display: block;
+  max-height: 100%;
+}
+
 @for $i from 1 through $frame-count {
   .viewer.frame#{$i} {
-    background-position: -(($i * $offset-val) * 2) + px 50%;
+    background-position: -(($i * $offset-val) * 2) + px center;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  
+  section.hero {
+    height: 50vh;
+  }
+
+  .animation-passport {
+    min-height: 75vh;
+    min-width: 75vh;
+  }
+
+  #passportHolder {
+    grid-template-columns: auto auto;
+  }
+
   .market {
     flex-flow: row;
+    height: 70vh;
+  }
+
+  .viewer {
+    margin: 0 0.5em;
+  }
+
+  .detail-01 {
+    margin: 0;
+  }
+
+  .detail-02 {
+    margin: 0;
   }
 
   .animation {
@@ -156,10 +218,18 @@ $offset-val2: 320;
     justify-content: flex-start;
     padding-bottom: 1em;
   }
-  div.text-section{
+  .market-title {
+    height: auto;
+    padding-bottom: 1em;
+  }
+  div.text-section {
     padding-left: 3em;
     height: auto;
     max-width: 30em;
+  }
+
+  .carousel-cell {
+    width: 50%;
   }
 }
 
@@ -171,8 +241,15 @@ $offset-val2: 320;
   svg {
     max-width: 30em;
   }
+
+  .carousel-cell {
+    width: 33.33%;
+  }
 }
 @media only screen and (min-width: 1800px) {
+  .carousel-cell {
+    width: 25%;
+  }
 
   .viewer {
     max-width: 640px;
