@@ -55,27 +55,96 @@ header {
   }
 }
 
-p{
+.flex {
+  display: flex;
+}
+
+.flex-align-end {
+  align-items: flex-end;
+}
+
+.block {
+  display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+p {
   font-weight: 300;
+}
+
+.text-narrow {
+  max-width: 36em;
+  margin: auto;
+}
+
+.padding-top-1 {
+  padding-top: 1em;
+}
+
+.padding-top-2 {
+  padding-top: 2em;
+}
+
+.padding-top-3 {
+  padding-top: 3em;
+}
+
+.text-disclaimer {
+  font-size: 1em;
+}
+
+.text-margin-bt-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-margin-top-0 {
+  margin-top: 0;
+}
+
+.text-margin-top-25 {
+  margin-top: 1em;
+}
+
+.text-desc-title {
+  margin-bottom: 0.25em;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.text-desc-details {
+  padding-top: 1rem;
 }
 
 h1 {
   color: black;
   font-weight: 300;
   width: 100%;
-  text-align: center;
   font-size: 2rem;
 }
 
 h2 {
   font-size: 1.5em;
+  font-weight: 300;
   margin-top: 0;
-  text-align: center;
 }
 
 h3 {
-  font-weight: 700;
-  font-size: 1rem;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.image-container {
+  width: calc(100% + 0.5em);
+  margin-left: -0.25em;
 }
 
 .wrapper {
@@ -84,10 +153,13 @@ h3 {
 
   section {
     .gallery {
+      width: calc(100% + 0.5em);
+      margin-left: -0.25em;
+
       h3 {
         font-weight: 300;
         font-size: 1.15rem;
-        background: rgba(255, 255, 255, .85);
+        background: rgba(255, 255, 255, 0.85);
         display: inline-block;
         padding: 0.5em 0.7em;
       }
@@ -96,7 +168,7 @@ h3 {
       grid-template-columns: auto;
 
       figure {
-        margin: 6px;
+        margin: 0.25em;
         overflow: hidden;
         position: relative;
         background: none;
@@ -105,7 +177,6 @@ h3 {
         img {
           width: calc(100% + 6px);
           opacity: 1;
-          transform: translate3d(0, -20px, 0) scale(1.12);
           transition: all 0.5s;
         }
 
@@ -118,6 +189,7 @@ h3 {
           margin-left: auto;
           margin-right: auto;
           text-align: center;
+          pointer-events: none;
         }
       }
 
@@ -126,46 +198,32 @@ h3 {
         transform: scale(1);
         transition: all 0.5s;
       }
-    }
 
-    figure:hover {
-      background: white;
-    }
+      figure:hover {
+        background: white;
+      }
 
-    figure:hover img {
-      opacity: 0.4;
-    }
+      figure:hover img {
+        opacity: 0.4;
+      }
 
-    figure:hover .additional {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  section.hero {
-    padding-top: 8em;
-    background: url("../img/hero-background.jpg");
-    background-size: cover;
-    h1,
-    a {
-      color: white;
-      font-weight: 300;
-    }
-
-    h1 {
-      text-align: left;
-      width: 90%;
-      font-size: 1.5rem;
+      figure:hover .additional {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 }
 
 section {
-  padding: 2em 2em;
+  padding: 2em 1em;
+  padding-top: 0;
 }
 
 footer {
   padding-bottom: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
   text-align: center;
 
   ul {
@@ -174,10 +232,6 @@ footer {
     align-content: center;
     list-style-type: none;
     padding-inline-start: 0%;
-  }
-
-  p {
-    line-height: 0.25rem;
   }
 
   a {
@@ -203,11 +257,38 @@ img.hide-image {
 
 .inline:hover img {
   display: inline;
+  pointer-events: none;
+
+}
+
+.hero-about {
+  padding: 0 0;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+
+  .about-pic {
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+
+  .about-text {
+    padding: 2em;
+    h3 {
+      font-weight: 300;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
   html {
     font-size: 18px;
+  }
+
+  .grid-columns-2 {
+    grid-template-columns: auto auto;
   }
 
   .wrapper section .gallery {
@@ -224,7 +305,6 @@ img.hide-image {
   .site-content {
     max-width: 48em;
     margin: 0 auto;
-    display: block;
   }
 
   .wrapper {
@@ -256,19 +336,29 @@ img.hide-image {
 }
 
 @media only screen and (min-width: 1020px) {
-  .wrapper {
-    section.hero {
-      h1 {
-        width: 70%;
-      }
-    }
-  }
   section {
     padding: 2em 4em;
   }
 
   .site-content {
     max-width: 60em;
+  }
+
+  .hero-about {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 8em 2em;
+
+    .about-pic {
+      align-items: center;
+      img {
+      }
+    }
+
+    .about-text {
+      padding-top: 0;
+      padding-left: 3em;
+    }
   }
 }
 

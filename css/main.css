@@ -63,27 +63,101 @@ header nav ul li a {
   padding: 0.5em;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-align-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.block {
+  display: block;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
 p {
   font-weight: 300;
+}
+
+.text-narrow {
+  max-width: 36em;
+  margin: auto;
+}
+
+.padding-top-1 {
+  padding-top: 1em;
+}
+
+.padding-top-2 {
+  padding-top: 2em;
+}
+
+.padding-top-3 {
+  padding-top: 3em;
+}
+
+.text-disclaimer {
+  font-size: 1em;
+}
+
+.text-margin-bt-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-margin-top-0 {
+  margin-top: 0;
+}
+
+.text-margin-top-25 {
+  margin-top: 1em;
+}
+
+.text-desc-title {
+  margin-bottom: 0.25em;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.text-desc-details {
+  padding-top: 1rem;
 }
 
 h1 {
   color: black;
   font-weight: 300;
   width: 100%;
-  text-align: center;
   font-size: 2rem;
 }
 
 h2 {
   font-size: 1.5em;
+  font-weight: 300;
   margin-top: 0;
-  text-align: center;
 }
 
 h3 {
-  font-weight: 700;
-  font-size: 1rem;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.image-container {
+  width: calc(100% + 0.5em);
+  margin-left: -0.25em;
 }
 
 .wrapper {
@@ -94,6 +168,8 @@ h3 {
 }
 
 .wrapper section .gallery {
+  width: calc(100% + 0.5em);
+  margin-left: -0.25em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
@@ -109,7 +185,7 @@ h3 {
 }
 
 .wrapper section .gallery figure {
-  margin: 6px;
+  margin: 0.25em;
   overflow: hidden;
   position: relative;
   background: none;
@@ -120,8 +196,6 @@ h3 {
 .wrapper section .gallery figure img {
   width: calc(100% + 6px);
   opacity: 1;
-  -webkit-transform: translate3d(0, -20px, 0) scale(1.12);
-          transform: translate3d(0, -20px, 0) scale(1.12);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -135,6 +209,7 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  pointer-events: none;
 }
 
 .wrapper section .gallery .additional {
@@ -145,44 +220,29 @@ h3 {
   transition: all 0.5s;
 }
 
-.wrapper section figure:hover {
+.wrapper section .gallery figure:hover {
   background: white;
 }
 
-.wrapper section figure:hover img {
+.wrapper section .gallery figure:hover img {
   opacity: 0.4;
 }
 
-.wrapper section figure:hover .additional {
+.wrapper section .gallery figure:hover .additional {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.wrapper section.hero {
-  padding-top: 8em;
-  background: url("../img/hero-background.jpg");
-  background-size: cover;
-}
-
-.wrapper section.hero h1,
-.wrapper section.hero a {
-  color: white;
-  font-weight: 300;
-}
-
-.wrapper section.hero h1 {
-  text-align: left;
-  width: 90%;
-  font-size: 1.5rem;
-}
-
 section {
-  padding: 2em 2em;
+  padding: 2em 1em;
+  padding-top: 0;
 }
 
 footer {
   padding-bottom: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
   text-align: center;
 }
 
@@ -198,10 +258,6 @@ footer ul {
   list-style-type: none;
   -webkit-padding-start: 0%;
           padding-inline-start: 0%;
-}
-
-footer p {
-  line-height: 0.25rem;
 }
 
 footer a {
@@ -226,11 +282,41 @@ img.hide-image {
 
 .inline:hover img {
   display: inline;
+  pointer-events: none;
+}
+
+.hero-about {
+  padding: 0 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  justify-items: center;
+}
+
+.hero-about .about-pic {
+  position: relative;
+}
+
+.hero-about .about-pic img {
+  width: 100%;
+}
+
+.hero-about .about-text {
+  padding: 2em;
+}
+
+.hero-about .about-text h3 {
+  font-weight: 300;
 }
 
 @media only screen and (min-width: 768px) {
   html {
     font-size: 18px;
+  }
+  .grid-columns-2 {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
   }
   .wrapper section .gallery {
     display: -ms-grid;
@@ -248,7 +334,6 @@ img.hide-image {
   .site-content {
     max-width: 48em;
     margin: 0 auto;
-    display: block;
   }
   .wrapper {
     -ms-grid-rows: 100%;
@@ -274,14 +359,27 @@ img.hide-image {
 }
 
 @media only screen and (min-width: 1020px) {
-  .wrapper section.hero h1 {
-    width: 70%;
-  }
   section {
     padding: 2em 4em;
   }
   .site-content {
     max-width: 60em;
+  }
+  .hero-about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    padding: 8em 2em;
+  }
+  .hero-about .about-pic {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero-about .about-text {
+    padding-top: 0;
+    padding-left: 3em;
   }
 }
 
