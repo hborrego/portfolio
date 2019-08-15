@@ -5,34 +5,34 @@ document.addEventListener("DOMContentLoaded", function() {
     function() {
       document.body.style.display = "block";
 
-      var options = {
-        wrapAround: true,
-        autoPlay: true,
-        prevNextButtons: false,
-        lazyLoad: 3
-      };
+      // $('[data-fancybox="gallery"]').fancybox({
+      //   afterLoad: function(instance, current) {
+      //     var pixelRatio = window.devicePixelRatio || 1;
 
-      if (matchMedia("screen and (min-width: 768px)").matches) {
-        options.prevNextButtons = true;
-      }
+      //     if (pixelRatio > 1.5) {
+      //       current.width = current.width / pixelRatio;
+      //       current.height = current.height / pixelRatio;
+      //     }
+      //   }
+      // });
 
-      if (matchMedia("screen and (min-width: 1200px)").matches) {
-        options.draggable = false;
-      }
+      // var options = {
+      //   delegate: "a",
+      //   type: "image",
+      //   gallery: {
+      //     enabled: true
+      //   }
+      // };
 
-      $(".carousel").flickity(options);
+      // if (matchMedia("screen and (min-width: 768px)").matches) {
+      //   options.
+      // }
 
-      $(".carousel").on("staticClick.flickity", function(
-        event,
-        pointer,
-        cellElement,
-        cellIndex
-      ) {
-        if (typeof cellIndex == "number") {
-          $(".carousel").flickity("select", cellIndex);
-        }
-        $(".carousel").flickity("toggleFullscreen");
-      });
+      // if (matchMedia("screen and (min-width: 1200px)").matches) {
+      //   options.draggable = false;
+      // }
+
+      // $(".project-gallery").magnificPopup(options);
 
       // --------------------------------------------------------
       // ------------------ Scrolling Control--------------------
@@ -87,11 +87,11 @@ document.addEventListener("DOMContentLoaded", function() {
       var numMap = $(".text-map").length;
 
       new ScrollMagic.Scene({
-        triggerElement: "#mapHolder",
-        duration: numMap * 100 //controls how long the scroll should be to display the animation
+        triggerElement: "#map",
+        duration: numMap * 133 //controls how long the scroll should be to display the animation
       })
         .setTween(mapTL)
-        .setPin("#mapHolder") // set the div where the animation gets pined
+        .setPin("#map") // set the div where the animation gets pined
         .on("start", function() {
           $(".map0").toggleClass("hold-text");
         }) // keeps first text visible when scrolling back
@@ -105,9 +105,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
       for (var i = 0, l = numMap - 1; i <= l; i++) {
         new ScrollMagic.Scene({
-          triggerElement: "#mapHolder",
-          duration: 100,
-          offset: i * 100
+          triggerElement: "#map",
+          duration: 133,
+          offset: i * 133
         })
           .setClassToggle(".map" + i, "active")
           // .addIndicators()
@@ -117,14 +117,12 @@ document.addEventListener("DOMContentLoaded", function() {
       // --------------------------------------------------------
       // ------------------ Passport Animation ------------------
       // --------------------------------------------------------
-
       var controller2 = new ScrollMagic.Controller({
         globalSceneOptions: {
           triggerHook: 0.125,
           reverse: true
         }
       });
-
       // 1. Set up for Passport animation
 
       var passportAnimWindow = document.getElementById("passportLottie"),
@@ -162,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // 3. ScrollMagic Passport Animation
 
       new ScrollMagic.Scene({
-        triggerElement: "#passportLottie"
+        triggerElement: "#passport"
       })
         .setTween(passportTL)
         // .setPin("#passportLottie") // set the id where the animation gets pined
@@ -173,28 +171,148 @@ document.addEventListener("DOMContentLoaded", function() {
       // --------------- Market Drawing ANIMATION ---------------
       // --------------------------------------------------------
 
-      (frame_count = 15), (offset_value = 50);
+      // 1. Set up for Market animation
 
-      // build pinned scene
+      var marketAnimWindow = document.getElementById("marketLottie"),
+        marketAnimData = {
+          wrapper: marketAnimWindow,
+          renderer: "svg",
+          loop: false,
+          prerender: true,
+          autoplay: false,
+          path: "../json/market/market.json"
+        };
+      var marketAnim = bodymovin.loadAnimation(marketAnimData);
+      marketAnim.addEventListener("DOMLoaded", onmarketDOMLoaded);
+
+      // 2. TimelineMax Market animation
+
+      var marketTL = new TimelineMax(); // new TimelineMax
+
+      function onmarketDOMLoaded(e) {
+        marketTL.to(
+          {
+            frame: 0
+          },
+          3,
+          {
+            frame: marketAnim.totalFrames - 1,
+            onUpdate: function() {
+              marketAnim.goToAndStop(Math.round(this.target.frame), true);
+            },
+            ease: Linear.easeNone
+          }
+        );
+      }
+
+      // 3. ScrollMagic Market Animation
+
       new ScrollMagic.Scene({
-        triggerElement: "#marketHolder",
-        duration: frame_count * offset_value + "px",
-        reverse: true
+        triggerElement: "#market",
+        duration: 500 //controls how long the scroll should be to display the animation
       })
-        .setPin("#marketHolder")
-        // .addIndicators()
+        .setTween(marketTL)
+        .setPin("#market") // set the div where the animation gets pined
+        // .addIndicators() //triger, start and end indicators
         .addTo(controller);
 
-      // build step frame scene
-      for (var i = 1, l = frame_count; i <= l; i++) {
-        new ScrollMagic.Scene({
-          triggerElement: "#marketHolder",
-          offset: i * offset_value
-        })
-          .setClassToggle(".viewer", "frame" + i)
-          // .addIndicators()
-          .addTo(controller);
+      // --------------------------------------------------------
+      // -------------- Market Detail 03 ANIMATION --------------
+      // --------------------------------------------------------
+
+      // 1. Set up for market01 animation
+
+      var market01AnimWindow = document.getElementById("market01Lottie"),
+        market01AnimData = {
+          wrapper: market01AnimWindow,
+          renderer: "svg",
+          loop: false,
+          prerender: true,
+          autoplay: false,
+          path: "../json/market01/market01.json"
+        };
+      var market01Anim = bodymovin.loadAnimation(market01AnimData);
+      market01Anim.addEventListener("DOMLoaded", onmarket01DOMLoaded);
+
+      // 2. TimelineMax market01 animation
+
+      var market01TL = new TimelineMax(); // new TimelineMax
+
+      function onmarket01DOMLoaded(e) {
+        market01TL.to(
+          {
+            frame: 0
+          },
+          3,
+          {
+            frame: market01Anim.totalFrames - 1,
+            onUpdate: function() {
+              market01Anim.goToAndStop(Math.round(this.target.frame), true);
+            },
+            ease: Linear.easeNone
+          }
+        );
       }
+
+      // 3. ScrollMagic market01 Animation
+
+      new ScrollMagic.Scene({
+        triggerElement: "#market",
+        duration: 500 //controls how long the scroll should be to display the animation
+      })
+        .setTween(market01TL)
+        .setPin("#market01") // set the div where the animation gets pined
+        // .addIndicators() //triger, start and end indicators
+        .addTo(controller);
+
+      // --------------------------------------------------------
+      // -------------- Market Detail 02 ANIMATION --------------
+      // --------------------------------------------------------
+
+      // 1. Set up for market02 animation
+
+      var market02AnimWindow = document.getElementById("market02Lottie"),
+        market02AnimData = {
+          wrapper: market02AnimWindow,
+          renderer: "svg",
+          loop: false,
+          prerender: true,
+          autoplay: false,
+          path: "../json/market02/market02.json"
+        };
+      var market02Anim = bodymovin.loadAnimation(market02AnimData);
+      market02Anim.addEventListener("DOMLoaded", onmarket02DOMLoaded);
+
+      // 2. TimelineMax market02 animation
+
+      var market02TL = new TimelineMax(); // new TimelineMax
+
+      function onmarket02DOMLoaded(e) {
+        market02TL.to(
+          {
+            frame: 0
+          },
+          3,
+          {
+            frame: market02Anim.totalFrames - 1,
+            onUpdate: function() {
+              market02Anim.goToAndStop(Math.round(this.target.frame), true);
+            },
+            ease: Linear.easeNone
+          }
+        );
+      }
+
+      // 3. ScrollMagic market02 Animation
+
+      new ScrollMagic.Scene({
+        triggerElement: "#market",
+        duration: 500 //controls how long the scroll should be to display the animation
+      })
+        .setTween(market02TL)
+        .setPin("#market02") // set the div where the animation gets pined
+        // .addIndicators() //triger, start and end indicators
+        .addTo(controller);
     },
     false
   );

@@ -88,6 +88,10 @@ p {
   font-weight: 300;
 }
 
+a {
+  color: black;
+}
+
 .text-narrow {
   max-width: 36em;
   margin: auto;
@@ -124,8 +128,8 @@ p {
 
 .text-desc-title {
   margin-bottom: 0.25em;
-  font-family: "Merriweather", serif;
-  font-weight: 300;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
 }
 
 .text-desc-details {
@@ -146,9 +150,16 @@ h2 {
 }
 
 h3 {
-  font-family: "Merriweather", serif;
-  font-weight: 300;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
   font-size: 1.25em;
+}
+
+h4 {
+  font-family: "Space Mono", monospace;
+  font-size: 1.125em;
+  font-weight: 400;
+  margin-top: 0;
 }
 
 .text-center {
@@ -177,7 +188,6 @@ h3 {
 }
 
 .wrapper section .gallery h3 {
-  font-weight: 300;
   font-size: 1.15rem;
   background: rgba(255, 255, 255, 0.85);
   display: inline-block;
@@ -296,6 +306,7 @@ img.hide-image {
 
 .hero-about .about-pic {
   position: relative;
+  margin-top: 2em;
 }
 
 .hero-about .about-pic img {
@@ -303,7 +314,7 @@ img.hide-image {
 }
 
 .hero-about .about-text {
-  padding: 2em;
+  padding: 1em;
 }
 
 .hero-about .about-text h3 {
@@ -340,7 +351,7 @@ img.hide-image {
         grid-template-rows: 100%;
   }
   section {
-    padding: 1.5em 3em;
+    padding: 1.5em 2em;
   }
   section {
     display: -ms-grid;
@@ -356,12 +367,27 @@ img.hide-image {
   header section.hero h1 {
     width: 80%;
   }
+  .hero-about .about-pic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 5em;
+  }
+  .hero-about .about-pic img {
+    width: 50%;
+  }
+  .hero-about .about-text {
+    padding: 2em;
+  }
 }
 
 @media only screen and (min-width: 1020px) {
-  section {
-    padding: 2em 4em;
-  }
   .site-content {
     max-width: 60em;
   }
@@ -370,15 +396,17 @@ img.hide-image {
     display: grid;
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
-    padding: 8em 2em;
+    padding: 0 2em;
+    padding-top: 6em;
   }
   .hero-about .about-pic {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: block;
+    margin-top: 0;
+  }
+  .hero-about .about-pic img {
+    width: 100%;
   }
   .hero-about .about-text {
-    padding-top: 0;
     padding-left: 3em;
   }
 }
@@ -386,9 +414,6 @@ img.hide-image {
 @media only screen and (min-width: 1800px) {
   html {
     font-size: 21px;
-  }
-  section {
-    padding: 3em 8em;
   }
   .site-content {
     max-width: 72em;

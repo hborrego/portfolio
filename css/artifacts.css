@@ -5,23 +5,9 @@ section.hero {
   height: 35vh;
 }
 
-.wrapper {
-  margin: auto;
-  display: inline;
-}
-
-.wrapper .project-description {
-  text-align: center;
-  list-style: none;
-  padding-bottom: 1em;
-}
-
-.wrapper .project-description h3 {
-  font-size: 1rem;
-}
-
-#mapHolder {
+.map {
   background-color: #e6e7e8;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,7 +15,6 @@ section.hero {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -38,8 +23,8 @@ section.hero {
           justify-content: center;
 }
 
-#marketHolder {
-  background-color: #e6e7e8;
+.map-flex {
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +32,6 @@ section.hero {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -56,35 +40,30 @@ section.hero {
           justify-content: center;
 }
 
-#passportHolder {
-  display: -ms-grid;
-  display: grid;
-  height: 75vh;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+.map-holder {
+  width: 100%;
+  height: 100%;
+}
+
+.map-animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.animation-passport {
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  min-height: 50vh;
+  width: 100%;
+  height: 100%;
 }
 
-.map {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+.map-animation svg {
+  max-height: 60vh;
 }
 
 .text-map {
@@ -103,17 +82,7 @@ section.hero {
   display: block;
 }
 
-.animation {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  height: auto;
-  width: 100%;
-}
-
-div.text-title {
-  height: 20vh;
+.text-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,9 +96,11 @@ div.text-title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
 }
 
-div.text-section {
+.text-section {
   height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,81 +111,133 @@ div.text-section {
           flex-flow: column;
 }
 
-.market {
-  height: 80vh;
-  width: 100%;
+.fisherman {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.market-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  padding-bottom: 1em;
-}
-
-.viewer {
-  height: 100%;
-  max-width: 320px;
   width: 100%;
-  background-image: url(../img/market.png);
-  background-size: 5120px;
-  background-repeat: no-repeat;
-  background-position: 0 center;
-  -ms-flex-preferred-size: 320px;
-      flex-basis: 320px;
-  margin: 0.5em 0;
 }
 
-.detail-01 {
-  margin: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background-image: url(../img/marketClose01.png);
+.fisherman img {
+  width: 100%;
+  max-width: 30rem;
 }
 
-.detail-02 {
-  margin: 0;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background-image: url(../img/marketClose02.png);
-}
-
-.carousel {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+#passport {
   height: 75vh;
 }
 
-.carousel-cell {
+.passport-flex {
+  width: auto;
+  height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.passport-holder {
   height: 100%;
   width: 100%;
-  margin: 0 1em;
-  /* center images in cells with flexbox */
+}
+
+.passport-animation {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-section .project-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery-section .image {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-section .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.market {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e6e7e8;
+  height: 100vh;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.market-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.market-flex {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.market-holder {
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,109 +249,74 @@ div.text-section {
           justify-content: center;
 }
 
-.carousel.is-fullscreen .carousel-cell {
-  max-height: 100%;
+.market-holder-01 {
+  height: 23%;
+}
+
+.market-holder-02 {
+  height: 23%;
+}
+
+.market-animation {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
   width: 100%;
-}
-
-.carousel-cell img {
-  cursor: pointer;
-  display: block;
-  max-height: 100%;
-}
-
-.viewer.frame1 {
-  background-position: -320px center;
-}
-
-.viewer.frame2 {
-  background-position: -640px center;
-}
-
-.viewer.frame3 {
-  background-position: -960px center;
-}
-
-.viewer.frame4 {
-  background-position: -1280px center;
-}
-
-.viewer.frame5 {
-  background-position: -1600px center;
-}
-
-.viewer.frame6 {
-  background-position: -1920px center;
-}
-
-.viewer.frame7 {
-  background-position: -2240px center;
-}
-
-.viewer.frame8 {
-  background-position: -2560px center;
-}
-
-.viewer.frame9 {
-  background-position: -2880px center;
-}
-
-.viewer.frame10 {
-  background-position: -3200px center;
-}
-
-.viewer.frame11 {
-  background-position: -3520px center;
-}
-
-.viewer.frame12 {
-  background-position: -3840px center;
-}
-
-.viewer.frame13 {
-  background-position: -4160px center;
-}
-
-.viewer.frame14 {
-  background-position: -4480px center;
-}
-
-.viewer.frame15 {
-  background-position: -4800px center;
+  height: auto;
 }
 
 @media only screen and (min-width: 768px) {
+  .map-animation svg {
+    max-width: 75vh;
+  }
+  .wrapper {
+    -ms-grid-rows: none;
+        grid-template-rows: none;
+  }
+  .passport-flex {
+    min-width: 32em;
+  }
   section.hero {
     height: 50vh;
   }
-  .animation-passport {
-    min-height: 75vh;
-    min-width: 75vh;
-  }
-  #passportHolder {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-  }
   .market {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .market-content {
+    height: auto;
+  }
+  .market-flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    height: 70vh;
   }
-  .viewer {
-    margin: 0 0.5em;
+  .market-holder {
+    height: auto;
+    width: 32%;
   }
-  .detail-01 {
-    margin: 0;
+  .gallery-section .image {
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
   }
-  .detail-02 {
-    margin: 0;
+}
+
+@media only screen and (min-width: 1020px) {
+  .map-animation svg {
+    max-width: none;
+    max-height: none;
   }
-  .animation {
+  .text-title {
+    height: auto;
+    padding-bottom: 1em;
+  }
+  .text-section {
+    padding-left: 3em;
     height: auto;
   }
-  .map {
+  .map-flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -339,104 +327,6 @@ div.text-section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  div.text-title {
-    height: auto;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    padding-bottom: 1em;
-  }
-  .market-title {
-    height: auto;
-    padding-bottom: 1em;
-  }
-  div.text-section {
-    padding-left: 3em;
-    height: auto;
-    max-width: 30em;
-  }
-  .carousel-cell {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 1020px) {
-  .wrapper {
-    -ms-grid-rows: none;
-        grid-template-rows: none;
-  }
-  svg {
-    max-width: 30em;
-  }
-  .carousel-cell {
-    width: 33.33%;
-  }
-}
-
-@media only screen and (min-width: 1800px) {
-  .carousel-cell {
-    width: 25%;
-  }
-  .viewer {
-    max-width: 640px;
-    background-size: 10240px;
-    -ms-flex-preferred-size: 640px;
-        flex-basis: 640px;
-    border: solid 0.25em white;
-  }
-  svg {
-    width: auto;
-    height: 100%;
-    max-width: 60em;
-  }
-  .viewer.frame1 {
-    background-position: -640px 50%;
-  }
-  .viewer.frame2 {
-    background-position: -1280px 50%;
-  }
-  .viewer.frame3 {
-    background-position: -1920px 50%;
-  }
-  .viewer.frame4 {
-    background-position: -2560px 50%;
-  }
-  .viewer.frame5 {
-    background-position: -3200px 50%;
-  }
-  .viewer.frame6 {
-    background-position: -3840px 50%;
-  }
-  .viewer.frame7 {
-    background-position: -4480px 50%;
-  }
-  .viewer.frame8 {
-    background-position: -5120px 50%;
-  }
-  .viewer.frame9 {
-    background-position: -5760px 50%;
-  }
-  .viewer.frame10 {
-    background-position: -6400px 50%;
-  }
-  .viewer.frame11 {
-    background-position: -7040px 50%;
-  }
-  .viewer.frame12 {
-    background-position: -7680px 50%;
-  }
-  .viewer.frame13 {
-    background-position: -8320px 50%;
-  }
-  .viewer.frame14 {
-    background-position: -8960px 50%;
-  }
-  .viewer.frame15 {
-    background-position: -9600px 50%;
   }
 }
 /*# sourceMappingURL=artifacts.css.map */

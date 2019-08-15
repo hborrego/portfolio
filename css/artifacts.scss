@@ -1,4 +1,4 @@
-
+// ---------- HERO IMAGE ----------
 
 section.hero {
   background: url("../img/hero-artifacts.jpg");
@@ -7,56 +7,42 @@ section.hero {
   height: 35vh;
 }
 
-.wrapper {
-  margin: auto;
-  display: inline;
+// ---------- MAP ANIMATION ----------
 
-  .project-description {
-    text-align: center;
-    list-style: none;
-    padding-bottom: 1em;
-    h3 {
-      font-size: 1rem;
-    }
-  }
-}
-
-#mapHolder {
+.map {
   background-color: #e6e7e8;
+  height: 100vh;
   display: flex;
   flex-flow: column;
-  height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
-#marketHolder {
-  background-color: #e6e7e8;
+.map-flex {
+  height: auto;
   display: flex;
   flex-flow: column;
-  height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
-#passportHolder {
-  display: grid;
-  height: 75vh;
-  grid-template-columns: auto;
-  align-items: center;
-  justify-content: center;
+.map-holder {
+  width: 100%;
+  height: 100%;
 }
 
-.animation-passport {
+.map-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  min-height: 50vh;
-}
-
-.map {
-  display: flex;
-  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  svg {
+    max-height: 60vh;
+  }
 }
 
 .text-map {
@@ -75,200 +61,235 @@ section.hero {
   display: block;
 }
 
-.animation {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  height: auto;
-  width: 100%;
-}
-
-div.text-title {
-  height: 20vh;
+.text-title {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
 }
 
-div.text-section {
+.text-section {
   height: 30vh;
   display: flex;
   flex-flow: column;
 }
 
-.market {
-  height: 80vh;
-  width: 100%;
+// ---------- FISHERMAN COMMENTS ----------
+
+.fisherman {
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
   align-items: center;
   justify-content: center;
-}
-
-.market-title {
-  display: flex;
-  flex-flow: column;
-  padding-bottom: 1em;
-}
-
-$frame-count: 15;
-$offset-val: 160;
-$offset-val2: 320;
-
-.viewer {
-  height: 100%;
-  max-width: 320px;
   width: 100%;
-  background-image: url(../img/market.png);
-  background-size: 5120px;
-  background-repeat: no-repeat;
-  background-position: 0 center;
-  flex-basis: 320px;
-  margin: 0.5em 0;
+
+  img{
+    width: 100%;
+    max-width: 30rem;
+
+  }
 }
 
-.detail-01 {
-  margin: 0;
-  flex: 1;
-  background-image: url(../img/marketClose01.png);
-}
-.detail-02 {
-  margin: 0;
-  order: -1;
-  flex: 1;
-  background-image: url(../img/marketClose02.png);
-}
+// ---------- PASSPORT ANIMATION ----------
 
-.carousel {
-  box-sizing: border-box;
+#passport {
   height: 75vh;
 }
 
-.carousel-cell {
+.passport-flex {
+  width: auto;
+  height: 75vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.passport-holder {
   height: 100%;
   width: 100%;
-  margin: 0 1em;
-  /* center images in cells with flexbox */
+}
+
+.passport-animation {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// ---------- DRAWINGS GALLERY ----------
+
+
+.gallery-section .project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-section .image {
+  flex: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-section .image img {
+  width: 100%;
+  height: 100%;
+}
+
+
+// ---------- MARKET ANIMATION ----------
+
+.market {
+  display: flex;
+  background-color: #e6e7e8;
+  height: 100vh;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.market-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.market-flex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.market-holder {
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.carousel.is-fullscreen .carousel-cell {
-  max-height: 100%;
+.market-holder-01 {
+  height: 23%;
+}
+
+.market-holder-02 {
+  height: 23%;
+}
+
+.market-animation {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
   width: 100%;
+  height: auto;
 }
 
-.carousel-cell img {
-  cursor: pointer;
-  display: block;
-  max-height: 100%;
-}
 
-@for $i from 1 through $frame-count {
-  .viewer.frame#{$i} {
-    background-position: -(($i * $offset-val) * 2) + px center;
-  }
-}
+// ---------------------------------------
+// ---------- MEDIA QUERY 768px ----------
+// ---------------------------------------
 
 @media only screen and (min-width: 768px) {
-  section.hero {
-    height: 50vh;
+  .map-animation {
+    svg {
+      max-width: 75vh;
+    }
   }
 
-  .animation-passport {
-    min-height: 75vh;
-    min-width: 75vh;
-  }
-
-  #passportHolder {
-    grid-template-columns: auto auto;
-  }
-
-  .market {
-    flex-flow: row;
-    height: 70vh;
-  }
-
-  .viewer {
-    margin: 0 0.5em;
-  }
-
-  .detail-01 {
-    margin: 0;
-  }
-
-  .detail-02 {
-    margin: 0;
-  }
-
-  .animation {
-    height: auto;
-  }
-
-  .map {
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
-  }
-  div.text-title {
-    height: auto;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-bottom: 1em;
-  }
-  .market-title {
-    height: auto;
-    padding-bottom: 1em;
-  }
-  div.text-section {
-    padding-left: 3em;
-    height: auto;
-    max-width: 30em;
-  }
-
-  .carousel-cell {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 1020px) {
   .wrapper {
     grid-template-rows: none;
   }
 
-  svg {
-    max-width: 30em;
+  .passport-flex {
+    min-width: 32em;
   }
 
-  .carousel-cell {
-    width: 33.33%;
+  // ---------- HERO IMAGE ----------
+
+  section.hero {
+    height: 50vh;
+  }
+
+  // ---------- MARKET ANIMATION ----------
+  .market {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .market-content {
+    height: auto;
+  }
+  .market-flex {
+    flex-flow: row;
+  }
+
+  .market-holder {
+    height: auto;
+    width: 32%;
+  }
+
+  // ---------- DRAWINGS GALLERY ----------
+
+  .gallery-section .image {
+    flex: 25%;
   }
 }
-@media only screen and (min-width: 1800px) {
-  .carousel-cell {
-    width: 25%;
-  }
 
-  .viewer {
-    max-width: 640px;
-    background-size: 10240px;
-    flex-basis: 640px;
-    border: solid 0.25em white;
-  }
+// ---------------------------------------
+// ---------- MEDIA QUERY 1020px ---------
+// ---------------------------------------
 
-  svg {
-    width: auto;
-    height: 100%;
-    max-width: 60em;
-  }
-
-  @for $i from 1 through $frame-count {
-    .viewer.frame#{$i} {
-      background-position: -(($i * $offset-val2) * 2) + px 50%;
+@media only screen and (min-width: 1020px) {
+  .map-animation {
+    svg {
+      max-width: none;
+      max-height: none;
     }
   }
+
+  // ---------- MAP ANIMATION ----------
+
+  .text-title {
+    height: auto;
+    padding-bottom: 1em;
+  }
+
+  .text-section {
+    padding-left: 3em;
+    height: auto;
+  }
+
+  .map-flex {
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// ---------------------------------------
+// ---------- MEDIA QUERY 1800px ---------
+// ---------------------------------------
+
+@media only screen and (min-width: 1800px) {
+  // .viewer {
+  //   max-width: 640px;
+  //   background-size: 10240px;
+  //   flex-basis: 640px;
+  //   border: solid 0.25em white;
+  // }
+
+  // @for $i from 1 through $frame-count {
+  //   .viewer.frame#{$i} {
+  //     background-position: -(($i * $offset-val2) * 2) + px 50%;
+  //   }
+  // }
 }
