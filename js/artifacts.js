@@ -5,6 +5,17 @@ document.addEventListener("DOMContentLoaded", function() {
     function() {
       document.body.style.display = "block";
 
+      var tlMapText = new TimelineMax().staggerFrom(
+        ".text-map",
+        0.25,
+        {
+          opacity: 0,
+          y: -20,
+          ease: Power2.easeInOut
+        },
+        0.05
+      );
+
       // $('[data-fancybox="gallery"]').fancybox({
       //   afterLoad: function(instance, current) {
       //     var pixelRatio = window.devicePixelRatio || 1;
@@ -98,21 +109,33 @@ document.addEventListener("DOMContentLoaded", function() {
         .on("end", function() {
           $(".map" + (numMap - 1)).toggleClass("hold-text");
         }) // keeps last text visible when scrolling pass animation
-        // .addIndicators() //triger, start and end indicators
+        // .addIndicators() //trigger, start and end indicators
         .addTo(controller);
 
       // 4. ScrollMagic Map Text
 
-      for (var i = 0, l = numMap - 1; i <= l; i++) {
+      for (var i = 0, l = numMap - 1; i < l; i++) {
         new ScrollMagic.Scene({
           triggerElement: "#map",
           duration: 133,
           offset: i * 133
         })
           .setClassToggle(".map" + i, "active")
+          .on("end", function() {
+            tlMapText.restart();
+          })
           // .addIndicators()
           .addTo(controller);
       }
+
+      new ScrollMagic.Scene({
+        triggerElement: "#map",
+        duration: 133,
+        offset: (numMap - 1) * 133
+      })
+        .setClassToggle(".map" + (numMap - 1), "active")
+        // .addIndicators()
+        .addTo(controller);
 
       // --------------------------------------------------------
       // ------------------ Passport Animation ------------------

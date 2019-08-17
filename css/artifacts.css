@@ -68,6 +68,7 @@ section.hero {
 
 .text-map {
   display: none;
+  opacity: 1;
 }
 
 .text-passport {
@@ -79,6 +80,10 @@ section.hero {
 }
 
 .active {
+  display: block;
+}
+
+.text-exit {
   display: block;
 }
 

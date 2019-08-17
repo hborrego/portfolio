@@ -47,6 +47,7 @@ section.hero {
 
 .text-map {
   display: none;
+  opacity: 1;
 }
 
 .text-passport {
@@ -58,6 +59,10 @@ section.hero {
 }
 
 .active {
+  display: block;
+}
+
+.text-exit {
   display: block;
 }
 
@@ -84,10 +89,9 @@ section.hero {
   justify-content: center;
   width: 100%;
 
-  img{
+  img {
     width: 100%;
     max-width: 30rem;
-
   }
 }
 
@@ -121,7 +125,6 @@ section.hero {
 
 // ---------- DRAWINGS GALLERY ----------
 
-
 .gallery-section .project-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -138,7 +141,6 @@ section.hero {
   width: 100%;
   height: 100%;
 }
-
 
 // ---------- MARKET ANIMATION ----------
 
@@ -192,7 +194,6 @@ section.hero {
   width: 100%;
   height: auto;
 }
-
 
 // ---------------------------------------
 // ---------- MEDIA QUERY 768px ----------
@@ -273,23 +274,4 @@ section.hero {
     align-items: center;
     justify-content: center;
   }
-}
-
-// ---------------------------------------
-// ---------- MEDIA QUERY 1800px ---------
-// ---------------------------------------
-
-@media only screen and (min-width: 1800px) {
-  // .viewer {
-  //   max-width: 640px;
-  //   background-size: 10240px;
-  //   flex-basis: 640px;
-  //   border: solid 0.25em white;
-  // }
-
-  // @for $i from 1 through $frame-count {
-  //   .viewer.frame#{$i} {
-  //     background-position: -(($i * $offset-val2) * 2) + px 50%;
-  //   }
-  // }
 }

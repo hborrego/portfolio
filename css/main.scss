@@ -69,10 +69,12 @@ header {
 
 .grid {
   display: grid;
+  grid-template-columns: auto;
 }
 
 p {
   font-weight: 300;
+  line-height: 1.25em;
 }
 
 a {
@@ -110,7 +112,7 @@ a {
 }
 
 .text-margin-top-25 {
-  margin-top: 1em;
+  margin-top: 0.25em;
 }
 
 .text-desc-title {
@@ -154,8 +156,28 @@ h4 {
 }
 
 .image-container {
-  width: calc(100% + 0.5em);
-  margin-left: -0.25em;
+  grid-gap: 0.5em;
+}
+
+.image-frame {
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.hero-project {
+  height: 35vh;
+}
+
+.hero-bd {
+  background: url("../img/bd-highstreet.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .wrapper {
@@ -176,16 +198,19 @@ h4 {
 
       display: grid;
       grid-template-columns: auto;
+      grid-gap: 0.5em;
 
       figure {
-        margin: 0.25em;
+        display: flex;
+        margin: 0;
         overflow: hidden;
         position: relative;
         background: none;
         transition: background-color 0.5s;
 
         img {
-          width: calc(100% + 6px);
+          width: 100%;
+          height: 100%;
           opacity: 1;
           transition: all 0.5s;
         }
@@ -297,6 +322,10 @@ img.hide-image {
     font-size: 18px;
   }
 
+  p {
+    line-height: 1.5em;
+  }
+
   .grid-columns-2 {
     grid-template-columns: auto auto;
   }
@@ -344,6 +373,10 @@ img.hide-image {
     }
   }
 
+  .hero-project {
+    height: 50vh;
+  }
+
   .hero-about {
     .about-pic {
       display: flex;
@@ -355,16 +388,13 @@ img.hide-image {
       }
     }
 
-    .about-text{
+    .about-text {
       padding: 2em;
     }
   }
 }
 
 @media only screen and (min-width: 1020px) {
-  // section {
-  //   padding: 2em 4em;
-  // }
 
   .site-content {
     max-width: 60em;
@@ -394,9 +424,6 @@ img.hide-image {
   html {
     font-size: 21px;
   }
-  // section {
-  //   padding: 3em 8em;
-  // }
 
   .site-content {
     max-width: 72em;
