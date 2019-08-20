@@ -55,6 +55,10 @@ header {
   }
 }
 
+.home-header {
+  background: none;
+}
+
 .flex {
   display: flex;
 }
@@ -170,12 +174,52 @@ h4 {
   }
 }
 
+canvas {
+  display: block;
+  position: absolute;
+}
+
+#hero {
+  overflow: hidden;
+  width: 100vh;
+}
+
+.hero-home {
+  padding-top: 8em;
+  background: url("../img/hero-background.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  h1,
+  a {
+    color: black;
+    font-weight: 300;
+  }
+
+  h1 {
+    text-align: left;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+}
+
 .hero-project {
   height: 35vh;
 }
 
 .hero-bd {
   background: url("../img/bd-highstreet.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero-ar {
+  background: url("../img/hero-tc.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero-229 {
+  background: url("../img/hero-229.jpg");
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -292,7 +336,9 @@ img.hide-image {
 
 .inline:hover img {
   display: inline;
+  position: absolute;
   pointer-events: none;
+  transform: translate(-50%, -100%);
 }
 
 .hero-about {
@@ -360,6 +406,16 @@ img.hide-image {
     align-items: center;
   }
 
+  .hero-home {
+    h1 {
+      width: 70%;
+    }
+  }
+
+  .wrapper {
+    height: 100vh;
+  }
+
   header {
     nav ul {
       li a {
@@ -395,7 +451,6 @@ img.hide-image {
 }
 
 @media only screen and (min-width: 1020px) {
-
   .site-content {
     max-width: 60em;
   }

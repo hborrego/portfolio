@@ -63,6 +63,10 @@ header nav ul li a {
   padding: 0.5em;
 }
 
+.home-header {
+  background: none;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,12 +191,53 @@ h4 {
   width: 100%;
 }
 
+canvas {
+  display: block;
+  position: absolute;
+}
+
+#hero {
+  overflow: hidden;
+  width: 100vh;
+}
+
+.hero-home {
+  padding-top: 8em;
+  background: url("../img/hero-background.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero-home h1,
+.hero-home a {
+  color: black;
+  font-weight: 300;
+}
+
+.hero-home h1 {
+  text-align: left;
+  width: 90%;
+  font-size: 1.5rem;
+}
+
 .hero-project {
   height: 35vh;
 }
 
 .hero-bd {
   background: url("../img/bd-highstreet.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero-ar {
+  background: url("../img/hero-tc.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero-229 {
+  background: url("../img/hero-229.jpg");
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -323,7 +368,10 @@ img.hide-image {
 
 .inline:hover img {
   display: inline;
+  position: absolute;
   pointer-events: none;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
 }
 
 .hero-about {
@@ -394,6 +442,12 @@ img.hide-image {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .hero-home h1 {
+    width: 70%;
+  }
+  .wrapper {
+    height: 100vh;
   }
   header nav ul li a {
     padding: 1em;

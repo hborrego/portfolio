@@ -1,4 +1,4 @@
-section.hero {
+.hero {
   background: url("../img/hero-artifacts.jpg");
   background-size: cover;
   background-position: 50% 50%;
@@ -281,7 +281,7 @@ section.hero {
   .passport-flex {
     min-width: 32em;
   }
-  section.hero {
+  .hero {
     height: 50vh;
   }
   .market {

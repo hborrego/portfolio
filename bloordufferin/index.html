@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-137931305-1"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -9,9 +13,30 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Space+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/flickity.css" />
-    <link rel="stylesheet" href="../css/fullscreen.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../ico/favicon.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="../ico/apple-touch-icon-144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="../ico/apple-touch-icon-114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="../ico/apple-touch-icon-72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../ico/apple-touch-icon-57-precomposed.png"
+    />
   </head>
   <body>
     <header id="header">
@@ -31,7 +56,7 @@
     <section class="hero-bd hero-project"></section>
 
     <section class="project-title site-content">
-      <h1 class="text-center">Bloor & Dufferin Development</h1>
+      <h1 class="text-center">Bloor & Dufferin</h1>
       <div class="project-description">
         <div class="text-center">
           <p class="text-desc-title">Made At:</p>
@@ -51,11 +76,11 @@
       <div class="text-desc-details">
         <p class="text-desc-title text-center">Project Details:</p>
         <p class="text-margin-bt-0">
-          I made part of the team that designed the user experience at ground
-          level and visual strategy for the Bloor & Dufferin development
-          proposal in Toronto, Canada. I was responsible of creating 3D models
-          and strategize the visual representations that expressed the design
-          intent to future users.
+          I made part of the team that conceptualized and designed the user
+          experience and visual strategy at ground level for the Bloor &
+          Dufferin development proposal in Toronto, Canada. I was responsible of
+          creating 3D models and strategize the rendering representations used
+          to communicate the general design intent to future users.
         </p>
       </div>
     </section>
@@ -65,26 +90,38 @@
         A Space Where People's Experiences Come First
       </h3>
       <div class="image-container grid">
-        <div class="image-frame">
+        <a
+          data-fancybox="gallery"
+          href="../img/bd-bloorstreet.jpg"
+          class="image-frame"
+        >
           <img src="../img/bd-bloorstreet.jpg" alt="" />
-        </div>
+        </a>
         <p>
           The vision for Bloor & Dufferin parted with the idea of creating a new
-          destination point in the city for locals and visitors. The project
-          approach is based on community-oriented, pedestrian-first design
-          decisions that aim to create new public spaces, boutique shopping
-          experiences, a new community hub, increased accessibility, a
+          destination point in the city, for locals and visitors alike. The
+          project approach is based on community-oriented, pedestrian-first
+          design decisions that aim to create new public spaces, boutique
+          shopping experiences, a new community hub, increased accessibility, a
           neighborhood daycare, reenvisioned heritage spaces and new park areas.
-          The goal is to bring vibrant new textures to the neighborhood’s
-          storied fabric.
+          The ultimate goal is to bring vibrant new textures to the
+          neighborhood’s fabric.
         </p>
         <div class="image-container grid grid-columns-2">
-          <div class="image-frame">
+          <a
+            data-fancybox="gallery"
+            href="../img/bd-pedestrianmews.jpg"
+            class="image-frame"
+          >
             <img src="../img/bd-pedestrianmews.jpg" alt="" />
-          </div>
-          <div class="image-frame">
+          </a>
+          <a
+            data-fancybox="gallery"
+            href="../img/bd-daycaremews.jpg"
+            class="image-frame"
+          >
             <img src="../img/bd-daycaremews.jpg" alt="" />
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -94,14 +131,15 @@
         Designs Decisions by the Community, for the Community
       </h3>
       <p>
-        The proposal evolved and continued to changed based on feedback received
-        from the different stakeholders, including community neighbors and
-        potential new residents. Based on this, the development proposes:
+        The proposal evolved and the initial approach changed, based on
+        community feedback from the different stakeholders, including neighbors
+        and potential new residents, which ultimately inspired proposals for the
+        benefit of all, such as:
       </p>
       <ul class="grid grid-columns-2 text-margin-bt-0">
-        <li class="text-margin-top-25">A 35,000sq.ft. Community Hub</li>
+        <li class="text-margin-top-25">A 35,000 sq. ft. Community Hub</li>
         <li class="text-margin-top-25">Best-in-Class Daycare</li>
-        <li class="text-margin-top-25">38,500sq.ft. of New Park Space</li>
+        <li class="text-margin-top-25">38,500 sq. ft. of New Park Space</li>
         <li class="text-margin-top-25">44% New Public Space</li>
         <li class="text-margin-top-25">Pedestrian-Oriented Design</li>
         <li class="text-margin-top-25">Opportunities for Entrepreneurs</li>
@@ -109,12 +147,20 @@
         <li class="text-margin-top-25">Affordable Housing</li>
       </ul>
       <div class="padding-top-2 image-container grid">
-        <div class="image-frame">
+        <a
+          data-fancybox="gallery"
+          href="../img/bd-communityhub.jpg"
+          class="image-frame"
+        >
           <img src="../img/bd-communityhub.jpg" alt="" />
-        </div>
-        <div class="image-frame">
+        </a>
+        <a
+          data-fancybox="gallery"
+          href="../img/bd-communitymews.jpg"
+          class="image-frame"
+        >
           <img src="../img/bd-communitymews.jpg" alt="" />
-        </div>
+        </a>
       </div>
     </section>
 
@@ -165,15 +211,14 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="../js/flickity.pkgd.min.js"></script>
-    <script src="../js/fullscreen.js"></script>
-    <script src="../js/scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
     <script src="../js/projects.js "></script>
+    <script src="../js/scroll.js"></script>
   </body>
 </html>
