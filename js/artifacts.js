@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .addTo(controller);
 
       // --------------------------------------------------------
-      // -------------- Market Detail 03 ANIMATION --------------
+      // -------------- Market Detail 01 ANIMATION --------------
       // --------------------------------------------------------
 
       // 1. Set up for market01 animation

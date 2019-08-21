@@ -163,10 +163,8 @@
 
 .passport-animation {
   position: relative;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .gallery-section .project-gallery {
