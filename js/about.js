@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
           {
             frame: 0
           },
-          1.5,
+          4,
           {
             frame: passportAnim.totalFrames - 1,
             onUpdate: function() {
