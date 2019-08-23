@@ -22,6 +22,23 @@ a.back-to-top {
   bottom: 1em;
 }
 
+#drag-arrow {
+  img {
+    width: 3em;
+    height: auto;
+    opacity: 50%;
+  }
+  pointer-events: none;
+  position: fixed;
+  z-index: 999;
+
+  bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 header {
   position: absolute;
   padding: 1em;
@@ -54,6 +71,10 @@ header {
     }
   }
 }
+
+// .header-portfolio{
+//   position: relative;
+// }
 
 .home-header {
   background: none;
@@ -179,26 +200,42 @@ canvas {
   position: absolute;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100%;
+  height: 100vh;
+}
+
 #hero {
   overflow: hidden;
   width: 100vh;
+  cursor: grab;
 }
 
 .hero-home {
-  padding-top: 8em;
-  background: url("../img/hero-background.jpg");
+  // padding-top: 8em;
+  // background: url("../img/hero-background.jpg");
   background-size: cover;
   background-position: 50% 50%;
+  display: grid;
+  grid-auto-rows: auto;
+  align-items: center;
   h1,
   a {
     color: black;
     font-weight: 300;
+    z-index: 99;
   }
 
   h1 {
     text-align: left;
     width: 90%;
     font-size: 1.5rem;
+  }
+
+  h1 span {
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -224,73 +261,70 @@ canvas {
   background-position: 50% 50%;
 }
 
-.wrapper {
+.portfolio {
+  padding-top: 4em;
+}
+
+.gallery {
+  // width: calc(100% + 0.5em);
+  // margin-left: -0.25em;
+
+  h3 {
+    font-size: 1.15rem;
+    background: rgba(255, 255, 255, 0.85);
+    display: inline-block;
+    padding: 0.5em 0.7em;
+  }
+
   display: grid;
   grid-template-columns: auto;
+  grid-gap: 0.5em;
 
-  section {
-    .gallery {
-      width: calc(100% + 0.5em);
-      margin-left: -0.25em;
+  figure {
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background: none;
+    transition: background-color 0.5s;
 
-      h3 {
-        font-size: 1.15rem;
-        background: rgba(255, 255, 255, 0.85);
-        display: inline-block;
-        padding: 0.5em 0.7em;
-      }
-
-      display: grid;
-      grid-template-columns: auto;
-      grid-gap: 0.5em;
-
-      figure {
-        display: flex;
-        margin: 0;
-        overflow: hidden;
-        position: relative;
-        background: none;
-        transition: background-color 0.5s;
-
-        img {
-          width: 100%;
-          height: 100%;
-          opacity: 1;
-          transition: all 0.5s;
-        }
-
-        figcaption {
-          position: absolute;
-          padding: 1em 1em;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;
-          pointer-events: none;
-        }
-      }
-
-      .additional {
-        opacity: 1;
-        transform: scale(1);
-        transition: all 0.5s;
-      }
-
-      figure:hover {
-        background: white;
-      }
-
-      figure:hover img {
-        opacity: 0.4;
-      }
-
-      figure:hover .additional {
-        opacity: 1;
-        transform: scale(1);
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      transition: all 0.5s;
     }
+
+    figcaption {
+      position: absolute;
+      padding: 1em 1em;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      pointer-events: none;
+    }
+  }
+
+  .additional {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.5s;
+  }
+
+  figure:hover {
+    background: white;
+  }
+
+  figure:hover img {
+    opacity: 0.4;
+  }
+
+  figure:hover .additional {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -379,8 +413,8 @@ img.hide-image {
   height: 100%;
 }
 
-#passportAboutLottie{
-visibility: hidden;
+#passportAboutLottie {
+  visibility: hidden;
 }
 
 @media only screen and (min-width: 768px) {
@@ -396,12 +430,16 @@ visibility: hidden;
     grid-template-columns: auto auto;
   }
 
-  .wrapper section .gallery {
+  .portfolio {
+    padding-top: 6em;
+  }
+
+  .gallery {
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
 
-  .wrapper section .gallery .additional {
+  .gallery .additional {
     opacity: 0;
     transform: scale(1.2);
     transition: all 0.5s;
@@ -410,10 +448,6 @@ visibility: hidden;
   .site-content {
     max-width: 48em;
     margin: 0 auto;
-  }
-
-  .wrapper {
-    grid-template-rows: 100%;
   }
 
   section {
@@ -430,10 +464,6 @@ visibility: hidden;
     h1 {
       width: 70%;
     }
-  }
-
-  .wrapper {
-    height: 100vh;
   }
 
   header {
