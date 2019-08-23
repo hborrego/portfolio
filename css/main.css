@@ -439,33 +439,6 @@ img.hide-image {
   font-weight: 300;
 }
 
-.passport-holder-about {
-  pointer-events: none;
-  position: fixed;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh;
-  width: 100%;
-  z-index: 99;
-}
-
-.passport-animation-about {
-  width: 100%;
-  height: 100%;
-}
-
-#passportAboutLottie {
-  visibility: hidden;
-}
-
 @media only screen and (min-width: 768px) {
   html {
     font-size: 18px;

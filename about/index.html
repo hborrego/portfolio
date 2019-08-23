@@ -25,6 +25,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/about.css" />
 
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="../ico/favicon.png" />
@@ -49,23 +50,31 @@
     />
   </head>
   <body>
-    <header>
+    <header id="header">
       <a href="../index.html" class="logo">Herman Borrego</a>
       <nav>
         <ul>
           <li><a href="../portfolio">Portfolio</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="../about">About</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="passport-holder-about">
-      <div class="passport-animation-about" id="passportAboutLottie"></div>
-    </div>
-
     <a href="#header" class="back-to-top"
       ><img src="../svg/top-arrow.svg" alt=""
     /></a>
+
+    <!-- <div class="wrapper"> -->
+    <section id="passport">
+      <div class="site-content">
+        <div class="passport-flex">
+          <div class="passport-holder">
+            <div class="passport-animation" id="passportAboutLottie"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- </div> -->
 
     <div id="header" class="site-content">
       <section class="hero-about">
@@ -109,9 +118,10 @@
             and there. I took on coding this site as a challenge to gain more
             understanding of the developer's role, needs, and constrains. Home
             page's model, animation, and orbit controls were build using
-            <a href="https://threejs.org/" target="_blank">three.js</a>.
-            Project animations, like <a href="#website" id="example-animation">this</a>,
-            were done in After Effects, exported through
+            <a href="https://threejs.org/" target="_blank">three.js</a>. Project
+            animations, such as
+            <a href="javascript:void(0)" id="example-animation">this</a>, were
+            done in After Effects, exported through
             <a href="https://airbnb.design/lottie" target="_blank">
               Lottie/Bodymovin</a
             >
@@ -165,9 +175,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="../js/projects.js"></script>
     <script src="../js/about.js"></script>
     <script src="../js/scroll.js"></script>
   </body>
