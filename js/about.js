@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // 2. TimelineMax Passport animation
       
       var hideAnim = function() {
-        document.getElementById("passportAboutLottie").style.visibility = "hidden";
+        document.getElementById("passportAboutLottie").style.visibility = "visible";
       }
     
       var passportTL = new TimelineMax({onComplete:hideAnim}); // new TimelineMax
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
           {
             frame: 0
           },
-          4,
+          1.5,
           {
             frame: passportAnim.totalFrames - 1,
             onUpdate: function() {
