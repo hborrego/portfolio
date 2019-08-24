@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
       var tl = new TimelineMax();
 
       var tlh1 = function(){ 
+
         document.getElementById("hero-text").style.visibility = "visible";
         document.getElementById("drag-arrow").style.visibility = "visible";
+        
 
         tl.staggerFrom(
         "h1",
@@ -41,7 +43,10 @@ document.addEventListener("DOMContentLoaded", function() {
       };
 
       document.getElementById("hero").addEventListener("mousedown", hideText);
-
+      document.getElementById("hero").addEventListener("click", hideText);
+      document.getElementById("hero").addEventListener("scroll", hideText);
+      document.getElementById("hero").addEventListener("touchstart", hideText);
+      
       var inactivityTime = function() {
         var time;
         window.onload = resetTimer;
@@ -52,9 +57,13 @@ document.addEventListener("DOMContentLoaded", function() {
         document.onscroll = resetTimer;
 
         function showText() {
+          var status = document.getElementById("hero-text").style.visibility;
+
+          if (status == "hidden"){
           tlh1();
           // alert("You are now logged out.");
           //location.href = 'logout.html'
+          }
         }
 
         function resetTimer() {
