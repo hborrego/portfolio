@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // DOM Events
         document.onmousedown = resetTimer;
         document.ontouchstart = resetTimer;
+        document.ontouchend = resetTimer;
         document.onclick = resetTimer; 
         document.onscroll = resetTimer;
 
