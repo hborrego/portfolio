@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "artifacts",
+"productVersion": "0.1",
+"dataUrl": "artifacts_web.data.unityweb",
+"wasmCodeUrl": "artifacts_web.wasm.code.unityweb",
+"wasmFrameworkUrl": "artifacts_web.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.0b1"
+}
