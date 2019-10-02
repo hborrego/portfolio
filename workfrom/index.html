@@ -1,25 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-137931305-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-137931305-1");
+    </script>
+
+    <!-- Hotjar Tracking Code for www.borrego.ca -->
+    <script>
+      (function(h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function() {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 1511396, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Herman Borrego - Artifacts of Self-Determination</title>
+    <title>Herman Borrego - Workfrom Redesign</title>
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Space+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/flickity.css" />
-    <link rel="stylesheet" href="../css/fullscreen.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/workfrom.css" />
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../ico/favicon.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="../ico/apple-touch-icon-144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="../ico/apple-touch-icon-114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="../ico/apple-touch-icon-72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../ico/apple-touch-icon-57-precomposed.png"
+    />
   </head>
   <body>
     <header id="header">
       <a href="../index.html" class="logo">Herman Borrego</a>
       <nav>
         <ul>
-          <li><a href="../index.html#portfolio">Portfolio</a></li>
+          <li><a href="../portfolio">Portfolio</a></li>
           <li><a href="../about">About</a></li>
         </ul>
       </nav>
@@ -29,11 +81,266 @@
       ><img src="../svg/top-arrow.svg" alt=""
     /></a>
 
-    <section class="site-content">
-      <div>
-        <img src="" alt="" />
+    <section class="hero-wf hero-project"></section>
+
+    <section class="project-title site-content">
+      <h1 class="text-center">Workfrom Redesign</h1>
+      <div class="project-description">
+        <div class="text-center">
+          <p class="text-desc-title">Made for:</p>
+          <p class="text-margin-bt-0">Workfrom</p>
+        </div>
+        <div class="text-center">
+          <p class="text-desc-title">Role:</p>
+          <p class="text-margin-bt-0">
+            Product Designer
+          </p>
+        </div>
+        <div class="text-center">
+          <p class="text-desc-title">When:</p>
+          <p class="text-margin-bt-0">2019</p>
+        </div>
+      </div>
+      <div class="text-desc-details">
+        <p class="text-desc-title text-center">Project Details:</p>
+        <p class="text-margin-bt-0">
+          Workfrom is a product that allows users to find cafes, coffee shops or
+          co-working spaces where they can work from. The collection of
+          available places focuses on the immediate needs to the user, such as
+          internet connection or noise preference. Workfrom removes the extra
+          steps and uncertainty by simplifying the process to finding the
+          perfect place to work from in an unfamiliar place. The product is
+          perfect for people who want to explore a new neighborhood in their
+          city or travelers trying to get work done in a new place. Workfrom
+          gives solutions so they can focus on work rather than where to work
+          from.
+        </p>
       </div>
     </section>
+
+    <section class="site-content grid">
+      <h3 class="text-center text-margin-top-0">
+        Initial Research
+      </h3>
+      <div class="image-container grid">
+        <div class="image-frame">
+          <img src="../img/wf-intro.jpg" alt="" />
+        </div>
+        <p>
+          In our initial user interviews, we observed that people were attracted
+          by the idea to find a place, but were disappointed with the experience
+          of the product. In particular, users manifested discontent by the lack
+          of intuitiveness that the product has. Common insights, such as
+          saturated results, lack of refined suggestions, absence of personal
+          preferences, and inconsistent UI language. Additionally, users
+          expressed an special interest on how the product could be useful in
+          unknown scenarios, where they don't know where is north or south, for
+          instance, which is a feature that the product lacks.
+          <br />
+          <br />
+          We decided to concentrate in the three the most notable issues.
+        </p>
+      </div>
+    </section>
+
+    <section class="site-content grid">
+      <h2 class="text-center text-margin-top-0">
+        Issue 01: Difficulty Deciding Which Cafe is Optimal
+      </h2>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-3">
+          <div class="image-frame"></div>
+          <div class="image-frame">
+            <img src="/img/wf-ext-01-map.jpg" alt="" />
+          </div>
+          <div class="image-frame"></div>
+        </div>
+      </div>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-3">
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">Intention</h3>
+            <p class="padding-sides-1">
+              Use the map to locate the most suitable working space based on
+              current location.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">
+              Current Difficulty
+            </h3>
+            <p class="padding-sides-1">
+              Lack of hierarchy and saturated results make it hard to choose an
+              optimal place for the user.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">Strategy</h3>
+            <p class="padding-sides-1">
+              Reduce the amount of options by filtering results that do not
+              fulfill users expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-content grid">
+      <h2 class="text-center text-margin-top-0">
+        Issue 02: Internet Connection Should be Part of the Decision Making
+        Process
+      </h2>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-2c">
+          <div class="image-frame"></div>
+          <div class="image-frame">
+            <img src="/img/wf-ext-02-maincards.jpg" alt="" />
+          </div>
+          <div class="image-frame">
+            <img src="/img/wf-ext-02-businesscard.jpg" alt="" />
+          </div>
+          <div class="image-frame"></div>
+        </div>
+      </div>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-3">
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">Intention</h3>
+            <p class="padding-sides-1">
+              Display if working spaces have good internet connection or not.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">Current Difficulty</h3>
+            <p class="padding-sides-1">
+              The internet speed is hard to find and does not make part of the
+              discovery experience.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">Strategy</h3>
+            <p class="padding-sides-1">
+              Bring internet speed as a critical aspect early in the discovery
+              experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-content grid">
+      <h2 class="text-center text-margin-top-0">
+        Issue 03: Orientation in an unknown place
+      </h2>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-2c">
+          <div class="image-frame"></div>
+          <div class="image-frame">
+            <img src="/img/wf-ext-03-businessmap.jpg" alt="" />
+          </div>
+          <div class="image-frame">
+            <img src="/img/wf-ext-03-directions.jpg" alt="" />
+          </div>
+          <div class="image-frame"></div>
+        </div>
+      </div>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-3">
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">Intention</h3>
+            <p class="padding-sides-1">
+              Give clear directions to the user in a unknown area.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">Current Difficulty</h3>
+            <p class="padding-sides-1">
+              The product does not offer any alternative other than sending the
+              user to an external map app.
+            </p>
+          </div>
+          <div class="text-box">
+            <h3 class="text-center padding-sides-1">How to improve it?</h3>
+            <p class="padding-sides-1">
+              Integrate directions and orientation strategies within the
+              product.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-content grid">
+      <h2 class="text-center text-margin-top-0">
+        Getting to know the user from the beggining
+      </h2>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-2c">
+          <div class="image-frame"></div>
+          <div class="image-frame">
+            <img src="/img/wf-01-allowLocation.jpg" alt="" />
+          </div>
+          <div class="image-frame">
+            <img src="/img/wf-02-options.jpg" alt="" />
+          </div>
+          <div class="image-frame"></div>
+        </div>
+      </div>
+      <p>
+        Location and general preferences give control to the user to define the
+        kind of place that they are looking to work from.
+      </p>
+    </section>
+
+    <section class="site-content grid">
+      <h2 class="text-center text-margin-top-0">
+        Filtered Results and Valuable Information as Part of the Discovery
+        Process
+      </h2>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-3">
+          <div class="image-frame">
+            <img src="/img/wf-03-main.jpg" alt="" />
+          </div>
+          <div class="image-frame">
+            <img src="/img/wf-04-businessCard.jpg" alt="" />
+          </div>
+          <div class="image-frame">
+            <img src="/img/wf-06-ARMain.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <p>
+        Valuable information are displayed during the discovery process. Rather
+        than using technical terminology, such as "30mbps" to define the
+        internet speed, a more relatable language was chosen.
+      </p>
+    </section>
+
+    <section class="site-content grid">
+      <h2 class="text-center text-margin-top-0">
+        AR
+      </h2>
+      <div class="image-container grid">
+        <div class="image-container grid grid-columns-3">
+          <div class="image-frame">
+            <img src="/img/wf-05-directions.jpg" alt="" />
+          </div>
+          <div class="image-frame">
+            <img src="/img/wf-07-ARDirections.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="prototype-container">
+      <iframe
+        class="prototype"
+        src="//invis.io/TQU6273PVNJ"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div> -->
 
     <footer class="footer">
       <ul class="text-margin-bt-0">
@@ -59,8 +366,12 @@
         </li>
       </ul>
       <div>
-        <p class="text-margin-bt-0"><a href="../about/index.html#website">About This Site</a></p>
-        <p class="text-margin-bt-0"><a href="mailto:herman@borrego.ca">herman@borrego.ca</a></p>
+        <p class="text-margin-bt-0">
+          <a href="../about/index.html#website">About This Site</a>
+        </p>
+        <p class="text-margin-bt-0">
+          <a href="mailto:herman@borrego.ca">herman@borrego.ca</a>
+        </p>
         <p class="text-margin-bt-0">© 2019 — Herman Borrego</p>
         <p class="text-margin-bt-0">
           All Rights Reserved
@@ -68,15 +379,9 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5//plugins/debug.addIndicators.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="../js/flickity.pkgd.min.js"></script>
-    <script src="../js/fullscreen.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/projects.js"></script>
     <script src="../js/scroll.js"></script>
-    <script src="../js/workfrom.js"></script>
   </body>
 </html>
