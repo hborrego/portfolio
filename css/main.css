@@ -47,7 +47,7 @@ a.back-to-top img {
 }
 
 header {
-  position: absolute;
+  position: relative;
   padding: 1em;
   z-index: 20;
   display: -webkit-box;
@@ -87,6 +87,7 @@ header nav ul li a {
 }
 
 .home-header {
+  position: absolute;
   background: none;
 }
 
@@ -183,6 +184,7 @@ a {
 .text-box {
   width: 100%;
   height: auto;
+  padding-top: 1em;
   border: 1px dashed rgba(0, 0, 0, 0.25);
 }
 
