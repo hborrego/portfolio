@@ -127,6 +127,11 @@ a {
   margin: auto;
 }
 
+.narrow-42 {
+  max-width: 42em;
+  margin: auto;
+}
+
 .padding-top-1 {
   padding-top: 1em;
 }
@@ -137,6 +142,10 @@ a {
 
 .padding-top-3 {
   padding-top: 3em;
+}
+
+.padding-bottom-3 {
+  padding-bottom: 3em;
 }
 
 .padding-sides-1 {
@@ -175,6 +184,12 @@ a {
   width: 100%;
   height: auto;
   border: 1px dashed rgba(0, 0, 0, 0.25);
+}
+
+.grey-section {
+  background-color: #e6e7e8;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 .prototype-container {
@@ -228,14 +243,26 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
   overflow: hidden;
   padding: 0;
 }
 
 .image-frame img {
-  height: 100%;
   width: 100%;
+}
+
+.persona-container h4, .persona-container p {
+  display: inline;
 }
 
 canvas {
@@ -548,6 +575,9 @@ img.hide-image {
   }
   .hero-about .about-text {
     padding: 2em;
+  }
+  .text-container {
+    padding-left: 2em;
   }
 }
 
