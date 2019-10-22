@@ -357,6 +357,12 @@ canvas {
   background-position: 50% 0;
 }
 
+.hero-st {
+  background: url("../img/hero-st.jpg");
+  background-size: cover;
+  background-position: 50% 0;
+}
+
 .portfolio {
   padding-top: 4em;
 }
@@ -366,14 +372,20 @@ canvas {
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-  grid-gap: 0.5em;
+  grid-gap: 1em;
 }
 
 .gallery h3 {
   font-size: 1.15rem;
-  background: rgba(255, 255, 255, 0.85);
-  display: inline-block;
-  padding: 0.5em 0.7em;
+  display: block;
+  margin: 0;
+}
+
+.gallery p {
+  font-size: 1rem;
+  display: block;
+  margin: 0;
+  padding-top: 0.25em;
 }
 
 .gallery figure {
@@ -409,6 +421,8 @@ canvas {
 }
 
 .gallery .additional {
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.85);
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -571,6 +585,7 @@ img.hide-image {
   }
   .hero-project {
     height: 50vh;
+    min-height: 24em;
   }
   .hero-about .about-pic {
     display: -webkit-box;

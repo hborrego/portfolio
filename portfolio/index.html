@@ -18,22 +18,59 @@
 
     <!-- Fullstory Tracking Code -->
     <script>
-      window['_fs_debug'] = false;
-      window['_fs_host'] = 'fullstory.com';
-      window['_fs_org'] = 'PBG11';
-      window['_fs_namespace'] = 'FS';
-      (function(m,n,e,t,l,o,g,y){
-          if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-          g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
-          o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_host+'/s/fs.js';
-          y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-          g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
-          g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
-          g.log = function(a,b) { g("log", [a,b]) };
-          g.consent=function(a){g("consent",!arguments.length||a)};
-          g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-          g.clearUserCookie=function(){};
-      })(window,document,window['_fs_namespace'],'script','user');
+      window["_fs_debug"] = false;
+      window["_fs_host"] = "fullstory.com";
+      window["_fs_org"] = "PBG11";
+      window["_fs_namespace"] = "FS";
+      (function(m, n, e, t, l, o, g, y) {
+        if (e in m) {
+          if (m.console && m.console.log) {
+            m.console.log(
+              'FullStory namespace conflict. Please set window["_fs_namespace"].'
+            );
+          }
+          return;
+        }
+        g = m[e] = function(a, b, s) {
+          g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
+        };
+        g.q = [];
+        o = n.createElement(t);
+        o.async = 1;
+        o.crossOrigin = "anonymous";
+        o.src = "https://" + _fs_host + "/s/fs.js";
+        y = n.getElementsByTagName(t)[0];
+        y.parentNode.insertBefore(o, y);
+        g.identify = function(i, v, s) {
+          g(l, { uid: i }, s);
+          if (v) g(l, v, s);
+        };
+        g.setUserVars = function(v, s) {
+          g(l, v, s);
+        };
+        g.event = function(i, v, s) {
+          g("event", { n: i, p: v }, s);
+        };
+        g.shutdown = function() {
+          g("rec", !1);
+        };
+        g.restart = function() {
+          g("rec", !0);
+        };
+        g.log = function(a, b) {
+          g("log", [a, b]);
+        };
+        g.consent = function(a) {
+          g("consent", !arguments.length || a);
+        };
+        g.identifyAccount = function(i, v) {
+          o = "account";
+          v = v || {};
+          v.acctId = i;
+          g(o, v);
+        };
+        g.clearUserCookie = function() {};
+      })(window, document, window["_fs_namespace"], "script", "user");
     </script>
 
     <meta charset="UTF-8" />
@@ -86,15 +123,38 @@
     /></a>
 
     <section class="portfolio site-content" id="portfolio">
-      <h2 class="text-center">Selected Works</h2>
+      <h1 class="text-center">Selected Works</h1>
       <div class="gallery">
         <figure>
+          <a href="../workfrom">
+            <img src="../img/gallery-wf.jpg" />
+          </a>
+          <figcaption>
+            <div class="additional">
+              <h3>Workfrom Redesign</h3>
+              <p>Product Design</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure>
+          <a href="../strava">
+            <img src="../img/gallery-st.jpg" />
+          </a>
+          <figcaption>
+            <div class="additional">
+              <h3>Strava AR</h3>
+              <p>Product Design (AR Glasses)</p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure>
           <a href="../artifacts">
-            <img src="../img/gallery-artifacts.jpg" />
+            <img src="../img/gallery-artifacts3.jpg" />
           </a>
           <figcaption>
             <div class="additional">
               <h3>Artifacts of Self-Determination</h3>
+              <p>Academic Research & Design</p>
             </div>
           </figcaption>
         </figure>
@@ -105,6 +165,7 @@
           <figcaption>
             <div class="additional">
               <h3>Bloor & Dufferin</h3>
+              <p>3D Modeling & Rendering</p>
             </div>
           </figcaption>
         </figure>
@@ -115,6 +176,7 @@
           <figcaption>
             <div class="additional">
               <h3>Thorncliffe Community Market</h3>
+              <p>Physical Product Design & Research</p>
             </div>
           </figcaption>
         </figure>
@@ -124,7 +186,8 @@
           </a>
           <figcaption>
             <div class="additional">
-              <h3>229: Historic Arts and Craft Home Restoration</h3>
+              <h3>229: Historic Arts & Craft Home Restoration</h3>
+              <p>Spatial Design</p>
             </div>
           </figcaption>
         </figure>
