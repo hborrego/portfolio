@@ -18,22 +18,59 @@
 
     <!-- Fullstory Tracking Code -->
     <script>
-      window['_fs_debug'] = false;
-      window['_fs_host'] = 'fullstory.com';
-      window['_fs_org'] = 'PBG11';
-      window['_fs_namespace'] = 'FS';
-      (function(m,n,e,t,l,o,g,y){
-          if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-          g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
-          o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_host+'/s/fs.js';
-          y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-          g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
-          g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
-          g.log = function(a,b) { g("log", [a,b]) };
-          g.consent=function(a){g("consent",!arguments.length||a)};
-          g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-          g.clearUserCookie=function(){};
-      })(window,document,window['_fs_namespace'],'script','user');
+      window["_fs_debug"] = false;
+      window["_fs_host"] = "fullstory.com";
+      window["_fs_org"] = "PBG11";
+      window["_fs_namespace"] = "FS";
+      (function(m, n, e, t, l, o, g, y) {
+        if (e in m) {
+          if (m.console && m.console.log) {
+            m.console.log(
+              'FullStory namespace conflict. Please set window["_fs_namespace"].'
+            );
+          }
+          return;
+        }
+        g = m[e] = function(a, b, s) {
+          g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
+        };
+        g.q = [];
+        o = n.createElement(t);
+        o.async = 1;
+        o.crossOrigin = "anonymous";
+        o.src = "https://" + _fs_host + "/s/fs.js";
+        y = n.getElementsByTagName(t)[0];
+        y.parentNode.insertBefore(o, y);
+        g.identify = function(i, v, s) {
+          g(l, { uid: i }, s);
+          if (v) g(l, v, s);
+        };
+        g.setUserVars = function(v, s) {
+          g(l, v, s);
+        };
+        g.event = function(i, v, s) {
+          g("event", { n: i, p: v }, s);
+        };
+        g.shutdown = function() {
+          g("rec", !1);
+        };
+        g.restart = function() {
+          g("rec", !0);
+        };
+        g.log = function(a, b) {
+          g("log", [a, b]);
+        };
+        g.consent = function(a) {
+          g("consent", !arguments.length || a);
+        };
+        g.identifyAccount = function(i, v) {
+          o = "account";
+          v = v || {};
+          v.acctId = i;
+          g(o, v);
+        };
+        g.clearUserCookie = function() {};
+      })(window, document, window["_fs_namespace"], "script", "user");
     </script>
 
     <meta charset="UTF-8" />
@@ -100,30 +137,76 @@
           <img src="../img/Herman1080Web.jpg" alt="" />
         </div>
         <div class="about-text">
+          <h2>
+            I'm Herman Borrego, a product designer who specializes in digital
+            interactions, spatial experiences and user research.
+          </h2>
           <p>
-            I aim to create products and experiences that positively impact
-            people and our environment. Trained as an architect and a designer,
-            with extensive experience in multidisciplinary practices, I thrive
-            to be an active participant in projects that promote innovative
-            solutions in our everyday spaces and cities. I am a believer that
-            technology and space-making are allies and that by embracing
-            innovations, such as VR/AR/MR, we have the ability to efficiently
-            test ideas, bridging the gap between the digital and the physical,
-            and alleviate wasteful practices.
+            Trained as an architect and a designer, I thrive to be an active
+            participant in projects that promote innovative solutions for our
+            everyday devices and spaces. I am a believer that
+            <strong>technology and space-making are allies</strong> and that by
+            embracing emerging technologies, such as XR, we have the ability to
+            <strong>
+              enhance our physical space through digital solutions that generate
+              memorable experiences.
+            </strong>
           </p>
+          <p>
+            My design process relies on
+            <strong>contextual research, prototyping and user testing</strong>
+            at its core. I'm inspired by peer feedback, iterative processes and
+            unexpected findings. I'm committed to work closely with clients and
+            users from diverse backgrounds who empower different perspectives
+            and ideas.
+          </p>
+        </div>
+      </section>
 
-          <p>
-            My design process relies on contextual research, prototyping and
-            user testing at its core. I'm inspired by peer feedback, iterative
-            processes and unexpected findings. I'm committed to work closely
-            with clients and users from diverse backgrounds who empower
-            different perspectives and ideas. When I make a mistake, I own it,
-            embrace it and learn from it to better myself everyday, because
-            failure and vulnerability are also aspects that make us human.
-            Understanding both, the positive and negative, creates a unique
-            opportunity, in which advantages and constraints become the
-            catalysts of ideas and lessons.
-          </p>
+      <section class="site-content">
+        <!-- <div class="text-center">
+          <h2>Tools</h2>
+        </div> -->
+        <div class="grid grid-columns-3 no-decoration">
+          <div>
+            <h4>
+              Design & Research
+            </h4>
+            <ul>
+              <li>Product Design</li>
+              <li>Spatial Design</li>
+              <li>Usability Testing</li>
+              <li>Surveys</li>
+              <li>Interviews</li>
+              <li>Wireframing</li>
+            </ul>
+          </div>
+          <div>
+            <h4>
+              Prototyping
+            </h4>
+            <ul>
+              <li>Sketch</li>
+              <li>InVision</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>After Effects</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </div>
+          <div>
+            <h4>
+              3D Tools
+            </h4>
+            <ul>
+              <li>Cinema 4D</li>
+              <li>Unity</li>
+              <li>Rhino</li>
+              <li>Arnold Renderer</li>
+              <li>Web GL / three.js</li>
+              <li>A-Frame</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -131,15 +214,14 @@
         <div>
           <h3 class="text-center">This Website Was Built From Scratch</h3>
           <p class="text-margin-bt-0">
-            Made with ❤️ thanks to countless online tutorials, giving up on
-            trying to keep up with JS framework releases and borrowing code here
-            and there. I took on coding this site as a challenge to gain more
-            understanding of the developer's role, needs, and constrains. Home
-            page's model, animation, and orbit controls were built using
+            Made with ❤️ thanks to countless online tutorials and borrowing code
+            here and there. Home page's model, animation, and orbit controls
+            were built using
             <a href="https://threejs.org/" target="_blank">three.js</a>. Project
             animations, such as
-            <a href="javascript:void(0)" id="example-animation">this one</a>,
-            were done in After Effects, exported through
+            <a href="javascript:void(0)" id="example-animation"
+              ><strong>this one</strong></a
+            >, were done in After Effects, exported through
             <a href="https://airbnb.design/lottie" target="_blank">
               Lottie/Bodymovin</a
             >

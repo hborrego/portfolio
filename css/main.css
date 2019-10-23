@@ -220,6 +220,16 @@ a {
   height: 58em;
 }
 
+.no-decoration {
+  text-align: center;
+}
+
+.no-decoration ul {
+  -webkit-padding-start: 0%;
+          padding-inline-start: 0%;
+  list-style-type: none;
+}
+
 h1 {
   color: black;
   font-weight: 300;
@@ -275,7 +285,8 @@ h4 {
   width: 100%;
 }
 
-.persona-container h4, .persona-container p {
+.persona-container h4,
+.persona-container p {
   display: inline;
 }
 
@@ -509,7 +520,6 @@ img.hide-image {
 
 .hero-about .about-pic {
   position: relative;
-  margin-top: 2em;
 }
 
 .hero-about .about-pic img {
