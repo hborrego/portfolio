@@ -18,22 +18,59 @@
 
     <!-- Fullstory Tracking Code -->
     <script>
-      window['_fs_debug'] = false;
-      window['_fs_host'] = 'fullstory.com';
-      window['_fs_org'] = 'PBG11';
-      window['_fs_namespace'] = 'FS';
-      (function(m,n,e,t,l,o,g,y){
-          if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-          g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
-          o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_host+'/s/fs.js';
-          y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-          g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
-          g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
-          g.log = function(a,b) { g("log", [a,b]) };
-          g.consent=function(a){g("consent",!arguments.length||a)};
-          g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-          g.clearUserCookie=function(){};
-      })(window,document,window['_fs_namespace'],'script','user');
+      window["_fs_debug"] = false;
+      window["_fs_host"] = "fullstory.com";
+      window["_fs_org"] = "PBG11";
+      window["_fs_namespace"] = "FS";
+      (function(m, n, e, t, l, o, g, y) {
+        if (e in m) {
+          if (m.console && m.console.log) {
+            m.console.log(
+              'FullStory namespace conflict. Please set window["_fs_namespace"].'
+            );
+          }
+          return;
+        }
+        g = m[e] = function(a, b, s) {
+          g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
+        };
+        g.q = [];
+        o = n.createElement(t);
+        o.async = 1;
+        o.crossOrigin = "anonymous";
+        o.src = "https://" + _fs_host + "/s/fs.js";
+        y = n.getElementsByTagName(t)[0];
+        y.parentNode.insertBefore(o, y);
+        g.identify = function(i, v, s) {
+          g(l, { uid: i }, s);
+          if (v) g(l, v, s);
+        };
+        g.setUserVars = function(v, s) {
+          g(l, v, s);
+        };
+        g.event = function(i, v, s) {
+          g("event", { n: i, p: v }, s);
+        };
+        g.shutdown = function() {
+          g("rec", !1);
+        };
+        g.restart = function() {
+          g("rec", !0);
+        };
+        g.log = function(a, b) {
+          g("log", [a, b]);
+        };
+        g.consent = function(a) {
+          g("consent", !arguments.length || a);
+        };
+        g.identifyAccount = function(i, v) {
+          o = "account";
+          v = v || {};
+          v.acctId = i;
+          g(o, v);
+        };
+        g.clearUserCookie = function() {};
+      })(window, document, window["_fs_namespace"], "script", "user");
     </script>
 
     <meta charset="UTF-8" />
@@ -71,7 +108,7 @@
   </head>
   <body>
     <header id="header">
-      <a href="../index.html" class="logo">Herman Borrego</a>
+      <a href="../" class="logo">Herman Borrego</a>
       <nav>
         <ul>
           <li><a href="../portfolio">Portfolio</a></li>
@@ -86,27 +123,27 @@
 
     <section class="hero-ar hero-project"></section>
 
-    <section class="project-title site-content">
+    <section class="width-42">
       <h1 class="text-center">Thorncliffe Community Market</h1>
       <div class="project-description">
         <div class="text-center">
           <p class="text-desc-title">Made At:</p>
-          <p class="text-margin-bt-0">ERA Architects</p>
+          <p class="margin-bt-0">ERA Architects</p>
         </div>
         <div class="text-center">
           <p class="text-desc-title">Role:</p>
-          <p class="text-margin-bt-0">
+          <p class="margin-bt-0">
             Physical Product Designer and Researcher
           </p>
         </div>
         <div class="text-center">
           <p class="text-desc-title">When:</p>
-          <p class="text-margin-bt-0">2016</p>
+          <p class="margin-bt-0">2016</p>
         </div>
       </div>
       <div class="text-desc-details">
         <p class="text-desc-title text-center">Project Details:</p>
-        <p class="text-margin-bt-0 narrow-42">
+        <p class="margin-bt-0">
           Located in central east Toronto, Thorncliffe Park is densly populated
           neighborhood, home of a wide range of cultures and newcomers to
           Canada. Our team worked with with the Thorncliffe Park Action Group
@@ -117,36 +154,88 @@
       </div>
     </section>
 
-    <section class="site-content grid">
-      <h3 class="text-center text-margin-top-0">
-        Focus on What Really Matters
-      </h3>
-      <div class="image-container grid">
+    <section class="grid grey-section padding-top-3">
+      <div class="width-42">
+        <h2 class="text-center margin-top-0">
+          Research Sessions
+        </h2>
+      </div>
+      <div class="width-48 image-container grid grid-columns-2">
         <div class="image-frame">
-          <img src="../img/tr-diagram.png" alt="" />
+          <img src="../img/tr-user-research-1.jpg" alt="" />
         </div>
+        <div class="image-frame">
+          <img src="../img/tr-user-research-2.jpg" alt="" />
+        </div>
+      </div>
+      <div class="width-42 image-container grid">
+        <h3 class="text-center padding-top-2">
+          "A few years ago we had a lot of wind, which ended up damaging some of
+          the tents that we were using"
+        </h3>
         <p>
-          Before making any design decisions, we run a few prototype ideas
-          collectively with the users, which allowed us understand which
-          elements to prioritize and which were unnecessary. Aspects that we
+          We quickly realized of the importance getting users involved during
+          the decision making stages after we brought our assumptions to them
+          and noticed that we had it all wrong. A few sessions later, we were
+          able to recollect relevant aspects that allowed us understand which
+          elements to prioritize and which were unnecessary. Features that we
           thought were very important, such as creating a shading canopy, were
           quickly discarded by the TAG group.
         </p>
-        <div class="image-container grid grid-columns-2">
-          <div class="image-frame">
-            <img src="../img/tr-user-research-1.jpg" alt="" />
-          </div>
-          <div class="image-frame">
-            <img src="../img/tr-user-research-2.jpg" alt="" />
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="site-content">
-      <h3 class="text-center text-margin-top-0">
-        Build Half, Let the Users Finish the Other Half
-      </h3>
+    <section class="width-42 padding-top-3">
+      <div class="padding-bottom-1">
+        <h2 class="text-center margin-top-0">
+          Guiding Principals
+        </h2>
+      </div>
+      <div>
+        <p>
+          Although the meetings with the users was very informative we decided
+          that we could not do them all. We decided narrow down our priorities
+          and focus on what was more important for the users and what budget
+          would allow us to accomplish:
+        </p>
+        <ol>
+          <li>
+            Design and build a <strong>stable structure</strong>, instead of
+            using foldable tables, like they have done in the past
+          </li>
+          <li>
+            Allow design to have <strong>customizable components</strong>, in
+            order to allow the user to take ownership of the product
+          </li>
+          <li>
+            The product had to be <strong>easy to repair</strong>, simple tools
+            could be used to fix in the future if needed
+          </li>
+          <li>The stand should be <strong>easy to move and store</strong></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="width-48 padding-top-3">
+      <div class="width-42 padding-bottom-1">
+        <h2 class="text-center margin-top-0">Product Configurations</h2>
+      </div>
+      <div class="image-frame">
+        <img src="../img/tr-diagram.png" alt="" />
+      </div>
+      <div class="width-42 padding-top-1">
+        <p>
+          We decided to create an L shaped stand that would allow for storage
+          capacity, could be interlocked when stored and be versatile enough for
+          different configurations in the park.
+        </p>
+      </div>
+    </section>
+
+    <section class="width-48 padding-top-3">
+      <div class="width-42 padding-bottom-1">
+        <h2 class="text-center margin-top-0">Building the Base</h2>
+      </div>
       <div class="image-container grid">
         <div class="image-container grid grid-columns-2">
           <div class="image-frame">
@@ -156,23 +245,26 @@
             <img src="../img/tr-frame-assembly-2.jpg" alt="" />
           </div>
         </div>
-        <p>
-          Based on feedback, we ended up designing and building a structural
-          skeleton, with the intension of only creating the more technical
-          aspects of the market stands. The design had a minimal presence,
-          giving us the opportunity to hand the structures over to the users at
-          this point.
-        </p>
-        <div class="image-frame">
+        <div class="width-42 padding-top-1 padding-bottom-1">
+          <p>
+            The design we ended up building was made out of wood and was meant
+            to serve as a structural skeleton, with the intension of. The design
+            had a minimal presence, giving us the opportunity to hand the
+            structures over to the users at this point.
+          </p>
+        </div>
+        <div class="image-frame margin-bottom-1">
           <img src="../img/tr-frame.jpg" alt="" />
         </div>
       </div>
     </section>
 
-    <section class="site-content grid">
-      <h3 class="text-center text-margin-top-0">
-        Let the Users Take Ownership of the Product
-      </h3>
+    <section class="width-48 padding-top-3">
+      <div class="width-42 padding-bottom-1">
+        <h2 class="text-center margin-top-0">
+          Building the Rest
+        </h2>
+      </div>
       <div class="image-container grid">
         <div class="image-container grid grid-columns-2">
           <div class="image-frame">
@@ -185,12 +277,17 @@
         <div class="image-frame">
           <img src="../img/tr-assembly-tutorial.jpg" alt="" />
         </div>
-        <p>
-          The users made the structures their own. Through the use of colorful
-          fabrics — a very familiar and comfortable elements for them — they
-          were able to transform, personalize and associate themselves to
-          product.
-        </p>
+        <div class="width-42 image-container grid padding-bottom-2">
+          <h3 class="text-center padding-top-2">
+            Build half, let the users finish the other half
+          </h3>
+          <p>
+            The users made the structures their own. Through the use of colorful
+            fabrics — a very familiar and comfortable elements for them — they
+            were able to transform, personalize and associate themselves to
+            product.
+          </p>
+        </div>
         <div class="image-container grid grid-columns-2">
           <div class="image-frame">
             <img src="../img/tr-assembly-1.jpg" alt="" />
@@ -199,16 +296,18 @@
             <img src="../img/tr-assembly-2.jpg" alt="" />
           </div>
         </div>
-        <div class="image-frame">
+        <div class="image-frame margin-bottom-1">
           <img src="../img/tr-finished.jpg" alt="" />
         </div>
       </div>
     </section>
 
-    <section class="site-content grid">
-      <h3 class="text-center text-margin-top-0">
-        Let the User Take The Steering Wheel
-      </h3>
+    <section class="width-48 padding-top-3">
+      <div class="width-42 padding-bottom-1">
+        <h2 class="text-center margin-top-0">
+          Takeaways
+        </h2>
+      </div>
       <div class="image-container grid">
         <div class="image-frame">
           <img src="../img/tr-park-1.jpg" alt="" />
@@ -221,22 +320,27 @@
             <img src="../img/tr-park-3.jpg" alt="" />
           </div>
         </div>
-        <p>
-          The most important lesson from this project was to step back and let
-          the user take the steering wheel. As designers, we tent to believe
-          that we have all the answers for the users we are serving, but
-          sometimes is it better to stop designing and allow them change the
-          product to their own preferences.
-        </p>
+        <div class="width-42 image-container grid padding-bottom-2">
+          <h3 class="text-center padding-top-2">
+            Let the Users Take Ownership of the Product
+          </h3>
+          <p>
+            The most important lesson from this project was to step back and let
+            the user take the steering wheel. As designers, we tent to believe
+            that we have all the answers for the users we are serving, but
+            sometimes is it better to stop designing and allow them change the
+            product to their own preferences.
+          </p>
+        </div>
         <div class="image-frame">
           <img src="../img/tc-serving.jpg" alt="" />
         </div>
       </div>
     </section>
 
-    <section class="site-content grid">
+    <section class="width-48 grid">
       <div>
-        <p class="text-margin-bt-0 text-center">
+        <p class="margin-bt-0 text-center">
           All images displayed in this project are property of ERA Architects
           Inc.
         </p>
@@ -244,7 +348,7 @@
     </section>
 
     <footer class="footer">
-      <ul class="text-margin-bt-0">
+      <ul class="margin-bt-0">
         <li>
           <a href="https://www.instagram.com/hbor" target="_blank"
             ><img class="icon" src="../svg/instagram-brands.svg" alt=""
@@ -267,14 +371,14 @@
         </li>
       </ul>
       <div>
-        <p class="text-margin-bt-0">
+        <p class="margin-bt-0">
           <a href="../about/index.html#website">About This Site</a>
         </p>
-        <p class="text-margin-bt-0">
+        <p class="margin-bt-0">
           <a href="mailto:herman@borrego.ca">herman@borrego.ca</a>
         </p>
-        <p class="text-margin-bt-0">© 2019 — Herman Borrego</p>
-        <p class="text-margin-bt-0">
+        <p class="margin-bt-0">© 2019 — Herman Borrego</p>
+        <p class="margin-bt-0">
           All Rights Reserved
         </p>
       </div>
