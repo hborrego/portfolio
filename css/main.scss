@@ -17,6 +17,26 @@ body {
   }
 }
 
+.button {
+  background-color: black;
+  border: solid black 1px;
+  color: white;
+  padding: 20px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background: white;
+  border: solid black 1px;
+  color: black;
+}
+
 a.back-to-top {
   img {
     width: 4.5em;
@@ -231,7 +251,7 @@ a {
   }
 }
 
-.link-nd{
+.link-nd {
   text-decoration: none;
 }
 
