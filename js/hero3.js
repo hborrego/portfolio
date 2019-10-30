@@ -1,9 +1,9 @@
 import * as THREE from "./three.module.js";
-import Stats from "./stats.module.js";
+// import Stats from "./stats.module.js";
 import { OrbitControls } from "./OrbitControls.js";
 import { ConvexObjectBreaker } from "./ConvexObjectBreaker.js";
 import { ConvexBufferGeometry } from "./ConvexGeometry.js";
-import { FBXLoader } from "./FBXLoader.js";
+// import { FBXLoader } from "./FBXLoader.js";
 // - Global variables -
 // Graphics variables
 var container, stats;
@@ -159,28 +159,6 @@ function createObjects() {
     quat,
     createMaterial(0xE9C46A)
   );
-  // Tower 2
-  // pos.set(10, 5, 0);
-  // quat.set(0, 0, 0, 1);
-  // createObject(
-  //   towerMass,
-  //   towerHalfExtents,
-  //   pos,
-  //   quat,
-  //   createMaterial(0xb03214)
-  // );
-  //Bridge
-  // var bridgeMass = 100;
-  // var bridgeHalfExtents = new THREE.Vector3(7, 0.2, 1.5);
-  // pos.set(0, 10.2, 0);
-  // quat.set(0, 0, 0, 1);
-  // createObject(
-  //   bridgeMass,
-  //   bridgeHalfExtents,
-  //   pos,
-  //   quat,
-  //   createMaterial(0xb3b865)
-  // );
 
   // Cylinder
   var cylinderMass = 200; //300
