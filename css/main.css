@@ -21,7 +21,7 @@ body ::selection {
 
 .button {
   background-color: black;
-  border: solid black 1px;
+  border: solid black 2px;
   color: white;
   padding: 20px 34px;
   text-align: center;
@@ -40,27 +40,15 @@ body ::selection {
   color: black;
 }
 
-a.back-to-top {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  right: 1em;
-  bottom: 1em;
-}
-
-a.back-to-top img {
-  width: 4.5em;
-  height: auto;
-  opacity: 50%;
-}
-
 #drag-arrow {
   pointer-events: none;
   position: fixed;
   z-index: 999;
   bottom: 1.5em;
+  padding: 0.5em 0.5em;
   text-align: center;
-  width: 100%;
+  text-decoration: none;
+  background-color: white;
 }
 
 #drag-arrow p {
@@ -73,6 +61,32 @@ a.back-to-top img {
   height: auto;
   opacity: 50%;
   margin: 0 0;
+}
+
+.arrow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+a.back-to-top {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  right: 1em;
+  bottom: 1em;
+}
+
+a.back-to-top img {
+  width: 4.5em;
+  height: auto;
+  opacity: 50%;
 }
 
 header {
@@ -347,8 +361,6 @@ canvas {
 #hero {
   overflow: hidden;
   width: 100vh;
-  cursor: -webkit-grab;
-  cursor: grab;
 }
 
 .hero-home {

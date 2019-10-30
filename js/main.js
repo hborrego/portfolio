@@ -7,78 +7,74 @@ document.addEventListener("DOMContentLoaded", function() {
 
       var tl = new TimelineMax();
 
-      var tlh1 = function(){ 
-
+      var tlh1 = function() {
         document.getElementById("hero-text").style.visibility = "visible";
         document.getElementById("drag-arrow").style.visibility = "visible";
-        
 
         tl.staggerFrom(
-        "h1",
-        2,
-        {
-          opacity: 0,
-          y: -40,
-          ease: Power2.easeInOut
-        },
-        0.2
-      );
-        tl.staggerFrom(
-        "#drag-arrow",
-        2,
-        {
-          opacity: 0,
-          y: -40,
-          ease: Power2.easeInOut
-        },
-        0.2
-      );
-    }
+          "h1",
+          2,
+          {
+            opacity: 0,
+            y: -40,
+            ease: Power2.easeInOut
+          },
+          0.2
+        );
+        // tl.staggerFrom(
+        //   "#drag-arrow",
+        //   2,
+        //   {
+        //     opacity: 0,
+        //     y: -40,
+        //     ease: Power2.easeInOut
+        //   },
+        //   0.2
+        // );
+      };
 
-    tlh1();
+      tlh1();
 
       var hideText = function() {
         document.getElementById("hero-text").style.visibility = "hidden";
-        document.getElementById("drag-arrow").style.visibility = "hidden";
+        // document.getElementById("drag-arrow").style.visibility = "hidden";
       };
 
-      document.getElementById("hero").addEventListener("mousedown", hideText);
-      document.getElementById("hero").addEventListener("click", hideText);
-      document.getElementById("hero").addEventListener("scroll", hideText);
-      document.getElementById("hero").addEventListener("touchstart", hideText);
-      
+      document.getElementById("hero").addEventListener("mousedown", hideText, false);
+      document.getElementById("hero").addEventListener("click", hideText, false);
+      document.getElementById("hero").addEventListener("scroll", hideText, false);
+      document.getElementById("hero").addEventListener("touchstart", hideText, false);
+      document.getElementById("hero").addEventListener("touchend", hideText, false);
+      document.getElementById("hero").addEventListener("touchmove", hideText, false);
+
       var inactivityTime = function() {
         var time;
         window.onload = resetTimer;
         // DOM Events
         document.onmousedown = resetTimer;
         document.ontouchstart = resetTimer;
+        document.ontouchmove = resetTimer;
         document.ontouchend = resetTimer;
-        document.onclick = resetTimer; 
+        document.onclick = resetTimer;
         document.onscroll = resetTimer;
 
         function showText() {
           var status = document.getElementById("hero-text").style.visibility;
 
-          if (status == "hidden"){
-          tlh1();
-          // alert("You are now logged out.");
-          //location.href = 'logout.html'
+          if (status == "hidden") {
+            tlh1();
           }
         }
 
         function resetTimer() {
           clearTimeout(time);
-          time = setTimeout(showText, 3000);
+          time = setTimeout(showText, 10000);
           // 1000 milliseconds = 1 second
         }
       };
 
-      inactivityTime();
-
+      // inactivityTime();
     },
     false
   );
 });
-
-var images = ["img/passport01.png"];
