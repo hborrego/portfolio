@@ -361,6 +361,7 @@ canvas {
 #hero {
   overflow: hidden;
   width: 100vh;
+  cursor: crosshair;
 }
 
 .hero-home {

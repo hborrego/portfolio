@@ -248,27 +248,8 @@ function createObjects() {
   );
   createDebrisFromBreakableObject(mountain);
 
-  // Model
-  // var meshMass = 500;
-  // var loader = new FBXLoader();
-  // pos.set(0, 0, 0);
-  // quat.set(0, 0, 0, 1);
-
-  // loader.load("../js/mesh.fbx", function(object) {
-  //   // scene.add(object);
-  //   // object.position.copy(pos);
-  //   // object.quaternion.copy(quat);
-  //   convexBreaker.prepareBreakableObject(
-  //     object,
-  //     meshMass,
-  //     new THREE.Vector3(),
-  //     new THREE.Vector3(),
-  //     true
-  //   );
-  //   createDebrisFromBreakableObject(object);
-  //   scene.add(object);
-  // });
 }
+
 function createParalellepipedWithPhysics(
   sx,
   sy,

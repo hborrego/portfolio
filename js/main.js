@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       };
 
-      // inactivityTime();
+      // inactivityTime(); //turn off timer for now
     },
     false
   );
