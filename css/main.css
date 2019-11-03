@@ -40,7 +40,7 @@ body ::selection {
   color: black;
 }
 
-#drag-arrow {
+.instructions {
   pointer-events: none;
   position: fixed;
   z-index: 999;
@@ -48,22 +48,24 @@ body ::selection {
   padding: 0.5em 0.5em;
   text-align: center;
   text-decoration: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
+  max-width: calc(100% - 3em);
 }
 
-#drag-arrow p {
+.instructions p {
   margin: 0;
   font-size: 0.85em;
 }
 
-#drag-arrow img {
+.instructions img {
   width: 3em;
   height: auto;
   opacity: 50%;
   margin: 0 0;
 }
 
-.arrow-container {
+.instructions-container {
+  padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,18 +134,17 @@ header nav ul li a {
 .header-landing {
   position: fixed;
   background: none;
+  pointer-events: none;
+}
+
+.header-landing a {
+  pointer-events: all;
 }
 
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.flex-align-end {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 .block {
@@ -348,31 +349,36 @@ canvas {
   position: absolute;
 }
 
-.wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
-  height: 100vh;
-}
-
 #hero {
   overflow: hidden;
   width: 100vh;
   cursor: crosshair;
 }
 
+.hero-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+}
+
 .hero-home {
-  background-size: cover;
-  background-position: 50% 50%;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-rows: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
 }
 
 .hero-home h1,
@@ -380,16 +386,22 @@ canvas {
   color: black;
   font-weight: 300;
   z-index: 99;
+  pointer-events: all;
 }
 
 .hero-home h1 {
   text-align: left;
   width: 90%;
-  font-size: 1.5em;
+  font-size: 1.75em;
+  pointer-events: none;
 }
 
 .hero-home h1 span {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+#hero-text {
+  padding: 0 1em;
 }
 
 .hero-project {
@@ -485,7 +497,7 @@ canvas {
 
 .gallery .additional {
   padding: 1em;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.75);
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -649,9 +661,6 @@ img.hide-image {
   }
   header nav ul li a {
     padding: 1em;
-  }
-  header section.hero h1 {
-    width: 80%;
   }
   .hero-project {
     height: 50vh;

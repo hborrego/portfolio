@@ -37,7 +37,7 @@ body {
   color: black;
 }
 
-#drag-arrow {
+.instructions {
   p {
     margin: 0;
     font-size: 0.85em;
@@ -55,10 +55,12 @@ body {
   padding: 0.5em 0.5em;
   text-align: center;
   text-decoration: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
+  max-width: calc(100% - 3em);
 }
 
-.arrow-container {
+.instructions-container {
+  padding: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,14 +115,14 @@ header {
 .header-landing {
   position: fixed;
   background: none;
+  pointer-events: none;
+  a {
+    pointer-events: all;
+  }
 }
 
 .flex {
   display: flex;
-}
-
-.flex-align-end {
-  align-items: flex-end;
 }
 
 .block {
@@ -322,43 +324,47 @@ canvas {
   position: absolute;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 100%;
-  height: 100vh;
-}
-
 #hero {
   overflow: hidden;
   width: 100vh;
   cursor: crosshair;
 }
 
+.hero-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
 .hero-home {
-  // padding-top: 8em;
-  // background: url("../img/hero-background.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  display: grid;
-  grid-auto-rows: auto;
-  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
   h1,
   a {
     color: black;
     font-weight: 300;
     z-index: 99;
+    pointer-events: all;
   }
 
   h1 {
     text-align: left;
     width: 90%;
-    font-size: 1.5em;
+    font-size: 1.75em;
+    pointer-events: none;
   }
 
   h1 span {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.75);
   }
+}
+
+#hero-text {
+  padding: 0 1em;
 }
 
 .hero-project {
@@ -450,7 +456,7 @@ canvas {
 
   .additional {
     padding: 1em;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.75);
     opacity: 1;
     transform: scale(1);
     transition: all 0.5s;
@@ -610,11 +616,6 @@ img.hide-image {
     nav ul {
       li a {
         padding: 1em;
-      }
-    }
-    section.hero {
-      h1 {
-        width: 80%;
       }
     }
   }

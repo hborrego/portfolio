@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
       var tlh1 = function() {
         document.getElementById("hero-text").style.visibility = "visible";
-        document.getElementById("drag-arrow").style.visibility = "visible";
+        // document.getElementById("drag-arrow").style.visibility = "visible";
 
-        tl.staggerFrom(
+        tl.delay(2).staggerFrom(
           "h1",
           2,
           {
