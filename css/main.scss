@@ -231,6 +231,21 @@ a {
   border-radius: 1em;
 }
 
+.grey-text {
+  color: lightgrey;
+  transition: all 0.5s;
+}
+
+.grey-text:hover h5 {
+  color: black;
+  transition: all 0.5s;
+}
+
+.grey-text:hover {
+  color: black;
+  transition: all 0.5s;
+}
+
 .grey-section {
   background-color: #e6e7e8;
   padding-top: 3em;
@@ -287,6 +302,13 @@ h3 {
 h4 {
   font-family: "Space Mono", monospace;
   font-size: 1.125em;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+h5 {
+  font-family: "Space Mono", monospace;
+  font-size: 1em;
   font-weight: 400;
   margin-top: 0;
 }
