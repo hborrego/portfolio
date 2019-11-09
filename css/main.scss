@@ -428,9 +428,6 @@ canvas {
 }
 
 .gallery {
-  // width: calc(100% + 0.5em);
-  // margin-left: -0.25em;
-
   h3 {
     font-size: 1.15rem;
     display: block;
@@ -484,13 +481,13 @@ canvas {
     transition: all 0.5s;
   }
 
-  figure:hover {
-    background: white;
-  }
+  // figure:hover {
+  //   background: white;
+  // }
 
-  figure:hover img {
-    opacity: 0.4;
-  }
+  // figure:hover img {
+  //   opacity: 0.4;
+  // }
 
   figure:hover .additional {
     opacity: 1;
@@ -608,9 +605,9 @@ img.hide-image {
   }
 
   .gallery .additional {
-    opacity: 0;
-    transform: scale(1.2);
-    transition: all 0.5s;
+    // opacity: 0;
+    // transform: scale(1.2);
+    // transition: all 0.5s;
   }
 
   .width-48 {

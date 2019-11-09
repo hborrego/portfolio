@@ -530,14 +530,6 @@ canvas {
   transition: all 0.5s;
 }
 
-.gallery figure:hover {
-  background: white;
-}
-
-.gallery figure:hover img {
-  opacity: 0.4;
-}
-
 .gallery figure:hover .additional {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -659,13 +651,6 @@ img.hide-image {
     display: grid;
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
-  }
-  .gallery .additional {
-    opacity: 0;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
   }
   .width-48 {
     max-width: 48em;
