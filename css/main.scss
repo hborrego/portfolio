@@ -87,6 +87,7 @@ header {
   justify-content: space-between;
   width: calc(100% - 2em);
   background: white;
+  transition: all 0.5s;
 
   a {
     text-decoration: none;
@@ -109,6 +110,22 @@ header {
     li a {
       padding: 0.5em;
     }
+  }
+
+  .logo {
+    transition: all 0.5s;
+  }
+
+  .logo:hover {
+    transform: translate3d(0, -0.1em, 0em);
+  }
+
+  li {
+    transition: all 0.5s;
+  }
+
+  li:hover {
+    transform: translate3d(0, -0.1em, 0em);
   }
 }
 
@@ -451,7 +468,7 @@ canvas {
     overflow: hidden;
     position: relative;
     background: none;
-    transition: background-color 0.5s;
+    transition: all 0.5s;
 
     img {
       width: 100%;
@@ -481,17 +498,15 @@ canvas {
     transition: all 0.5s;
   }
 
-  // figure:hover {
-  //   background: white;
-  // }
-
-  // figure:hover img {
-  //   opacity: 0.4;
-  // }
+  figure:hover {
+    box-shadow: 0.25em 0.25em 0 black;
+    transform: translate(-0.25em, -0.25em);
+  }
 
   figure:hover .additional {
     opacity: 1;
-    transform: scale(1);
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
   }
 }
 
@@ -604,11 +619,11 @@ img.hide-image {
     grid-template-columns: repeat(2, auto);
   }
 
-  .gallery .additional {
-    // opacity: 0;
-    // transform: scale(1.2);
-    // transition: all 0.5s;
-  }
+  // .gallery .additional {
+  // opacity: 0;
+  // transform: scale(1.2);
+  // transition: all 0.5s;
+  // }
 
   .width-48 {
     max-width: 48em;

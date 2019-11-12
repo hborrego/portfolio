@@ -103,6 +103,8 @@ header {
           justify-content: space-between;
   width: calc(100% - 2em);
   background: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 header a {
@@ -129,6 +131,26 @@ header nav ul {
 
 header nav ul li a {
   padding: 0.5em;
+}
+
+header .logo {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .logo:hover {
+  -webkit-transform: translate3d(0, -0.1em, 0em);
+          transform: translate3d(0, -0.1em, 0em);
+}
+
+header li {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header li:hover {
+  -webkit-transform: translate3d(0, -0.1em, 0em);
+          transform: translate3d(0, -0.1em, 0em);
 }
 
 .header-landing {
@@ -496,8 +518,8 @@ canvas {
   overflow: hidden;
   position: relative;
   background: none;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .gallery figure img {
@@ -530,10 +552,17 @@ canvas {
   transition: all 0.5s;
 }
 
+.gallery figure:hover {
+  -webkit-box-shadow: 0.25em 0.25em 0 black;
+          box-shadow: 0.25em 0.25em 0 black;
+  -webkit-transform: translate(-0.25em, -0.25em);
+          transform: translate(-0.25em, -0.25em);
+}
+
 .gallery figure:hover .additional {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
 }
 
 section {
