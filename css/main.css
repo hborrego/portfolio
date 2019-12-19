@@ -21,14 +21,14 @@ body ::selection {
 
 .button {
   background-color: black;
-  border: solid black 2px;
+  border: solid black 0.0625em;
   color: white;
-  padding: 20px 34px;
+  padding: 1.125em 2em;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
+  font-size: 1.125em;
+  margin: 0.25em 0.125em;
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -36,7 +36,7 @@ body ::selection {
 
 .button:hover {
   background: white;
-  border: solid black 1px;
+  border: solid black 0.0625em;
   color: black;
 }
 
@@ -485,6 +485,12 @@ canvas {
   background-position: 50% 0;
 }
 
+.hero-ld {
+  background: url("https://borrego-site.s3.us-east-2.amazonaws.com/hero-ld-mobile.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 .portfolio {
   padding-top: 2em;
 }
@@ -494,7 +500,7 @@ canvas {
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-  grid-gap: 1em;
+  grid-gap: 1.25em;
 }
 
 .gallery h3 {
@@ -515,7 +521,6 @@ canvas {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  overflow: hidden;
   position: relative;
   background: none;
   -webkit-transition: all 0.5s;
@@ -528,6 +533,7 @@ canvas {
   opacity: 1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  border-radius: 0.1em;
 }
 
 .gallery figure figcaption {
@@ -542,6 +548,20 @@ canvas {
   pointer-events: none;
 }
 
+.gallery figure:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  left: 0;
+  top: 0;
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+  z-index: -1;
+  border-radius: 0.1em;
+}
+
 .gallery .additional {
   padding: 1em;
   background: rgba(255, 255, 255, 0.75);
@@ -550,11 +570,10 @@ canvas {
           transform: scale(1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  border-radius: 0.1em;
 }
 
-.gallery figure:hover {
-  -webkit-box-shadow: 0.25em 0.25em 0 black;
-          box-shadow: 0.25em 0.25em 0 black;
+.gallery figure:hover img {
   -webkit-transform: translate(-0.25em, -0.25em);
           transform: translate(-0.25em, -0.25em);
 }
@@ -563,6 +582,8 @@ canvas {
   opacity: 1;
   background: rgba(0, 0, 0, 0.75);
   color: white;
+  -webkit-transform: translate(-0.25em, -0.25em);
+          transform: translate(-0.25em, -0.25em);
 }
 
 section {
@@ -710,6 +731,11 @@ img.hide-image {
   .hero-project {
     height: 50vh;
     min-height: 24em;
+  }
+  .hero-ld {
+    background: url("https://borrego-site.s3.us-east-2.amazonaws.com/hero-ld.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
   }
   .hero-about .about-pic {
     display: -webkit-box;
