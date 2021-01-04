@@ -11,18 +11,18 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+      gtag('js', new Date());
 
-      gtag("config", "UA-137931305-1");
+      gtag('config', 'UA-137931305-1');
     </script>
 
     <!-- Fullstory Tracking Code -->
     <script>
-      window["_fs_debug"] = false;
-      window["_fs_host"] = "fullstory.com";
-      window["_fs_org"] = "PBG11";
-      window["_fs_namespace"] = "FS";
-      (function(m, n, e, t, l, o, g, y) {
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = 'PBG11';
+      window['_fs_namespace'] = 'FS';
+      (function (m, n, e, t, l, o, g, y) {
         if (e in m) {
           if (m.console && m.console.log) {
             m.console.log(
@@ -31,46 +31,46 @@
           }
           return;
         }
-        g = m[e] = function(a, b, s) {
+        g = m[e] = function (a, b, s) {
           g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
         };
         g.q = [];
         o = n.createElement(t);
         o.async = 1;
-        o.crossOrigin = "anonymous";
-        o.src = "https://" + _fs_host + "/s/fs.js";
+        o.crossOrigin = 'anonymous';
+        o.src = 'https://' + _fs_host + '/s/fs.js';
         y = n.getElementsByTagName(t)[0];
         y.parentNode.insertBefore(o, y);
-        g.identify = function(i, v, s) {
+        g.identify = function (i, v, s) {
           g(l, { uid: i }, s);
           if (v) g(l, v, s);
         };
-        g.setUserVars = function(v, s) {
+        g.setUserVars = function (v, s) {
           g(l, v, s);
         };
-        g.event = function(i, v, s) {
-          g("event", { n: i, p: v }, s);
+        g.event = function (i, v, s) {
+          g('event', { n: i, p: v }, s);
         };
-        g.shutdown = function() {
-          g("rec", !1);
+        g.shutdown = function () {
+          g('rec', !1);
         };
-        g.restart = function() {
-          g("rec", !0);
+        g.restart = function () {
+          g('rec', !0);
         };
-        g.log = function(a, b) {
-          g("log", [a, b]);
+        g.log = function (a, b) {
+          g('log', [a, b]);
         };
-        g.consent = function(a) {
-          g("consent", !arguments.length || a);
+        g.consent = function (a) {
+          g('consent', !arguments.length || a);
         };
-        g.identifyAccount = function(i, v) {
-          o = "account";
+        g.identifyAccount = function (i, v) {
+          o = 'account';
           v = v || {};
           v.acctId = i;
           g(o, v);
         };
-        g.clearUserCookie = function() {};
-      })(window, document, window["_fs_namespace"], "script", "user");
+        g.clearUserCookie = function () {};
+      })(window, document, window['_fs_namespace'], 'script', 'user');
     </script>
 
     <meta charset="UTF-8" />
@@ -111,7 +111,6 @@
       <a href="../" class="logo">Herman Borrego</a>
       <nav>
         <ul>
-          <li><a href="../portfolio">Portfolio</a></li>
           <li><a href="../about">About</a></li>
         </ul>
       </nav>
@@ -145,19 +144,21 @@
             My work focuses on designing user-centered and visually compelling
             products that empower people to accomplish more with less
             distractions. Trained as an architect and a designer, I thrive to be
-            an active participant in projects that promote <strong>innovative and
-            memorable solutions that positively impact our everyday devices and
-            spaces</strong>.
+            an active participant in projects that promote
+            <strong
+              >innovative and memorable solutions that positively impact our
+              everyday devices and spaces</strong
+            >.
           </p>
           <p>
             My passion for emerging technologies and innovative strategies
             encourages me to identify new product opportunities and applicable
-            concepts in every project. My design process relies on <strong>contextual
-            research, prototyping and user testing</strong> at its core. I am inspired by
-            peer feedback, iterative processes, and unexpected findings. I am
-            committed to working closely with clients and users from diverse
-            backgrounds who embrace and promote different perspectives and
-            ideas.
+            concepts in every project. My design process relies on
+            <strong>contextual research, prototyping and user testing</strong>
+            at its core. I am inspired by peer feedback, iterative processes,
+            and unexpected findings. I am committed to working closely with
+            clients and users from diverse backgrounds who embrace and promote
+            different perspectives and ideas.
           </p>
         </div>
       </section>
@@ -168,9 +169,7 @@
         </div> -->
         <div class="grid grid-columns-3 no-decoration text-center">
           <div>
-            <h4 class="margin-bottom-0">
-              Design & Research
-            </h4>
+            <h4 class="margin-bottom-0">Design & Research</h4>
             <ul>
               <li>Product Design</li>
               <li>Spatial Design</li>
@@ -181,9 +180,7 @@
             </ul>
           </div>
           <div>
-            <h4 class="margin-bottom-0">
-              Prototyping
-            </h4>
+            <h4 class="margin-bottom-0">Prototyping</h4>
             <ul>
               <li>Sketch</li>
               <li>InVision</li>
@@ -194,15 +191,13 @@
             </ul>
           </div>
           <div>
-            <h4 class="margin-bottom-0">
-              3D Tools
-            </h4>
+            <h4 class="margin-bottom-0">3D Tools</h4>
             <ul>
               <li>Cinema 4D</li>
               <li>Unity</li>
               <li>Rhino</li>
               <li>SketchUp</li>
-              <li>Arnold Renderer</li>
+              <li>Octane</li>
               <li>WebGL / three.js</li>
             </ul>
           </div>
@@ -262,9 +257,7 @@
             <a href="mailto:herman@borrego.ca">herman@borrego.ca</a>
           </p>
           <p class="margin-bt-0">© 2020 — Herman Borrego</p>
-          <p class="margin-bt-0">
-            All Rights Reserved
-          </p>
+          <p class="margin-bt-0">All Rights Reserved</p>
         </div>
       </footer>
     </div>
