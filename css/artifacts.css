@@ -296,7 +296,7 @@
 
 @media only screen and (min-width: 768px) {
   .map-animation svg {
-    max-width: 75vh;
+    max-width: 75vw;
   }
   .wrapper {
     -ms-grid-rows: none;
@@ -344,6 +344,7 @@
   .text-section {
     padding-left: 3em;
     height: auto;
+    width: 60em;
   }
   .map-flex {
     -webkit-box-orient: horizontal;

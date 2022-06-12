@@ -11,18 +11,18 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+      gtag('js', new Date());
 
-      gtag("config", "UA-137931305-1");
+      gtag('config', 'UA-137931305-1');
     </script>
 
     <!-- Fullstory Tracking Code -->
     <script>
-      window["_fs_debug"] = false;
-      window["_fs_host"] = "fullstory.com";
-      window["_fs_org"] = "PBG11";
-      window["_fs_namespace"] = "FS";
-      (function(m, n, e, t, l, o, g, y) {
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = 'PBG11';
+      window['_fs_namespace'] = 'FS';
+      (function (m, n, e, t, l, o, g, y) {
         if (e in m) {
           if (m.console && m.console.log) {
             m.console.log(
@@ -31,46 +31,46 @@
           }
           return;
         }
-        g = m[e] = function(a, b, s) {
+        g = m[e] = function (a, b, s) {
           g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
         };
         g.q = [];
         o = n.createElement(t);
         o.async = 1;
-        o.crossOrigin = "anonymous";
-        o.src = "https://" + _fs_host + "/s/fs.js";
+        o.crossOrigin = 'anonymous';
+        o.src = 'https://' + _fs_host + '/s/fs.js';
         y = n.getElementsByTagName(t)[0];
         y.parentNode.insertBefore(o, y);
-        g.identify = function(i, v, s) {
+        g.identify = function (i, v, s) {
           g(l, { uid: i }, s);
           if (v) g(l, v, s);
         };
-        g.setUserVars = function(v, s) {
+        g.setUserVars = function (v, s) {
           g(l, v, s);
         };
-        g.event = function(i, v, s) {
-          g("event", { n: i, p: v }, s);
+        g.event = function (i, v, s) {
+          g('event', { n: i, p: v }, s);
         };
-        g.shutdown = function() {
-          g("rec", !1);
+        g.shutdown = function () {
+          g('rec', !1);
         };
-        g.restart = function() {
-          g("rec", !0);
+        g.restart = function () {
+          g('rec', !0);
         };
-        g.log = function(a, b) {
-          g("log", [a, b]);
+        g.log = function (a, b) {
+          g('log', [a, b]);
         };
-        g.consent = function(a) {
-          g("consent", !arguments.length || a);
+        g.consent = function (a) {
+          g('consent', !arguments.length || a);
         };
-        g.identifyAccount = function(i, v) {
-          o = "account";
+        g.identifyAccount = function (i, v) {
+          o = 'account';
           v = v || {};
           v.acctId = i;
           g(o, v);
         };
-        g.clearUserCookie = function() {};
-      })(window, document, window["_fs_namespace"], "script", "user");
+        g.clearUserCookie = function () {};
+      })(window, document, window['_fs_namespace'], 'script', 'user');
     </script>
 
     <meta charset="UTF-8" />
@@ -109,13 +109,15 @@
   </head>
   <body>
     <header id="header">
-      <a href="../" class="logo">Herman Borrego</a>
-      <nav>
-        <ul>
-          <li><a href="../portfolio">Portfolio</a></li>
-          <li><a href="../about">About</a></li>
-        </ul>
-      </nav>
+      <div class="header-container">
+        <a href="../" class="logo">Herman Borrego</a>
+        <nav>
+          <ul>
+            <li><a href="../portfolio">Portfolio</a></li>
+            <li><a href="../about">About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <a href="#header" class="back-to-top"
@@ -172,11 +174,6 @@
           >
           for an interview and feature in their platform.
         </p>
-      </div>
-      <div class="text-center padding-top-1">
-        <a href="../artifacts_web/" class="button"
-          >Explore in Unity WebGL (WIP)</a
-        >
       </div>
     </section>
 
@@ -409,45 +406,21 @@
     </section>
 
     <section class="width-48">
-      <p class="text-center">
-        Special thanks to my advisor, John Shnier.
-      </p>
+      <p class="text-center">Special thanks to my advisor, John Shnier.</p>
     </section>
 
-    <footer class="footer">
-      <ul class="margin-bt-0">
-        <li>
-          <a href="https://www.instagram.com/hbor" target="_blank"
-            ><img class="icon" src="../svg/instagram-brands.svg" alt=""
-          /></a>
-        </li>
-        <!-- <li>
-          <a href="https://www.dribbble.com/hbor" target="_blank"
-            ><img class="icon" src="../svg/dribbble-brands.svg" alt=""
-          /></a>
-        </li> -->
-        <li>
-          <a href="https://www.github.com/hborrego" target="_blank"
-            ><img class="icon" src="../svg/github-brands.svg" alt=""
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/hbor" target="_blank"
-            ><img class="icon" src="../svg/linkedin-in-brands.svg" alt=""
-          /></a>
-        </li>
-      </ul>
+    <footer class="width-48">
       <div>
-        <p class="margin-bt-0">
-          <a href="../about/index.html#website">About This Site</a>
-        </p>
-        <p class="margin-bt-0">
-          <a href="mailto:herman@borrego.ca">herman@borrego.ca</a>
-        </p>
-        <p class="margin-bt-0">© 2020 — Herman Borrego</p>
-        <p class="margin-bt-0">
-          All Rights Reserved
-        </p>
+        <p class="margin-bt-0">© 2022 Herman Borrego — All Rights Reserved</p>
+      </div>
+      <div class="margin-bt-0">
+        <a class="link-nd" href="mailto:herman@borrego.ca">Email</a>
+        <a
+          class="link-nd"
+          href="https://www.linkedin.com/in/hbor"
+          target="_blank"
+          >LinkedIn</a
+        >
       </div>
     </footer>
 

@@ -5,7 +5,7 @@ html {
 
 body {
   height: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: none;
   ::-moz-selection {
     color: white;
@@ -83,8 +83,6 @@ header {
   position: relative;
   padding: 1em;
   z-index: 20;
-  display: flex;
-  justify-content: space-between;
   width: calc(100% - 2em);
   background: white;
   transition: all 0.5s;
@@ -129,6 +127,13 @@ header {
   }
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
 .header-landing {
   position: fixed;
   background: none;
@@ -151,6 +156,14 @@ header {
   grid-template-columns: auto;
 }
 
+.gap-5 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
 p {
   font-weight: 300;
   line-height: 1.25em;
@@ -162,6 +175,18 @@ li {
 
 a {
   color: black;
+}
+
+.paddding-1 {
+  padding: 1em;
+}
+
+.paddding-2 {
+  padding: 2em;
+}
+
+.paddding-3 {
+  padding: 3em;
 }
 
 .padding-top-1 {
@@ -197,8 +222,32 @@ a {
   font-size: 1em;
 }
 
+.margin-0 {
+  margin: 0;
+}
+
+.margin-top-0 {
+  margin-top: 0;
+}
+
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+.margin-top-3 {
+  margin-top: 3em;
+}
+
 .margin-bottom-0 {
   margin-bottom: 0;
+}
+
+.margin-bottom-05 {
+  margin-bottom: 0.5em;
 }
 
 .margin-bottom-1 {
@@ -228,7 +277,7 @@ a {
 
 .text-desc-title {
   margin-bottom: 0.25em;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
   font-weight: 400;
 }
 
@@ -297,6 +346,11 @@ a {
   text-decoration: none;
 }
 
+.link-body {
+  text-decoration: none;
+  font-weight: 600;
+}
+
 h1 {
   color: black;
   font-weight: 300;
@@ -305,33 +359,44 @@ h1 {
 }
 
 h2 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
   font-size: 1.5em;
   font-weight: 300;
   margin-top: 0;
 }
 
 h3 {
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
   font-weight: 400;
   font-size: 1.25em;
 }
 
 h4 {
-  font-family: "Space Mono", monospace;
   font-size: 1.125em;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 0;
 }
 
 h5 {
-  font-family: "Space Mono", monospace;
   font-size: 1em;
+  font-weight: 600;
+  margin: 0;
+}
+
+h6 {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.825em;
   font-weight: 400;
-  margin-top: 0;
+  margin-top: 0.75em;
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-start {
+  text-align: left;
 }
 
 .image-container {
@@ -411,37 +476,43 @@ canvas {
 }
 
 .hero-bd {
-  background: url("../img/bd-highstreet.jpg");
+  background: url('../img/bd-highstreet.jpg');
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .hero-ar {
-  background: url("../img/hero-tc.jpg");
+  background: url('../img/hero-tc.jpg');
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .hero-229 {
-  background: url("../img/hero-229.jpg");
+  background: url('../img/hero-229.jpg');
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .hero-wf {
-  background: url("../img/hero-wf.jpg");
+  background: url('../img/hero-wf.jpg');
   background-size: cover;
   background-position: 50% 0;
 }
 
 .hero-st {
-  background: url("../img/hero-st.jpg");
+  background: url('../img/hero-st.jpg');
   background-size: cover;
   background-position: 50% 0;
 }
 
 .hero-ld {
-  background: url("https://borrego-site.s3.us-east-2.amazonaws.com/hero-ld-mobile.jpg");
+  background: url('../img/hero-ld.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero-flix {
+  background: url('../img/hero-flix.jpg');
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -502,7 +573,7 @@ canvas {
   }
 
   figure:before {
-    content: "";
+    content: '';
     background: rgba(0, 0, 0, 0.75);
     // border: 1px black solid;
     position: absolute;
@@ -587,18 +658,16 @@ section {
 }
 
 footer {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  padding: 1em;
   padding-bottom: 3em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   text-align: center;
-
-  ul {
-    justify-content: center;
-    display: flex;
-    align-content: center;
-    list-style-type: none;
-    padding-inline-start: 0%;
-  }
+  gap: 1rem;
 
   a {
     color: black;
@@ -670,7 +739,7 @@ img.hide-image {
   }
 
   .grid-columns-2 {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   .grid-columns-2c {
@@ -679,6 +748,7 @@ img.hide-image {
 
   .grid-columns-3 {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
   }
 
   .portfolio {
@@ -731,15 +801,13 @@ img.hide-image {
     }
   }
 
+  footer {
+    flex-direction: row;
+  }
+
   .hero-project {
     height: 50vh;
     min-height: 24em;
-  }
-
-  .hero-ld {
-    background: url("https://borrego-site.s3.us-east-2.amazonaws.com/hero-ld.jpg");
-    background-size: cover;
-    background-position: 50% 50%;
   }
 
   .hero-about {
@@ -796,6 +864,6 @@ img.hide-image {
 
 @media only screen and (min-width: 2400px) {
   html {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
