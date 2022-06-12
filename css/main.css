@@ -304,6 +304,17 @@ a {
   margin-top: 0.25em;
 }
 
+.divider {
+  background: rgba(0, 0, 0, 0.15);
+  height: 1px;
+  width: 100%;
+}
+
+.text-section-title {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
 .text-desc-title {
   margin-bottom: 0.25em;
   font-family: 'Space Mono', monospace;
@@ -763,6 +774,11 @@ img.hide-image {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row;
+  }
+  .order-1 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .portfolio {
     padding-top: 4em;
