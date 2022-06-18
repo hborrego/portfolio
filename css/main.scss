@@ -93,7 +93,7 @@ header {
   }
 
   a.logo {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
   }
 
@@ -177,15 +177,15 @@ a {
   color: black;
 }
 
-.paddding-1 {
+.padding-1 {
   padding: 1em;
 }
 
-.paddding-2 {
+.padding-2 {
   padding: 2em;
 }
 
-.paddding-3 {
+.padding-3 {
   padding: 3em;
 }
 
@@ -211,6 +211,18 @@ a {
 
 .padding-bottom-3 {
   padding-bottom: 3em;
+}
+
+.padding-bottom-4 {
+  padding-bottom: 4em;
+}
+
+.padding-bottom-5 {
+  padding-bottom: 5em;
+}
+
+.padding-bottom-6 {
+  padding-bottom: 6em;
 }
 
 .padding-sides-1 {
@@ -283,17 +295,20 @@ a {
 
 .text-section-title {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .text-desc-title {
   margin-bottom: 0.25em;
-  font-family: 'Space Mono', monospace;
-  font-weight: 400;
+  font-size: 0.6667em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .text-desc-details {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .text-box {
@@ -301,6 +316,20 @@ a {
   height: auto;
   padding-top: 1em;
   border: 1px dashed rgba(0, 0, 0, 0.25);
+}
+
+.img-square {
+  aspect-ratio: 1 / 1;
+}
+
+.img-3-2 {
+  aspect-ratio: 3 / 2;
+}
+
+.img-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .issue-card {
@@ -525,7 +554,7 @@ canvas {
 .hero-flix {
   background: url('../img/hero-flix.jpg');
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 30%;
 }
 
 .portfolio {
@@ -669,16 +698,9 @@ section {
 }
 
 footer {
-  font-family: 'Space Mono', monospace;
-  font-weight: 400;
   padding: 1em;
-  padding-bottom: 3em;
-  padding-top: 1.5em;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  text-align: center;
-  gap: 1rem;
+  padding-bottom: 6em;
+  padding-top: 6em;
 
   a {
     color: black;
@@ -688,6 +710,19 @@ footer {
     padding: 1rem;
     width: 1.5rem;
   }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
 }
 
 img.hide-image {
@@ -730,6 +765,10 @@ img.hide-image {
   }
 }
 
+.grid-columns-4 {
+  grid-template-columns: 40% 25% 20% 15%;
+}
+
 @media only screen and (max-width: 350px) {
   html {
     font-size: 14px;
@@ -753,6 +792,14 @@ img.hide-image {
     grid-template-columns: 1fr 1fr;
   }
 
+  .grid-columns-2a {
+    grid-template-columns: 0.666fr 1.333fr;
+  }
+
+  .grid-columns-2b {
+    grid-template-columns: 1.333fr 0.666fr;
+  }
+
   .grid-columns-2c {
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
   }
@@ -760,6 +807,10 @@ img.hide-image {
   .grid-columns-3 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row;
+  }
+
+  .grid-columns-4 {
+    grid-template-columns: 45% 20% 18% auto;
   }
 
   .order-1 {
@@ -782,17 +833,19 @@ img.hide-image {
   // }
 
   .width-48 {
+    width: 100%;
     max-width: 48em;
     margin: 0 auto;
   }
 
   .width-42 {
+    width: 100%;
     max-width: 42em;
     margin: 0 auto;
   }
 
   section {
-    padding: 1.5em 2em;
+    padding: 2em 0;
   }
 
   section {
@@ -814,10 +867,6 @@ img.hide-image {
         padding: 1em;
       }
     }
-  }
-
-  footer {
-    flex-direction: row;
   }
 
   .hero-project {
@@ -853,8 +902,7 @@ img.hide-image {
 
   .hero-about {
     display: grid;
-    grid-template-columns: auto auto;
-    padding: 0 2em;
+    grid-template-columns: 33.3333% 66.6666%;
     padding-top: 6em;
 
     .about-pic {
