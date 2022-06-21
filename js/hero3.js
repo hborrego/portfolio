@@ -1,8 +1,8 @@
-import * as THREE from "./three.module.js";
+import * as THREE from './three.module.js';
 // import Stats from "./stats.module.js";
-import { OrbitControls } from "./OrbitControls.js";
-import { ConvexObjectBreaker } from "./ConvexObjectBreaker.js";
-import { ConvexBufferGeometry } from "./ConvexGeometry.js";
+import { OrbitControls } from './OrbitControls.js';
+import { ConvexObjectBreaker } from './ConvexObjectBreaker.js';
+import { ConvexBufferGeometry } from './ConvexGeometry.js';
 // import { FBXLoader } from "./FBXLoader.js";
 // - Global variables -
 // Graphics variables
@@ -36,7 +36,7 @@ var numObjectsToRemove = 0;
 var impactPoint = new THREE.Vector3();
 var impactNormal = new THREE.Vector3();
 // - Main code -
-Ammo().then(function(AmmoLib) {
+Ammo().then(function (AmmoLib) {
   Ammo = AmmoLib;
   init();
   animate();
@@ -49,7 +49,7 @@ function init() {
   initInput();
 }
 function initGraphics() {
-  container = document.getElementById("hero");
+  container = document.getElementById('hero');
   camera = new THREE.PerspectiveCamera(
     60,
     window.innerWidth / window.innerHeight,
@@ -57,7 +57,7 @@ function initGraphics() {
     2000
   );
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x88A2AA);
+  scene.background = new THREE.Color(0xe6eaf5);
   camera.position.set(0, 13, 24);
   renderer = new THREE.WebGLRenderer();
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -88,7 +88,7 @@ function initGraphics() {
   // stats.domElement.style.top = '0px';
   // container.appendChild( stats.domElement );
   //
-  window.addEventListener("resize", onWindowResize, false);
+  window.addEventListener('resize', onWindowResize, false);
 }
 function initPhysics() {
   // Physics configuration
@@ -140,7 +140,7 @@ function createObjects() {
     new THREE.MeshPhongMaterial({ color: 0xffffff })
   );
   ground.receiveShadow = true;
-  textureLoader.load("../img/grid.png", function(texture) {
+  textureLoader.load('../img/grid.png', function (texture) {
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
     texture.repeat.set(40, 40);
@@ -157,7 +157,7 @@ function createObjects() {
     towerHalfExtents,
     pos,
     quat,
-    createMaterial(0xE9C46A)
+    createMaterial(0xe9c46a)
   );
 
   // Cylinder
@@ -165,8 +165,8 @@ function createObjects() {
   pos.set(1, 9, 0);
   quat.set(0, 0, 0, 1);
   var cylinder = new THREE.Mesh(
-    new THREE.CylinderBufferGeometry( 3, 3, 6, 16 ),
-    createMaterial(0xF4A261)
+    new THREE.CylinderBufferGeometry(3, 3, 6, 16),
+    createMaterial(0xf4a261)
   );
   cylinder.position.copy(pos);
   cylinder.quaternion.copy(quat);
@@ -185,7 +185,7 @@ function createObjects() {
   quat.set(0, 0, 0, 1);
   var sphere = new THREE.Mesh(
     new THREE.DodecahedronBufferGeometry(1, 0),
-    createMaterial(0xADA296)
+    createMaterial(0xada296)
   );
   sphere.position.copy(pos);
   sphere.quaternion.copy(quat);
@@ -235,7 +235,7 @@ function createObjects() {
   mountainPoints.push(new THREE.Vector3(0, mountainHalfExtents.y, 0));
   var mountain = new THREE.Mesh(
     new ConvexBufferGeometry(mountainPoints),
-    createMaterial(0xE76F51)
+    createMaterial(0xe76f51)
   );
   mountain.position.copy(pos);
   mountain.quaternion.copy(quat);
@@ -247,7 +247,6 @@ function createObjects() {
     true
   );
   createDebrisFromBreakableObject(mountain);
-
 }
 
 function createParalellepipedWithPhysics(
@@ -355,12 +354,25 @@ function createMaterial(color) {
   return new THREE.MeshPhongMaterial({ color: color });
 }
 function initInput() {
-  document.getElementById("hero").addEventListener(
-    "mousedown",
-    function(event) {
+  const element = document.getElementById('hero');
+
+  const delta = 6;
+  let startX;
+  let startY;
+
+  element.addEventListener('mousedown', function (event) {
+    startX = event.clientX;
+    startY = event.clientY;
+  });
+
+  element.addEventListener('mouseup', function (event) {
+    const diffX = Math.abs(event.clientX - startX);
+    const diffY = Math.abs(event.clientY - startY);
+
+    function FireBall() {
       mouseCoords.set(
-        (event.clientX / window.innerWidth) * 2 - 1,
-        -(event.clientY / window.innerHeight) * 2 + 1
+        (startX / window.innerWidth) * 2 - 1,
+        -(startY / window.innerHeight) * 2 + 1
       );
       raycaster.setFromCamera(mouseCoords, camera);
       // Creates a ball and throws it
@@ -381,9 +393,12 @@ function initInput() {
       pos.copy(raycaster.ray.direction);
       pos.multiplyScalar(24);
       ballBody.setLinearVelocity(new Ammo.btVector3(pos.x, pos.y, pos.z));
-    },
-    false
-  );
+    }
+
+    if (diffX < delta && diffY < delta) {
+      FireBall();
+    }
+  });
 }
 function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -421,10 +436,14 @@ function updatePhysics(deltaTime) {
     var contactManifold = dispatcher.getManifoldByIndexInternal(i);
     var rb0 = Ammo.castObject(contactManifold.getBody0(), Ammo.btRigidBody);
     var rb1 = Ammo.castObject(contactManifold.getBody1(), Ammo.btRigidBody);
-    var threeObject0 = Ammo.castObject(rb0.getUserPointer(), Ammo.btVector3)
-      .threeObject;
-    var threeObject1 = Ammo.castObject(rb1.getUserPointer(), Ammo.btVector3)
-      .threeObject;
+    var threeObject0 = Ammo.castObject(
+      rb0.getUserPointer(),
+      Ammo.btVector3
+    ).threeObject;
+    var threeObject1 = Ammo.castObject(
+      rb1.getUserPointer(),
+      Ammo.btVector3
+    ).threeObject;
     if (!threeObject0 && !threeObject1) {
       continue;
     }

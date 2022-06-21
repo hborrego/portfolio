@@ -126,13 +126,13 @@
     <section class="hero-ld hero-project"></section>
 
     <section>
-      <div class="width-42">
-        <h1>Ledn Platform: Loan Repayments</h1>
+      <div class="width-42 padding-bottom-1">
+        <h1>Automating the Loan Repayment Process</h1>
         <div class="project-description">
           <div>
             <h5 class="text-desc-title margin-top-1">Made at</h5>
             <p class="margin-bt-0">
-              <a href="https://ledn.io/" target="_blank">Ledn Inc</a>
+              <a href="https://ledn.io/" target="_blank">Ledn</a>
               <!-- — a Canadian company that offers world-class financial services,
             such as savings and loans accounts, catered for digital assets (aka.
             cryptocurrencies) -->
@@ -152,20 +152,27 @@
             <h5 class="text-desc-title margin-top-1">When</h5>
             <p class="margin-bt-0">2019-2020</p>
           </div>
-        </div>
-        <div class="text-desc-details">
-          <h5 class="text-desc-title margin-top-1">Project Overview</h5>
+          <h5 class="text-desc-title margin-top-1">Company Overview</h5>
           <p class="margin-bt-0">
             Ledn is a Canadian company that offers world-class financial
             services, such as savings and loans accounts, catered for users who
-            are interested in cryptocurrencies. The goal of this project was to
-            research and resolve the existing repayment system for loan
-            products, which are granted to users who want access to their
-            holdings without the need to sell their digital assets. The existing
-            experience was confusing for users and very inneficient for the
-            company to manage. I worked on the improvement to make paying a loan
-            easier to understand for users and more adequate to mantain for
-            employees in the Leid Account Platform.
+            hold cryptocurrencies and want to make the most out of their
+            holdings.
+          </p>
+          <h5 class="text-desc-title margin-top-1">Project Summary</h5>
+          <p class="margin-bt-0">
+            The goal of the project was to
+            <strong
+              >research and resolve the existing repayment system for loan
+              products</strong
+            >, which are granted to users who want dollars by using their
+            Bitcoin as collateral. The existing experience was confusing for
+            users and very inefficient for the company to manage.
+            <strong
+              >I worked on the improvement to make paying a loan easier to
+              understand for users and more adequate to maintain for employees
+              in the Ledn Account Platform.</strong
+            >
           </p>
         </div>
       </div>
@@ -189,40 +196,42 @@
     <section class="grid padding-top-3 grey-section">
       <div class="width-48 image-container grid">
         <h2 class="text-section-title">Problem Definition</h2>
-        <div class="image-frame width-48">
-          <img src="../img/ld-oldacceptance.jpg" alt="" />
-          <h6>
-            Example of the existing loan repayment experience by liquidating
-            Bitcoin collateral.
-          </h6>
-        </div>
-        <div class="width-42">
-          <p>
-            One of the main issues with the existing loan repayment process was
-            that it was handled mostly manually by staff members at Ledn. For
-            instance, if a user wanted to liquidate the Bitcoin that they used
-            as collateral to get a loan in dollars, they would have to get a
-            quote through Email, which they would have limited time to accept
-            due to bitcoin volatility exchange rates. For users, the repayment
-            process was a
-            <strong>challenging experience</strong> as some of the quotes needed
-            to be fulfilled within a certain timeframes using irritating ways of
-            communication.
+        <div class="grid grid-columns-2 gap-1">
+          <div class="image-frame">
+            <img src="../img/ld-oldacceptance.png" alt="" />
+            <h6>
+              Example of the existing loan repayment experience by liquidating
+              Bitcoin collateral.
+            </h6>
+          </div>
+          <div class="width-42">
+            <p>
+              One of the main issues with the existing loan repayment process
+              was that it was handled mostly manually by staff members at Ledn.
+              For instance, if a user wanted to liquidate the Bitcoin that they
+              used as collateral to get a loan in dollars, they would have to
+              get a quote through Email, which they would have limited time to
+              accept due to bitcoin volatility exchange rates. For users, the
+              repayment process was a
+              <strong>challenging experience</strong> as some of the quotes
+              needed to be fulfilled within a certain timeframes using
+              irritating ways of communication.
 
-            <br />
-            <br />
+              <br />
+              <br />
 
-            Staff were also responsible of checking bank transactions, selling
-            assets, and cross checking information manually. The lack of
-            automation was
-            <strong>inefficient and prompt to human error</strong>, plus it
-            created <strong> major overhead for the company</strong>.
-          </p>
-          <h4 class="padding-top-2 text-center">
-            How might we streamline the repayment process in a way that allows
-            users to make loan payments in a more approachable environment?
-          </h4>
+              Staff were also responsible of checking bank transactions, selling
+              assets, and cross checking information manually. The lack of
+              automation was
+              <strong>inefficient and prompt to human error</strong>, plus it
+              created <strong> major overhead for the company</strong>.
+            </p>
+          </div>
         </div>
+        <h4 class="padding-top-2 text-center">
+          How might we streamline the repayment process in a way that allows
+          users to make loan payments in a more approachable environment?
+        </h4>
       </div>
     </section>
 
@@ -238,7 +247,7 @@
               <p class="margin-top-0">
                 I worked among a UX Researcher and a Product Owner during the
                 initial discovery state. We
-                <strong>framed the challanges</strong>, which made the current
+                <strong>framed the challenges</strong>, which made the current
                 repayment structure suffer the most,
                 <strong>conducted research</strong>, which refined our focus on
                 what needed our attention the most, and
@@ -260,191 +269,135 @@
     </section>
 
     <section class="grid padding-top-3 grey-section">
+      <div class="width-42 padding-bottom-3">
+        <h2 class="text-center margin-0">Findings</h2>
+        <h6 class="text-center margin-0">
+          Here are the three key issues we identified
+        </h6>
+      </div>
+      <div class="grid width-42 gap-1 padding-bottom-1">
+        <div class="margin-bottom-1">
+          <h3 class="grid margin-0 margin-bottom-05">1. Fragmented Journey</h3>
+          <div class="divider margin-0 margin-bottom-1"></div>
+          <p class="margin-0">
+            The existing repayment solution relied on users to access the
+            platform to submit a repayment request and then confirming to a
+            quote via email. There was little explanation how to use all the
+            available payment options, too, which created a frustrating
+            experience when a user was looking for a particular form of payment.
+          </p>
+        </div>
+        <div class="margin-bottom-1">
+          <h3 class="grid margin-0 margin-bottom-05">
+            2. Visibility of Loan Status
+          </h3>
+          <div class="divider margin-0 margin-bottom-1"></div>
+          <p class="margin-0">
+            Users struggled to understand the status of their loan, which was
+            given to them through the Loan-to-Value (LTV) ratio. For instance,
+            when the LTV is high, it means that the loan could get liquidated
+            unless the user deposits more collateral. The existing LTV didn't
+            give any relevant information, which made it hard for users to make
+            informed decisions based on the number they were looking at.
+          </p>
+        </div>
+        <div class="margin-bottom-1">
+          <h3 class="grid margin-0 margin-bottom-05">
+            3. Understanding Quote Confirmation
+          </h3>
+          <div class="divider margin-0 margin-bottom-1"></div>
+          <p class="margin-0">
+            After users received a loan repayment quote through email, they
+            struggled to understand the format of the quote. There was no
+            hierarchy and most users often had to use a calculator to understand
+            which number was doing what. This often made it harder for some
+            users to even respond and confirm repayment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-top-3">
+      <div class="width-42 padding-bottom-3">
+        <h2 class="text-center margin-0">Solutions</h2>
+        <h6 class="text-center margin-0">
+          How the three key issues were addressed
+        </h6>
+      </div>
+
       <div class="width-42">
-        <h2 class="text-section-title">Findings and Analysis</h2>
-        <!-- <div class="image-container grid">
-          <a
-            data-fancybox="existing"
-            href="../img/ld-findings.jpg"
-            class="image-frame"
-          >
-            <img src="../img/ld-findings.jpg" alt="" />
-          </a>
-        </div> -->
-      </div>
-      <div class="grid width-48 gap-1 padding-top-1 padding-bottom-1">
-        <div class="margin-bottom-1">
-          <h3 class="grid margin-0 margin-bottom-05">One</h3>
-          <div class="divider margin-0 margin-bottom-1"></div>
-          <div class="grid grid-columns-2 gap-1">
-            <div>
-              <h5 class="margin-0">
-                Problem: Lack of Visibility of Loan Status
-              </h5>
-              <p class="margin-0">
-                Users struggle to understand the LTV (Loan-to-Value) ratio,
-                which is the indicator if a loan is healthy or not, based on
-                bitcoin price and amount owed.
-              </p>
-            </div>
-            <div>
-              <h5>Strategy: Highlight a Dynamic LTVs Status</h5>
-              <p class="margin-0">
-                By making the LTV status a priority for users to find,
-                understand and act upon, we could lower user changes of
-                collateral liquidation.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="margin-bottom-1">
-          <h3 class="grid margin-0 margin-bottom-05">Two</h3>
-          <div class="divider margin-0 margin-bottom-1"></div>
-          <div class="grid grid-columns-2 gap-1">
-            <div>
-              <h5>Problem: Deficiency of Payment Options</h5>
-              <p class="margin-0">
-                Users wanted more automated and flexible forms of repayment,
-                such as using direct deposits from their bank account or even
-                liquidate their bitcoin as form of payment.
-              </p>
-            </div>
-            <div>
-              <h5>Strategy: Automate and Create More Repayment Options</h5>
-              <p class="margin-0">
-                This not only would help aliviate the frustrations with the
-                current repayment system based on messaging back and forward but
-                would also help the business overhead.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="margin-bottom-1">
-          <h3 class="grid margin-0 margin-bottom-05">Three</h3>
-          <div class="divider margin-0 margin-bottom-1"></div>
-          <div class="grid grid-columns-2 gap-1">
-            <div>
-              <h5>Problem: Current Interface is Unfriendly</h5>
-              <p class="margin-0">
-                Users wanted a more inviting and friendlier dashboard experience
-                — the existing interface intimidated users as there was little
-                explanation how to use all the available tools while repaying.
-              </p>
-            </div>
-            <div>
-              <h5>Strategy: Create an Easy to Understand Journey</h5>
-              <p class="margin-0">
-                Some of the financial jargon showed to be very challenging for
-                the persona that we were targeting. Using natural language and
-                graphics that were easier to understand became a key priority
-                for us.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="padding-top-3 padding-bottom-3">
-      <div class="width-48">
-        <h2 class="text-section-title">User Flow</h2>
-        <div class="image-container grid">
-          <a
-            data-fancybox="diagrams"
-            href="../img/ld-flowdiagram.jpg"
-            class="image-frame"
-          >
-            <img src="../img/ld-flowdiagram.jpg" alt="" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="padding-top-3 grey-section">
-      <h2 class="text-section-title">Solution</h2>
-      <div class="width-48">
-        <div class="padding-bottom-6">
-          <h3 class="grid margin-0 margin-bottom-05">One</h3>
-          <div class="divider margin-0 margin-bottom-1"></div>
-          <div class="grid grid-columns-2a gap-1">
-            <div>
-              <h5>Highlight a Dynamic LTVs Status</h5>
-              <div class="margin-0">
-                <p>
-                  We added more visible LTV statuses at strategic points when
-                  the user access their account. These inclided:
-                </p>
-                <ul>
-                  <li>Layout Hirearchy</li>
-                  <li>In-App Notifications</li>
-                  <li>Push Notifications</li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <a
-                data-fancybox="sketch"
-                href="../img/ld-lvtstatus.png"
-                class="image-frame"
-              >
-                <div class="img-center padding-tb-2">
-                  <img src="../img/ld-lvtstatus.png" alt="" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="padding-bottom-6">
-          <h3 class="grid margin-0 margin-bottom-05">Two</h3>
-          <div class="divider margin-0 margin-bottom-1"></div>
-          <div class="grid grid-columns-2b gap-1">
-            <div class="order-1">
-              <h5>Automate and Create More Repayment Options</h5>
-              <div class="margin-0">
-                <p>
-                  Based on the data gathered we automated the liquidation of
-                  bitcoin collateral as a way of payment for loans. This gave
-                  flexibility for users who have most of their assets in bitcoin
-                  and want to take advantage of it. We also improved the
-                  Interact E-Transfer (Canada only) and bank wire experience.
-                </p>
-              </div>
-            </div>
-            <div>
-              <a
-                data-fancybox="sketch"
-                href="../img/ld-moreoptions.png"
-                class="image-frame"
-              >
-                <img src="../img/ld-moreoptions.png" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-
         <div class="padding-bottom-3">
-          <h3 class="grid margin-0 margin-bottom-05">Three</h3>
+          <h3 class="grid margin-0 margin-bottom-05">1. Fragmented Journey</h3>
           <div class="divider margin-0 margin-bottom-1"></div>
-          <div class="grid grid-columns-2a gap-1">
-            <div>
-              <h5>Create an Easy to Understand Journey</h5>
-              <div class="margin-0">
-                <p>
-                  Crypto is hard enough to understand it. The overall tone of
-                  voice was revisited to remove any complicated jargon.
-                </p>
+          <div class="image-container grid">
+            <a
+              data-fancybox="diagrams"
+              href="../img/ld-flowdiagram.jpg"
+              class="image-frame"
+            >
+              <img src="../img/ld-flowdiagram.jpg" alt="" />
+            </a>
+          </div>
+          <div>
+            <div class="margin-0">
+              <p>
+                We remapped the loan journey from scratch. We reduced the amount
+                of unnecessary options and simplified the choices based on the
+                loan status. We also implemented different automated repayment
+                options, which allow the users to get the repayment process
+                completely done without leaving the Ledn Platform.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="padding-bottom-3">
+          <h3 class="grid margin-0 margin-bottom-05">
+            2. Visibility of Loan Status
+          </h3>
+          <div class="divider margin-0 margin-bottom-1"></div>
+          <div>
+            <a
+              data-fancybox="sketch"
+              href="../img/ld-lvtstatus.png"
+              class="image-frame"
+            >
+              <div class="img-center padding-tb-2">
+                <img src="../img/ld-lvtstatus.png" alt="" />
               </div>
-            </div>
-            <div>
-              <a
-                data-fancybox="sketch"
-                href="../img/ld-friendlier.png"
-                class="image-frame"
-              >
-                <img src="../img/ld-friendlier.png" alt="" />
-              </a>
-            </div>
+            </a>
+          </div>
+          <div class="margin-0">
+            <p>
+              We made the Loan-To-Value (LVT) field part of the main loan
+              information hierarchy, which allows users to quickly understand
+              the status of their loan and act upon it if needed. The LVT field
+              also uses color and caption messages to make sure the user lower
+              their risk of getting their collateral liquidated.
+            </p>
+          </div>
+        </div>
+        <div class="padding-bottom-3">
+          <h3 class="grid margin-0 margin-bottom-05">
+            3. Understanding Quote Confirmation
+          </h3>
+          <div class="divider margin-0 margin-bottom-1"></div>
+          <div>
+            <a
+              data-fancybox="sketch"
+              href="../img/ld-friendlier.png"
+              class="image-frame"
+            >
+              <img src="../img/ld-friendlier.png" alt="" />
+            </a>
+          </div>
+          <div class="margin-0">
+            <p>
+              We reduced the amount of information and organized it in a layout,
+              which helps to understand in simple math how the repayment process
+              is getting done. This demystified the complex repayment options,
+              such as when the user decided to sell part the collateral to pay
+              for a loan.
+            </p>
           </div>
         </div>
       </div>

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Ki';
+  src: './Ki-Medium';
+}
+
 body,
 html {
   margin: 0;
@@ -21,14 +26,14 @@ body ::selection {
 
 .button {
   background-color: black;
-  border: solid black 0.0625em;
+  border: solid black 0.0625rem;
   color: white;
-  padding: 1.125em 2em;
+  padding: 1.125rem 2rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.125em;
-  margin: 0.25em 0.125em;
+  font-size: 1.125rem;
+  margin: 0.25rem 0.125rem;
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -36,7 +41,7 @@ body ::selection {
 
 .button:hover {
   background: white;
-  border: solid black 0.0625em;
+  border: solid black 0.0625rem;
   color: black;
 }
 
@@ -44,28 +49,28 @@ body ::selection {
   pointer-events: none;
   position: fixed;
   z-index: 999;
-  bottom: 1.5em;
-  padding: 0.5em 0.5em;
+  bottom: 1.5rem;
+  padding: 0.5rem 0.5rem;
   text-align: center;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.75);
-  max-width: calc(100% - 3em);
+  max-width: calc(100% - 3rem);
 }
 
 .instructions p {
   margin: 0;
-  font-size: 0.85em;
+  font-size: 0.85rem;
 }
 
 .instructions img {
-  width: 3em;
+  width: 3rem;
   height: auto;
   opacity: 50%;
   margin: 0 0;
 }
 
 .instructions-container {
-  padding: 1em;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,21 +86,21 @@ a.back-to-top {
   display: none;
   position: fixed;
   z-index: 999;
-  right: 1em;
-  bottom: 1em;
+  right: 1rem;
+  bottom: 1rem;
 }
 
 a.back-to-top img {
-  width: 4.5em;
+  width: 4.5rem;
   height: auto;
   opacity: 50%;
 }
 
 header {
   position: relative;
-  padding: 1em;
+  padding: 1rem;
   z-index: 20;
-  width: calc(100% - 2em);
+  width: calc(100% - 2rem);
   background: white;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -124,7 +129,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 header .logo {
@@ -133,8 +138,8 @@ header .logo {
 }
 
 header .logo:hover {
-  -webkit-transform: translate3d(0, -0.1em, 0em);
-          transform: translate3d(0, -0.1em, 0em);
+  -webkit-transform: translate3d(0, -0.1rem, 0rem);
+          transform: translate3d(0, -0.1rem, 0rem);
 }
 
 header li {
@@ -143,8 +148,8 @@ header li {
 }
 
 header li:hover {
-  -webkit-transform: translate3d(0, -0.1em, 0em);
-          transform: translate3d(0, -0.1em, 0em);
+  -webkit-transform: translate3d(0, -0.1rem, 0rem);
+          transform: translate3d(0, -0.1rem, 0rem);
 }
 
 .header-container {
@@ -195,11 +200,11 @@ header li:hover {
 
 p {
   font-weight: 300;
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 li {
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 a {
@@ -207,60 +212,60 @@ a {
 }
 
 .padding-1 {
-  padding: 1em;
+  padding: 1rem;
 }
 
 .padding-2 {
-  padding: 2em;
+  padding: 2rem;
 }
 
 .padding-3 {
-  padding: 3em;
+  padding: 3rem;
 }
 
 .padding-top-1 {
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
 .padding-top-2 {
-  padding-top: 2em;
+  padding-top: 2rem;
 }
 
 .padding-top-3 {
-  padding-top: 3em;
+  padding-top: 3rem;
 }
 
 .padding-bottom-1 {
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
 .padding-bottom-2 {
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
 }
 
 .padding-bottom-3 {
-  padding-bottom: 3em;
+  padding-bottom: 3rem;
 }
 
 .padding-bottom-4 {
-  padding-bottom: 4em;
+  padding-bottom: 4rem;
 }
 
 .padding-bottom-5 {
-  padding-bottom: 5em;
+  padding-bottom: 5rem;
 }
 
 .padding-bottom-6 {
-  padding-bottom: 6em;
+  padding-bottom: 6rem;
 }
 
 .padding-sides-1 {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .text-disclaimer {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .margin-0 {
@@ -272,15 +277,15 @@ a {
 }
 
 .margin-top-1 {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .margin-top-2 {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .margin-top-3 {
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 
 .margin-bottom-0 {
@@ -288,19 +293,19 @@ a {
 }
 
 .margin-bottom-05 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 .margin-bottom-1 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .margin-bottom-2 {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .margin-bottom-3 {
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
 
 .margin-bt-0 {
@@ -313,7 +318,7 @@ a {
 }
 
 .margin-top-25 {
-  margin-top: 0.25em;
+  margin-top: 0.25rem;
 }
 
 .divider {
@@ -324,15 +329,15 @@ a {
 
 .text-section-title {
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
 
 .text-desc-title {
-  margin-bottom: 0.25em;
-  font-size: 0.6667em;
+  margin-bottom: 0.25rem;
+  font-size: 0.6667rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
 }
 
 .text-desc-details {
@@ -343,7 +348,7 @@ a {
 .text-box {
   width: 100%;
   height: auto;
-  padding-top: 1em;
+  padding-top: 1rem;
   border: 1px dashed rgba(0, 0, 0, 0.25);
 }
 
@@ -369,7 +374,7 @@ a {
 
 .issue-card {
   border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: 1em;
+  border-radius: 1rem;
 }
 
 .grey-text {
@@ -392,8 +397,8 @@ a {
 
 .grey-section {
   background-color: #e6e7e8;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .prototype-container {
@@ -406,7 +411,7 @@ a {
   -webkit-transform: scale(0.75);
           transform: scale(0.75);
   width: 100%;
-  height: 58em;
+  height: 58rem;
 }
 
 .no-decoration ul {
@@ -432,36 +437,36 @@ h1 {
 }
 
 h2 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Ki', monospace;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 300;
   margin-top: 0;
 }
 
 h3 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Ki', monospace;
   font-weight: 400;
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 h4 {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   font-weight: 600;
   margin-top: 0;
 }
 
 h5 {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
   margin: 0;
 }
 
 h6 {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.825em;
+  font-family: 'Ki', monospace;
+  font-size: 0.825rem;
   font-weight: 400;
-  margin-top: 0.75em;
+  margin-top: 0.75rem;
 }
 
 .text-center {
@@ -473,7 +478,7 @@ h6 {
 }
 
 .image-container {
-  grid-gap: 0.5em;
+  grid-gap: 0.5rem;
 }
 
 .image-frame {
@@ -537,6 +542,9 @@ canvas {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0;
 }
 
 .hero-home h1,
@@ -547,19 +555,19 @@ canvas {
   pointer-events: all;
 }
 
-.hero-home h1 {
-  text-align: left;
-  width: 90%;
-  font-size: 1.75em;
-  pointer-events: none;
-}
-
 .hero-home h1 span {
-  background-color: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
+  font-size: 3rem;
+  line-height: 100%;
 }
 
 #hero-text {
-  padding: 0 1em;
+  font-family: 'Ki', monospace;
+  text-align: left;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .hero-project {
@@ -609,7 +617,7 @@ canvas {
 }
 
 .portfolio {
-  padding-top: 2em;
+  padding-top: 2rem;
 }
 
 .gallery {
@@ -617,7 +625,7 @@ canvas {
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-  grid-gap: 1.25em;
+  grid-gap: 1.25rem;
 }
 
 .gallery h3 {
@@ -630,7 +638,7 @@ canvas {
   font-size: 1rem;
   display: block;
   margin: 0;
-  padding-top: 0.25em;
+  padding-top: 0.25rem;
 }
 
 .gallery figure {
@@ -650,12 +658,12 @@ canvas {
   opacity: 1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  border-radius: 0.1em;
+  border-radius: 0.1rem;
 }
 
 .gallery figure figcaption {
   position: absolute;
-  padding: 1em 1em;
+  padding: 1rem 1rem;
   bottom: 0;
   left: 0;
   right: 0;
@@ -676,42 +684,42 @@ canvas {
   width: calc(100% - 0px);
   height: calc(100% - 0px);
   z-index: -1;
-  border-radius: 0.1em;
+  border-radius: 0.1rem;
 }
 
 .gallery .additional {
-  padding: 1em;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.75);
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  border-radius: 0.1em;
+  border-radius: 0.1rem;
 }
 
 .gallery figure:hover img {
-  -webkit-transform: translate(-0.25em, -0.25em);
-          transform: translate(-0.25em, -0.25em);
+  -webkit-transform: translate(-0.25rem, -0.25rem);
+          transform: translate(-0.25rem, -0.25rem);
 }
 
 .gallery figure:hover .additional {
   opacity: 1;
   background: rgba(0, 0, 0, 0.75);
   color: white;
-  -webkit-transform: translate(-0.25em, -0.25em);
-          transform: translate(-0.25em, -0.25em);
+  -webkit-transform: translate(-0.25rem, -0.25rem);
+          transform: translate(-0.25rem, -0.25rem);
 }
 
 section {
-  padding: 2em 1em;
+  padding: 2rem 1rem;
   padding-top: 0;
 }
 
 footer {
-  padding: 1em;
-  padding-bottom: 6em;
-  padding-top: 6em;
+  padding: 1rem;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
 }
 
 footer a {
@@ -738,7 +746,7 @@ footer .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1em;
+  gap: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -764,6 +772,13 @@ img.hide-image {
           transform: translate(-50%, -100%);
 }
 
+#about-pic {
+  background: url("../img/Herman1080Web.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  aspect-ratio: 1 / 1;
+}
+
 .hero-about {
   padding: 0 0;
   display: -ms-grid;
@@ -782,16 +797,11 @@ img.hide-image {
 }
 
 .hero-about .about-text {
-  padding: 1em;
+  padding: 1rem;
 }
 
 .hero-about .about-text h3 {
   font-weight: 300;
-}
-
-.grid-columns-4 {
-  -ms-grid-columns: 40% 25% 20% 15%;
-      grid-template-columns: 40% 25% 20% 15%;
 }
 
 @media only screen and (max-width: 350px) {
@@ -805,10 +815,10 @@ img.hide-image {
     font-size: 18px;
   }
   p {
-    line-height: 1.5em;
+    line-height: 1.5rem;
   }
   li {
-    line-height: 1.5em;
+    line-height: 1.5rem;
   }
   .grid-columns-2 {
     -ms-grid-columns: 1fr 1fr;
@@ -841,7 +851,7 @@ img.hide-image {
             order: 2;
   }
   .portfolio {
-    padding-top: 4em;
+    padding-top: 4rem;
   }
   .gallery {
     display: -ms-grid;
@@ -851,16 +861,15 @@ img.hide-image {
   }
   .width-48 {
     width: 100%;
-    max-width: 48em;
     margin: 0 auto;
   }
   .width-42 {
     width: 100%;
-    max-width: 42em;
+    max-width: 42rem;
     margin: 0 auto;
   }
-  section {
-    padding: 2em 0;
+  .width-half {
+    width: 50%;
   }
   section {
     display: -ms-grid;
@@ -870,16 +879,12 @@ img.hide-image {
         -ms-flex-align: center;
             align-items: center;
   }
-  .hero-home h1 {
-    width: 75%;
-    font-size: 2em;
-  }
   header nav ul li a {
-    padding: 1em;
+    padding: 1rem;
   }
   .hero-project {
     height: 50vh;
-    min-height: 24em;
+    min-height: 24rem;
   }
   .hero-about .about-pic {
     display: -webkit-box;
@@ -891,29 +896,29 @@ img.hide-image {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 5em;
+    margin-top: 5rem;
   }
   .hero-about .about-pic img {
     width: 50%;
   }
   .hero-about .about-text {
-    padding: 2em;
+    padding: 0;
   }
   .text-container {
-    padding-left: 2em;
+    padding-left: 2rem;
   }
 }
 
 @media only screen and (min-width: 1020px) {
   .width-48 {
-    max-width: 60em;
+    max-width: 60rem;
   }
   .hero-about {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 33.3333% 66.6666%;
         grid-template-columns: 33.3333% 66.6666%;
-    padding-top: 6em;
+    padding-top: 6rem;
   }
   .hero-about .about-pic {
     display: block;
@@ -923,7 +928,7 @@ img.hide-image {
     width: 100%;
   }
   .hero-about .about-text {
-    padding-left: 3em;
+    padding-left: 0;
   }
 }
 
