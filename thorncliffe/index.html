@@ -107,12 +107,15 @@
     />
   </head>
   <body>
-    <header id="header">
+    <div id="header"></div>
+    <header class="header-project">
       <div class="header-container width-48">
-        <a href="../" class="logo">Herman Borrego</a>
+        <div class="logo">
+          <a href="../">Herman Borrego</a>
+        </div>
         <nav>
           <a href="../portfolio">Work</a>
-          <a class="selected" href="../about">Info</a>
+          <a class="right" href="../about">About</a>
         </nav>
       </div>
       <div class="divider"></div>
@@ -353,17 +356,12 @@
     </section>
 
     <footer>
-      <div class="header-container">
-        <div>
-          <h5 class="margin-bt-0">© 2022 Herman Borrego</h5>
-          <p class="margin-bt-0">All Rights Reserved</p>
-        </div>
+      <div class="divider"></div>
+      <div class="footer-container width-48 grid grid-columns-4 gap-1">
         <div class="footer-links">
           <div>
             <h5 class="text-desc-title margin-bt-0">Email</h5>
-            <a class="link-nd" href="mailto:herman@borrego.ca"
-              >herman@borrego.ca</a
-            >
+            <a href="mailto:herman@borrego.ca">herman@borrego.ca</a>
           </div>
           <div>
             <h5 class="text-desc-title margin-bt-0">Location</h5>
@@ -371,13 +369,14 @@
           </div>
           <div>
             <h5 class="text-desc-title margin-bt-0">Social</h5>
-            <a
-              class="link-nd"
-              href="https://www.linkedin.com/in/hbor"
-              target="_blank"
+            <a href="https://www.linkedin.com/in/hbor" target="_blank"
               >LinkedIn</a
             >
           </div>
+        </div>
+        <div class="footer-rights">
+          <h5 class="margin-bt-0">© 2022 Herman Borrego</h5>
+          <p class="margin-bt-0">All Rights Reserved</p>
         </div>
       </div>
     </footer>
