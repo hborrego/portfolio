@@ -295,9 +295,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .map-animation svg {
-    max-width: 75vw;
-  }
   .wrapper {
     -ms-grid-rows: none;
         grid-template-rows: none;
@@ -333,10 +330,6 @@
 }
 
 @media only screen and (min-width: 1020px) {
-  .map-animation svg {
-    max-width: none;
-    max-height: none;
-  }
   .text-title {
     height: auto;
     padding-bottom: 1rem;

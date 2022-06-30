@@ -216,11 +216,11 @@
 // ---------------------------------------
 
 @media only screen and (min-width: 768px) {
-  .map-animation {
-    svg {
-      max-width: 75vw;
-    }
-  }
+  // .map-animation {
+  //   svg {
+  //     max-height: 75vh;
+  //   }
+  // }
 
   .wrapper {
     grid-template-rows: none;
@@ -266,12 +266,12 @@
 // ---------------------------------------
 
 @media only screen and (min-width: 1020px) {
-  .map-animation {
-    svg {
-      max-width: none;
-      max-height: none;
-    }
-  }
+  // .map-animation {
+  //   svg {
+  //     max-width: none;
+  //     max-height: none;
+  //   }
+  // }
 
   // ---------- MAP ANIMATION ----------
 
