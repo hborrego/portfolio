@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-137931305-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-137931305-1');
+    </script>
+
+    <!-- Fullstory Tracking Code -->
+    <script>
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = 'PBG11';
+      window['_fs_namespace'] = 'FS';
+      (function (m, n, e, t, l, o, g, y) {
+        if (e in m) {
+          if (m.console && m.console.log) {
+            m.console.log(
+              'FullStory namespace conflict. Please set window["_fs_namespace"].'
+            );
+          }
+          return;
+        }
+        g = m[e] = function (a, b, s) {
+          g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
+        };
+        g.q = [];
+        o = n.createElement(t);
+        o.async = 1;
+        o.crossOrigin = 'anonymous';
+        o.src = 'https://' + _fs_host + '/s/fs.js';
+        y = n.getElementsByTagName(t)[0];
+        y.parentNode.insertBefore(o, y);
+        g.identify = function (i, v, s) {
+          g(l, { uid: i }, s);
+          if (v) g(l, v, s);
+        };
+        g.setUserVars = function (v, s) {
+          g(l, v, s);
+        };
+        g.event = function (i, v, s) {
+          g('event', { n: i, p: v }, s);
+        };
+        g.shutdown = function () {
+          g('rec', !1);
+        };
+        g.restart = function () {
+          g('rec', !0);
+        };
+        g.log = function (a, b) {
+          g('log', [a, b]);
+        };
+        g.consent = function (a) {
+          g('consent', !arguments.length || a);
+        };
+        g.identifyAccount = function (i, v) {
+          o = 'account';
+          v = v || {};
+          v.acctId = i;
+          g(o, v);
+        };
+        g.clearUserCookie = function () {};
+      })(window, document, window['_fs_namespace'], 'script', 'user');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Herman Borrego - Ledn: Loan Repayment</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,600|Space+Mono:400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../ico/favicon.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="../ico/apple-touch-icon-144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="../ico/apple-touch-icon-114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="../ico/apple-touch-icon-72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../ico/apple-touch-icon-57-precomposed.png"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+    <header class="header-project">
+      <div class="header-container width-48">
+        <div class="logo">
+          <a href="../">Herman Borrego</a>
+        </div>
+        <nav>
+          <a href="../portfolio">Work</a>
+          <a class="right" href="../about">About</a>
+        </nav>
+      </div>
+      <div class="divider"></div>
+    </header>
+
+    <a href="#header" class="back-to-top"
+      ><img src="../svg/top-arrow.svg" alt=""
+    /></a>
+
+    <section class="hero-ld hero-project"></section>
+
+    <section>
+      <div class="width-48 grid grid-columns-8">
+        <div class="grid-1-9">
+          <h1>Ledn: Loan Repayment</h1>
+        </div>
+        <div class="grid-5-9 padding-top-2">
+          <div>
+            <h5 class="text-desc-title margin-top-1">Made at</h5>
+            <p class="margin-bt-0">
+              <a href="https://ledn.io/" target="_blank">Ledn</a>
+            </p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">Role</h5>
+            <p class="margin-bt-0">Product Designer</p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">Techniques</h5>
+            <p class="margin-bt-0">
+              Research, Wireframing, Prototyping, Design Handoff
+            </p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">When</h5>
+            <p class="margin-bt-0">2019-2020</p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">Company Overview</h5>
+            <p class="margin-bt-0">
+              Ledn is a Canadian financial platform that provides borrowing,
+              saving, and trading services for the cryto-economy.
+            </p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">Project Summary</h5>
+            <p class="margin-bt-0">
+              The goal of the project was to
+              <strong>simplify Ledn's existing loan repayment process</strong>.
+              Led by research findings, we developed a new automated repayment
+              system and improved the experience for the user, as well as
+              created a more efficient and scalable process for the company.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding-sides-1">
+      <div class="divider width-48"></div>
+    </div>
+
+    <section>
+      <div class="width-48 grid grid-columns-8 gap-1">
+        <div class="grid-1-9 padding-bottom-3">
+          <h2>Problem Definition</h2>
+        </div>
+        <div class="grid-1-4">
+          <p class="margin-0">
+            The existing loan repayment method relied on keeping up with a
+            fragmented process for both, users and Ledn staff. If a user wanted
+            to initiate this transaction, they would have to get a quote through
+            Email, and have a limited 10 minute window to accept due to
+            Bitcoin's extreme volatility. This process was challenging to
+            understand and execute for users, while also creating unrealistic
+            processes internally for the small Ledn team that were susceptible
+            to human error.
+          </p>
+        </div>
+        <div class="grid-5-9 padding-top-2">
+          <div class="image-frame">
+            <img src="../img/ld-oldacceptance.png" alt="" />
+          </div>
+          <div>
+            <h6 class="padding-top-">
+              Example of the existing loan repayment experience by liquidating
+              Bitcoin collateral.
+            </h6>
+          </div>
+        </div>
+        <div class="grid-3-7 padding-top-2">
+          <h4 class="text-center padding-top-1 padding-top-3 padding-bottom-3">
+            How might we streamline the repayment process to be more
+            approachable for both, users and staff?
+          </h4>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding-sides-1">
+      <div class="divider width-48"></div>
+    </div>
+
+    <section>
+      <div class="width-48 grid gap-1 grid-columns-8">
+        <div class="grid-1-9">
+          <h2>Discovery</h2>
+        </div>
+        <div class="grid-5-9 padding-top-3">
+          <div class="image-frame">
+            <img src="../img/ld-discovery.jpg" alt="" />
+          </div>
+        </div>
+        <div class="grid-5-9 padding-top-3">
+          <p class="margin-0">
+            I worked alongside a UX Researcher and a Product Owner during the
+            initial discovery state. We
+            <strong>outlined the challenges</strong> of the current structure,
+            <strong>conducted research</strong> to refine our focus, and
+            <strong>gathered evidence</strong> to help us advocate for a
+            resolution.
+          </p>
+          <p>Our research methods included:</p>
+          <ul>
+            <li>User Interviews</li>
+            <li>Staff Interviews</li>
+            <li>Surveys</li>
+            <li>Competitive Analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding-sides-1">
+      <div class="divider width-48"></div>
+    </div>
+
+    <section>
+      <div class="width-48 grid gap-1 grid-columns-8">
+        <div class="grid-1-9">
+          <h2>Findings</h2>
+        </div>
+        <div class="grid-1-9">
+          <h5>Three main key issues identified</h5>
+        </div>
+        <div class="margin-bottom-1 padding-top-3 grid-1-5">
+          <h3 class="grid margin-0 margin-bottom-05">1. Fragmented Journey</h3>
+          <p class="margin-0">
+            The existing repayment solution relied on users to access the
+            platform to submit a repayment request and then confirming to a
+            quote via email. There was little explanation how to use all the
+            available payment options, too, which created a frustrating
+            experience when a user was looking for a particular form of payment.
+          </p>
+        </div>
+        <div class="margin-bottom-1 grid-1-5">
+          <h3 class="grid margin-0 margin-bottom-05">
+            2. Visibility of Loan Status
+          </h3>
+          <p class="margin-0">
+            Users struggled to understand the status of their loan, which was
+            given to them through the Loan-to-Value (LTV) ratio. For instance,
+            when the LTV is high, it means that the loan could get liquidated
+            unless the user deposits more collateral. The existing LTV didn't
+            give any relevant information, which made it hard for users to make
+            informed decisions based on the number they were looking at.
+          </p>
+        </div>
+        <div class="margin-bottom-1 grid-1-5">
+          <h3 class="grid margin-0 margin-bottom-05">
+            3. Understanding Quote Confirmation
+          </h3>
+          <p class="margin-0">
+            After users received a loan repayment quote through email, they
+            struggled to understand the format of the quote. There was no
+            hierarchy and most users often had to use a calculator to understand
+            which number was doing what. This often made it harder for some
+            users to even respond and confirm repayment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding-sides-1">
+      <div class="divider width-48"></div>
+    </div>
+
+    <section>
+      <div class="width-48 grid grid-columns-8 gap-1">
+        <div class="grid-1-9">
+          <h2>Solutions</h2>
+        </div>
+        <div class="grid-1-9">
+          <h5>How the three key issues were addressed</h5>
+        </div>
+
+        <div class="grid-1-7 gap-1 padding-top-3">
+          <h3>1. Fragmented Journey</h3>
+        </div>
+        <div class="grid-1-7 gap-1">
+          <div class="image-container">
+            <a
+              data-fancybox="diagrams"
+              href="../img/ld-flowdiagram.jpg"
+              class="image-frame"
+            >
+              <img src="../img/ld-flowdiagram.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="grid-1-5">
+          <p>
+            We remapped the loan journey from scratch. We reduced the amount of
+            unnecessary options and simplified the choices based on the loan
+            status. We also implemented different automated repayment options,
+            which allow the users to get the repayment process completely done
+            without leaving the Ledn Platform.
+          </p>
+        </div>
+
+        <div class="grid-1-7 gap-1 padding-top-3">
+          <h3>2. Visibility of Loan Status</h3>
+        </div>
+        <div class="grid-1-7 gap-1">
+          <div class="image-container">
+            <a
+              data-fancybox="sketch"
+              href="../img/ld-lvtstatus.png"
+              class="image-frame"
+            >
+              <div class="img-center padding-tb-2">
+                <img src="../img/ld-lvtstatus.png" alt="" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="grid-1-5">
+          <p>
+            We made the Loan-To-Value (LVT) field part of the main loan
+            information hierarchy, which allows users to quickly understand the
+            status of their loan and act upon it if needed. The LVT field also
+            uses color and caption messages to make sure the user lower their
+            risk of getting their collateral liquidated.
+          </p>
+        </div>
+
+        <div class="grid-1-7 gap-1 padding-top-3">
+          <h3>3. Understanding Quote Confirmation</h3>
+        </div>
+        <div class="grid-1-7 gap-1">
+          <div class="image-container">
+            <a
+              data-fancybox="sketch"
+              href="../img/ld-friendlier.png"
+              class="image-frame"
+            >
+              <img src="../img/ld-friendlier.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="grid-1-5">
+          <p>
+            We reduced the amount of information and organized it in a layout,
+            which helps to understand in simple math how the repayment process
+            is getting done. This demystified the complex repayment options,
+            such as when the user decided to sell part the collateral to pay for
+            a loan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="divider"></div>
+      <div class="footer-container width-48 grid gap-1">
+        <div class="footer-links">
+          <div>
+            <h5 class="text-desc-title margin-bt-0">Email</h5>
+            <a href="mailto:herman@borrego.ca">herman@borrego.ca</a>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-bt-0">Location</h5>
+            <a class="margin-bt-0">San Francisco, CA</a>
+          </div>
+          <div class="grid">
+            <h5 class="text-desc-title margin-bt-0">Social</h5>
+            <a
+              class="margin-bottom-05"
+              href="https://www.linkedin.com/in/hbor"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a
+              class="margin-bottom-05"
+              href="https://read.cv/hb"
+              target="_blank"
+              >read.cv</a
+            >
+            <a
+              class="margin-bottom-05"
+              href="https://github.com/hborrego"
+              target="_blank"
+              >GitHub</a
+            >
+            <a
+              class="margin-bottom-05"
+              href="https://www.strava.com/athletes/hbor"
+              target="_blank"
+              >Strava</a
+            >
+          </div>
+        </div>
+        <div class="footer-rights">
+          <h5 class="margin-bt-0">© 2022 Herman Borrego</h5>
+          <p class="margin-bt-0">All Rights Reserved</p>
+          <h6 class="padding-top-1 footer-note">
+            This website was
+            <a href="https://github.com/hborrego/" target="_blank"
+              >built from scratch</a
+            >
+            thanks to countless tutorials and
+            <span class="strike">borrowing</span> stealing code here and there
+            ✌️ <br /><br />Home page game made using
+            <a href="https://threejs.org/">three.js</a>
+          </h6>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../js/scroll.js"></script>
+  </body>
+</html>

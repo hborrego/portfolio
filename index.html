@@ -75,11 +75,12 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e6eaf5" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>Herman Borrego - Product Designer</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Space+Mono:400,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,600|Space+Mono:400,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.css" />
@@ -106,50 +107,50 @@
       href="./ico/apple-touch-icon-57-precomposed.png"
     />
   </head>
-
   <body>
-    <header id="header" class="header-landing">
-      <a href="./" class="logo">Herman Borrego</a>
-      <nav>
-        <ul>
-          <li><a href="./about">About</a></li>
-        </ul>
-      </nav>
+    <header class="header-landing" id="header">
+      <div class="header-container width-48">
+        <div class="logo">
+          <a href="../">Herman Borrego</a>
+        </div>
+        <nav>
+          <a href="../portfolio">Work</a>
+          <a class="right" href="../about">About</a>
+        </nav>
+      </div>
     </header>
 
     <div id="hero"></div>
 
-    <div class="hero-wrapper">
+    <section class="hero-wrapper">
       <div class="hero-home width-48">
         <div id="hero-text">
           <h1>
             <span>
-              Hi, I'm Herman Borrego, a designer who specializes in digital
-              interactions, spatial experiences and user research. <br />
-              Currently building awesome products at
-              <a href="https://www.leiainc.com/" target="_blank">Leia Inc</a>!
+              Herman is a <br />
+              Product Designer <br />
+              Based in <br />
+              San Francisco
             </span>
           </h1>
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="instructions-container">
       <div class="instructions">
         <p>
-          got a moment? click or tap to
-          <strong>fire cannonball</strong> | drag to orbit | scroll or pinch to
+          Click or tap to
+          <strong>fire cannonball</strong> | Drag to orbit | Scroll or pinch to
           zoom
         </p>
       </div>
     </div>
 
     <script src="../js/TweenMax.min.js"></script>
-    <script src="../js/ScrollMagic.min.js"></script>
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="./js/ammo.js"></script>
     <script src="./js/hero3.js" type="module"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/scroll.js"></script>
   </body>
 </html>

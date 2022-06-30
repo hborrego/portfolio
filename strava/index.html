@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-137931305-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-137931305-1');
+    </script>
+
+    <!-- Fullstory Tracking Code -->
+    <script>
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = 'PBG11';
+      window['_fs_namespace'] = 'FS';
+      (function (m, n, e, t, l, o, g, y) {
+        if (e in m) {
+          if (m.console && m.console.log) {
+            m.console.log(
+              'FullStory namespace conflict. Please set window["_fs_namespace"].'
+            );
+          }
+          return;
+        }
+        g = m[e] = function (a, b, s) {
+          g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
+        };
+        g.q = [];
+        o = n.createElement(t);
+        o.async = 1;
+        o.crossOrigin = 'anonymous';
+        o.src = 'https://' + _fs_host + '/s/fs.js';
+        y = n.getElementsByTagName(t)[0];
+        y.parentNode.insertBefore(o, y);
+        g.identify = function (i, v, s) {
+          g(l, { uid: i }, s);
+          if (v) g(l, v, s);
+        };
+        g.setUserVars = function (v, s) {
+          g(l, v, s);
+        };
+        g.event = function (i, v, s) {
+          g('event', { n: i, p: v }, s);
+        };
+        g.shutdown = function () {
+          g('rec', !1);
+        };
+        g.restart = function () {
+          g('rec', !0);
+        };
+        g.log = function (a, b) {
+          g('log', [a, b]);
+        };
+        g.consent = function (a) {
+          g('consent', !arguments.length || a);
+        };
+        g.identifyAccount = function (i, v) {
+          o = 'account';
+          v = v || {};
+          v.acctId = i;
+          g(o, v);
+        };
+        g.clearUserCookie = function () {};
+      })(window, document, window['_fs_namespace'], 'script', 'user');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Herman Borrego - Strava AR Segments</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,600|Space+Mono:400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../ico/favicon.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="../ico/apple-touch-icon-144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="../ico/apple-touch-icon-114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="../ico/apple-touch-icon-72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../ico/apple-touch-icon-57-precomposed.png"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+    <header class="header-project">
+      <div class="header-container width-48">
+        <div class="logo">
+          <a href="../">Herman Borrego</a>
+        </div>
+        <nav>
+          <a href="../portfolio">Work</a>
+          <a class="right" href="../about">About</a>
+        </nav>
+      </div>
+      <div class="divider"></div>
+    </header>
+
+    <a href="#header" class="back-to-top"
+      ><img src="../svg/top-arrow.svg" alt=""
+    /></a>
+
+    <section class="hero-st hero-project"></section>
+
+    <section>
+      <div class="width-48 grid grid-columns-8">
+        <div class="grid-1-9">
+          <h1>Strava AR Segments</h1>
+        </div>
+        <div class="grid-5-9 padding-top-2">
+          <div>
+            <h5 class="text-desc-title margin-top-1">Made for</h5>
+            <p class="margin-bt-0">Strava (Unaffiliated)</p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">Role</h5>
+            <p class="margin-bt-0">Product Designer</p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">Techniques</h5>
+            <p class="margin-bt-0">Research, Sketch, 3D Modeling, Animation</p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">When</h5>
+            <p class="margin-bt-0">2019</p>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-top-1">Project Overview</h5>
+            <p class="margin-bt-0">
+              AR Segments is a concept to be used with Sports AR Glasses that
+              <strong
+                >allow users to compete against themselves, friends and other
+                Strava users</strong
+              >. Using recorded data and perceivable 3D elements, this feature
+              was conceptualized to become part of the product's spatial
+              experience while running.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding-sides-1">
+      <div class="divider width-48"></div>
+    </div>
+
+    <section>
+      <div class="width-48 grid grid-columns-8 gap-1">
+        <div class="grid-1-9">
+          <h2>Prototype Simulation</h2>
+        </div>
+        <div class="grid-1-9 padding-top-3">
+          <div class="image-container">
+            <div class="image-frame">
+              <a data-fancybox="video" href="../img/st-prototype2.mp4">
+                <video width="100%" autoplay muted loop>
+                  <source src="../img/st-prototype.mp4" type="video/mp4" />
+                </video>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding-sides-1">
+      <div class="divider width-48"></div>
+    </div>
+
+    <section>
+      <div class="width-48 grid grid-columns-8 gap-1">
+        <div class="grid-1-9 padding-bottom-3 order-2">
+          <h2>User Research</h2>
+        </div>
+        <div class="grid-1-4">
+          <h3>
+            <a
+              class="link-nd"
+              href="https://www.inc.com/jeff-haden/10-years-in-strava-now-adds-1-million-users-a-month-but-can-it-become-next-great-sports-brand.html"
+              target="_blank"
+            >
+              "Strava Has 42 Million Users and
+              <strong>Adds 1 Million More Each Month</strong>" —Inc.com
+            </a>
+          </h3>
+          <p>
+            Strava is a well known product for runners, cyclists, swimmers and
+            other athletes and enthusiasts with over 42 million users. For
+            regular users,
+            <strong
+              >Strava is more than just a way to record their own data</strong
+            >, such as their time or heart rate during a run, but it has also
+            become a space where they can
+            <strong
+              >compare their performance with friends and other users in the
+              app</strong
+            >
+            who do similar workouts .
+          </p>
+          <p>
+            A survey was conducted with
+            <strong>10 people who run at least once a week</strong>. Out of the
+            10 people, 8 use or have used Strava to record their workouts. Out
+            of those 8, 7 were aware of the existing segments feature in the
+            current app, but only 2 people used it in a regular basis. People
+            manifested that, although they think
+            <strong
+              >the segments feature is a great way to push themselves to do
+              better</strong
+            >
+            and compete with friends and other users, they are hard to plan in
+            advance. Regular segments users also think that it is inconvenient
+            to look at your phone to know how well you are doing while
+            completing a segment.
+          </p>
+        </div>
+        <div class="grid-5-9 order-1">
+          <div class="image-frame">
+            <img src="../img/st-research.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="padding-sides-1">
+      <div class="divider width-48"></div>
+    </div>
+
+    <section>
+      <div class="width-48 grid grid-columns-8 gap-1">
+        <div class="grid-1-9 padding-bottom-3">
+          <h2>Existing Features Analysis</h2>
+        </div>
+        <div class="grid-2-8">
+          <div class="image-container grid">
+            <a
+              data-fancybox="existing"
+              href="../img/st-existing.jpg"
+              class="image-frame"
+            >
+              <img src="../img/st-existing.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="grid-3-7">
+          <h3>
+            Bring the elements runners want to have available at all times to
+            the AR experience
+          </h3>
+        </div>
+        <div class="grid-3-7">
+          <p>
+            As users manifested the <strong>importance of metrics</strong>, such
+            as minutes per kilometer or mile, it was decided to bring these
+            elements as part of the experience for the sports AR glasses
+            version, where users could have access to it without having to check
+            their phones or watches.
+          </p>
+        </div>
+        <div class="grid-2-8">
+          <div class="image-container">
+            <a
+              data-fancybox="concept"
+              href="../img/st-conceptsketch.jpg"
+              class="image-frame"
+            >
+              <img src="../img/st-conceptsketch.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="grid-3-7">
+          <p>
+            The segments feature was imagined a step further,
+            <strong
+              >using Augmented Reality, the segments are visible and make part
+              of the workout experience</strong
+            >. While completing a segment, the user has the ability to compete
+            against themselves, friends or other Strava users, which allows them
+            to push themselves as they would in a race.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="divider"></div>
+      <div class="footer-container width-48 grid grid-columns-4 gap-1">
+        <div class="footer-links">
+          <div>
+            <h5 class="text-desc-title margin-bt-0">Email</h5>
+            <a href="mailto:herman@borrego.ca">herman@borrego.ca</a>
+          </div>
+          <div>
+            <h5 class="text-desc-title margin-bt-0">Location</h5>
+            <a class="margin-bt-0">San Francisco, CA</a>
+          </div>
+          <div class="grid">
+            <h5 class="text-desc-title margin-bt-0">Social</h5>
+            <a
+              class="margin-bottom-05"
+              href="https://www.linkedin.com/in/hbor"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a
+              class="margin-bottom-05"
+              href="https://read.cv/hb"
+              target="_blank"
+              >read.cv</a
+            >
+            <a
+              class="margin-bottom-05"
+              href="https://github.com/hborrego"
+              target="_blank"
+              >GitHub</a
+            >
+            <a
+              class="margin-bottom-05"
+              href="https://www.strava.com/athletes/hbor"
+              target="_blank"
+              >Strava</a
+            >
+          </div>
+        </div>
+        <div class="footer-rights">
+          <h5 class="margin-bt-0">© 2022 Herman Borrego</h5>
+          <p class="margin-bt-0">All Rights Reserved</p>
+          <h6 class="padding-top-1 footer-note">
+            This website was
+            <a href="https://github.com/hborrego/" target="_blank"
+              >built from scratch</a
+            >
+            thanks to countless tutorials and
+            <span class="strike">borrowing</span> stealing code here and there
+            ✌️ <br /><br />Home page game made using
+            <a href="https://threejs.org/">three.js</a>
+          </h6>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../js/scroll.js"></script>
+  </body>
+</html>
