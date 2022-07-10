@@ -20,6 +20,7 @@
     <script>
       window['_fs_debug'] = false;
       window['_fs_host'] = 'fullstory.com';
+      window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
       window['_fs_org'] = 'PBG11';
       window['_fs_namespace'] = 'FS';
       (function (m, n, e, t, l, o, g, y) {
@@ -38,7 +39,7 @@
         o = n.createElement(t);
         o.async = 1;
         o.crossOrigin = 'anonymous';
-        o.src = 'https://' + _fs_host + '/s/fs.js';
+        o.src = 'https://' + _fs_script;
         y = n.getElementsByTagName(t)[0];
         y.parentNode.insertBefore(o, y);
         g.identify = function (i, v, s) {
@@ -50,6 +51,9 @@
         };
         g.event = function (i, v, s) {
           g('event', { n: i, p: v }, s);
+        };
+        g.anonymize = function () {
+          g.identify(!!0);
         };
         g.shutdown = function () {
           g('rec', !1);
@@ -70,6 +74,19 @@
           g(o, v);
         };
         g.clearUserCookie = function () {};
+        g.setVars = function (n, p) {
+          g('setVars', [n, p]);
+        };
+        g._w = {};
+        y = 'XMLHttpRequest';
+        g._w[y] = m[y];
+        y = 'fetch';
+        g._w[y] = m[y];
+        if (m[y])
+          m[y] = function () {
+            return g._w[y].apply(this, arguments);
+          };
+        g._v = '1.3.0';
       })(window, document, window['_fs_namespace'], 'script', 'user');
     </script>
 
