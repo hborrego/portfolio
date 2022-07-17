@@ -11,18 +11,18 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'UA-137931305-1');
+      gtag("config", "UA-137931305-1");
     </script>
 
     <!-- Fullstory Tracking Code -->
     <script>
-      window['_fs_debug'] = false;
-      window['_fs_host'] = 'fullstory.com';
-      window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
-      window['_fs_org'] = 'PBG11';
-      window['_fs_namespace'] = 'FS';
+      window["_fs_debug"] = false;
+      window["_fs_host"] = "fullstory.com";
+      window["_fs_script"] = "edge.fullstory.com/s/fs.js";
+      window["_fs_org"] = "PBG11";
+      window["_fs_namespace"] = "FS";
       (function (m, n, e, t, l, o, g, y) {
         if (e in m) {
           if (m.console && m.console.log) {
@@ -38,8 +38,8 @@
         g.q = [];
         o = n.createElement(t);
         o.async = 1;
-        o.crossOrigin = 'anonymous';
-        o.src = 'https://' + _fs_script;
+        o.crossOrigin = "anonymous";
+        o.src = "https://" + _fs_script;
         y = n.getElementsByTagName(t)[0];
         y.parentNode.insertBefore(o, y);
         g.identify = function (i, v, s) {
@@ -50,44 +50,44 @@
           g(l, v, s);
         };
         g.event = function (i, v, s) {
-          g('event', { n: i, p: v }, s);
+          g("event", { n: i, p: v }, s);
         };
         g.anonymize = function () {
           g.identify(!!0);
         };
         g.shutdown = function () {
-          g('rec', !1);
+          g("rec", !1);
         };
         g.restart = function () {
-          g('rec', !0);
+          g("rec", !0);
         };
         g.log = function (a, b) {
-          g('log', [a, b]);
+          g("log", [a, b]);
         };
         g.consent = function (a) {
-          g('consent', !arguments.length || a);
+          g("consent", !arguments.length || a);
         };
         g.identifyAccount = function (i, v) {
-          o = 'account';
+          o = "account";
           v = v || {};
           v.acctId = i;
           g(o, v);
         };
         g.clearUserCookie = function () {};
         g.setVars = function (n, p) {
-          g('setVars', [n, p]);
+          g("setVars", [n, p]);
         };
         g._w = {};
-        y = 'XMLHttpRequest';
+        y = "XMLHttpRequest";
         g._w[y] = m[y];
-        y = 'fetch';
+        y = "fetch";
         g._w[y] = m[y];
         if (m[y])
           m[y] = function () {
             return g._w[y].apply(this, arguments);
           };
-        g._v = '1.3.0';
-      })(window, document, window['_fs_namespace'], 'script', 'user');
+        g._v = "1.3.0";
+      })(window, document, window["_fs_namespace"], "script", "user");
     </script>
 
     <meta charset="UTF-8" />
@@ -147,7 +147,7 @@
     <section>
       <div class="width-48 grid grid-columns-8">
         <div class="grid-1-9">
-          <h1>Loan Repayment Improvements for Ledn</h1>
+          <h1>Loan Repayment Improvements in Ledn Platform</h1>
         </div>
         <div class="grid-5-9 padding-top-2">
           <div>
@@ -198,28 +198,50 @@
     <section>
       <div class="width-48 grid grid-columns-8 gap-1">
         <div class="grid-1-9 padding-bottom-3">
-          <h2>Problem Definition</h2>
+          <h5 class="text-uppercase">Problem Definition</h5>
+          <h2>Streamline the Repayment Process</h2>
         </div>
         <div class="grid-1-4">
-          <p class="margin-0">
-            The existing loan repayment method relied on keeping up with a
-            fragmented process for both, users and Ledn staff. If a user wanted
-            to initiate this transaction, they would have to get a quote through
-            Email, and have a limited 10 minute window to accept due to
-            Bitcoin's extreme volatility. This process was challenging to
-            understand and execute for users, while also creating unrealistic
-            processes internally for the small Ledn team that were susceptible
-            to human error.
-          </p>
+          <div>
+            <p class="margin-0">
+              The existing loan repayment method relied on keeping up with a
+              fragmented process for both, users and Ledn staff. If a user
+              wanted to initiate this transaction, they would have to get a
+              quote through Email, and have a limited 10 minute window to accept
+              due to Bitcoin's extreme volatility.
+            </p>
+            <p>
+              This process was challenging to understand and execute for users,
+              while also creating unrealistic processes internally for the small
+              Ledn team that were susceptible to human error.
+            </p>
+          </div>
+          <div class="padding-top-2">
+            <h3>My Role</h3>
+            <p>As the sole designer for the company, I was responsible of:</p>
+            <ul>
+              <li>Guiding the research resources to focus on priorities</li>
+              <li>Outlining the information architecture</li>
+              <li>Designing in different fidelities</li>
+              <li>Presenting solutions to stakeholders</li>
+              <li>Handing off the design for development</li>
+              <li>Resolving challenges during implementation</li>
+            </ul>
+          </div>
         </div>
+
         <div class="grid-5-9">
           <div class="image-frame">
             <img src="../img/ld-oldacceptance.png" alt="" />
           </div>
           <div>
-            <h6 class="padding-top-">
+            <h6 class="padding-top-05">
               Example of the existing loan repayment experience by liquidating
-              Bitcoin collateral.
+              Bitcoin collateral. In the example above,
+              <strong
+                >the user missed to send the acceptance response within the
+                given time frame</strong
+              >.
             </h6>
           </div>
         </div>
@@ -238,10 +260,11 @@
 
     <section>
       <div class="width-48 grid gap-1 grid-columns-8">
-        <div class="grid-1-9">
-          <h2>Discovery</h2>
+        <div class="grid-1-9 padding-bottom-3">
+          <h5 class="text-uppercase">Discovery</h5>
+          <h2>Narrowing Down Our Focus</h2>
         </div>
-        <div class="grid-5-9 padding-top-3">
+        <div class="grid-1-5 padding-top-3">
           <div class="image-frame">
             <img src="../img/ld-discovery.jpg" alt="" />
           </div>
@@ -262,6 +285,12 @@
             <li>Surveys</li>
             <li>Competitive Analysis</li>
           </ul>
+          <p>
+            Our goal was to narrow down our scope by understanding the
+            challenges that users and staff were facing while trying to complete
+            the repayment process and compare what other financial and crypto
+            companies were doing to resolve them.
+          </p>
         </div>
       </div>
     </section>
@@ -272,25 +301,25 @@
 
     <section>
       <div class="width-48 grid gap-1 grid-columns-8">
-        <div class="grid-1-9">
-          <h2>Findings</h2>
-        </div>
-        <div class="grid-1-9">
-          <h5>Three main key issues identified</h5>
+        <div class="grid-1-9 padding-bottom-3">
+          <h5 class="text-uppercase">Reframing the Challenges</h5>
+          <h2>The Three Most Important Issues to Resolve</h2>
         </div>
         <div class="margin-bottom-1 padding-top-3 grid-1-5">
-          <h3 class="grid margin-0 margin-bottom-05">1. Fragmented Journey</h3>
+          <h3 class="grid margin-0 margin-bottom-05">
+            1. Eliminate the Email Confirmation Process
+          </h3>
           <p class="margin-0">
             The existing repayment solution relied on users to access the
             platform to submit a repayment request and then confirming to a
-            quote via email. There was little explanation how to use all the
+            quote via email. There was little explanation of how to use all the
             available payment options, too, which created a frustrating
             experience when a user was looking for a particular form of payment.
           </p>
         </div>
         <div class="margin-bottom-1 grid-1-5">
           <h3 class="grid margin-0 margin-bottom-05">
-            2. Visibility of Loan Status
+            2. Create a Better Loan Status Visibility Solution
           </h3>
           <p class="margin-0">
             Users struggled to understand the status of their loan, which was
@@ -303,14 +332,15 @@
         </div>
         <div class="margin-bottom-1 grid-1-5">
           <h3 class="grid margin-0 margin-bottom-05">
-            3. Understanding Quote Confirmation
+            3. Make the Quote Confirmation Breakdown Easier to Understand
           </h3>
           <p class="margin-0">
             After users received a loan repayment quote through email, they
-            struggled to understand the format of the quote. There was no
-            hierarchy and most users often had to use a calculator to understand
-            which number was doing what. This often made it harder for some
-            users to even respond and confirm repayment.
+            struggled to understand the format of the payment quote. The email
+            information had no hierarchy and most users often had to use a
+            calculator to understand which number was doing what. The lack of
+            order often made it harder for some users to respond and confirm
+            repayment.
           </p>
         </div>
       </div>
@@ -322,17 +352,20 @@
 
     <section>
       <div class="width-48 grid grid-columns-8 gap-1">
-        <div class="grid-1-9">
-          <h2>Solutions</h2>
-        </div>
-        <div class="grid-1-9">
-          <h5>How the three key issues were addressed</h5>
+        <div class="grid-1-9 padding-bottom-3">
+          <h5 class="text-uppercase">Summary of Solutions</h5>
+          <h2>
+            A Glimpse of the Strategies and Resolutions to Solve the Challenges
+          </h2>
         </div>
 
-        <div class="grid-1-7 gap-1 padding-top-3">
-          <h3>1. Fragmented Journey</h3>
+        <div class="grid-1-9 gap-1 padding-top-3">
+          <h3>
+            1. No More Emails! Although Some Manual Work Is Still Required,
+            Sometimes
+          </h3>
         </div>
-        <div class="grid-1-7 gap-1">
+        <div class="grid-1-9 gap-1 padding-top-3">
           <div class="image-container">
             <a
               data-fancybox="diagrams"
@@ -342,21 +375,33 @@
               <img src="../img/ld-flowdiagram.jpg" alt="" />
             </a>
           </div>
+          <div>
+            <h6 class="padding-top-05">
+              User-flow of the loan repayment process isolated from the rest of
+              the platform
+            </h6>
+          </div>
         </div>
-        <div class="grid-1-5">
+        <div class="grid-1-5 padding-top-3">
+          <p class="margin-top-0">
+            We remapped the loan repayment journey from scratch. We reduced the
+            number of unnecessary options and simplified the choices based on
+            the loan status. We also implemented different automated repayment
+            options, allowing users to complete some repayment processes without
+            leaving the Ledn Platform.
+          </p>
           <p>
-            We remapped the loan journey from scratch. We reduced the amount of
-            unnecessary options and simplified the choices based on the loan
-            status. We also implemented different automated repayment options,
-            which allow the users to get the repayment process completely done
-            without leaving the Ledn Platform.
+            Some payment methods could not be completed in the Platform due to
+            limitations with banks, and that was okay. We were able to provide a
+            much more guided process for the few situations where this was
+            required.
           </p>
         </div>
 
-        <div class="grid-1-7 gap-1 padding-top-3">
-          <h3>2. Visibility of Loan Status</h3>
+        <div class="grid-1-9 gap-1 padding-top-3">
+          <h3>2. Put the Loan-to-Value Indicator on the Center Stage</h3>
         </div>
-        <div class="grid-1-7 gap-1">
+        <div class="grid-1-9 gap-1 padding-top-3">
           <div class="image-container">
             <a
               data-fancybox="sketch"
@@ -368,21 +413,27 @@
               </div>
             </a>
           </div>
+          <div>
+            <h6 class="padding-top-05">
+              Loan information profile modal showing a loan with a high
+              Loan-To-Value ratio
+            </h6>
+          </div>
         </div>
-        <div class="grid-1-5">
-          <p>
+        <div class="grid-1-5 padding-top-3">
+          <p class="margin-0">
             We made the Loan-To-Value (LVT) field part of the main loan
             information hierarchy, which allows users to quickly understand the
-            status of their loan and act upon it if needed. The LVT field also
+            health of their loan and act upon it if needed. The LVT field also
             uses color and caption messages to make sure the user lower their
             risk of getting their collateral liquidated.
           </p>
         </div>
 
-        <div class="grid-1-7 gap-1 padding-top-3">
-          <h3>3. Understanding Quote Confirmation</h3>
+        <div class="grid-1-9 gap-1 padding-top-3">
+          <h3>3. Simple Math Goes a Long Way</h3>
         </div>
-        <div class="grid-1-7 gap-1">
+        <div class="grid-1-9 gap-1 padding-top-3">
           <div class="image-container">
             <a
               data-fancybox="sketch"
@@ -392,14 +443,20 @@
               <img src="../img/ld-friendlier.png" alt="" />
             </a>
           </div>
+          <div>
+            <h6 class="padding-top-05">
+              Loan repayment summary and confirmation modal using simple math to
+              break down bitcoin liquidation to pay a loan
+            </h6>
+          </div>
         </div>
-        <div class="grid-1-5">
-          <p>
-            We reduced the amount of information and organized it in a layout,
-            which helps to understand in simple math how the repayment process
-            is getting done. This demystified the complex repayment options,
-            such as when the user decided to sell part the collateral to pay for
-            a loan.
+        <div class="grid-1-5 padding-top-3">
+          <p class="margin-0">
+            We reduced the amount of information and organized it in an isolated
+            modal layout, which helps to understand, in simple math, how the
+            repayment process is getting done. This strategy demystified the
+            complex repayment options, such as when the user decided to sell
+            part of the collateral to pay for a loan.
           </p>
         </div>
       </div>
