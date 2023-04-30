@@ -108,7 +108,7 @@ header {
 
   nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 }
@@ -985,7 +985,6 @@ img.hide-image {
   }
 
   .width-48 {
-
     margin: 0 auto;
   }
 
